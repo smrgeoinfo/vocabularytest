@@ -1,0 +1,18 @@
+# Integration test harness useful for testing the GitHub Action itself
+
+# This can be run locally using act (https://github.com/nektos/act) like this:
+# act -v -j build --
+# This will build the docker image that packages the GitHub Action and run it, with verbose logging to show each step in detail
+
+name: Integration Test
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Vocabulary action
+        uses: isamplesorg/vocabularies@main
+        with:
+          action: uijson
+          path: ${{ github.workspace }}
