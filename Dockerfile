@@ -1,6 +1,6 @@
 FROM python:3-slim
 WORKDIR /app
-COPY .github/actions/github_action_main.py .
+COPY ./.github/actions/github_action_main.py .
 COPY ./Makefile .
 COPY ./tools ./tools
 COPY ./vocabulary ./vocabulary
