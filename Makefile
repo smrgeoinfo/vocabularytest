@@ -3,14 +3,14 @@
 PYTHON := python3
 
 # The vocabulary sources, should contain the root vocabularies only, ./src/*.ttl
-SRC := src
+SRC := vocabulary
 
 # Vocabulary extensions, ./src/extensions/*.ttl
-EXTENSIONS := $(SRC)/extensions
+# EXTENSIONS := $(SRC)/extensions
 
-ROOT_VOCAB_SOURCES := materialtype sampledfeature specimentype
-ROOT_VOCAB_URIS := mat_materialsvocabulary sf_sampledfeaturevocabulary spec_specimentypevocabulary
-EXTENSION_VOCABS := $(wildcard $(EXTENSIONS)/*.ttl)
+ROOT_VOCAB_SOURCES := earthenv_material_extension_mineral_group earthenv_material_extension_rock_sediment earthenv_sampled_feature_role earthenv_specimen_type
+ROOT_VOCAB_URIS := ming_earthenv_material_extension_mineral_group rksd_earthenv_material_extension_rock_sediment essfrole_earthenv_sampled_feature_role  spec_earthenv_specimen_type
+# EXTENSION_VOCABS := $(wildcard $(EXTENSIONS)/*.ttl)
 
 # RDFLib triplestore cache
 CACHE_DIR := cache
@@ -44,12 +44,12 @@ cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 %.ttl:
 	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
 
-.PHONY: cache_extensions
-cache_extensions: $(EXTENSION_VOCABS)
-	for src_file in $^ ; do \
-		echo "Loading $${src_file} ..." ; \
-		$(PYTHON) tools/vocab.py --verbosity ERROR -s $(CACHE) load $${src_file} ; \
-	done
+#.PHONY: cache_extensions
+#cache_extensions: $(EXTENSION_VOCABS)
+#	for src_file in $^ ; do \
+#		echo "Loading $${src_file} ..." ; \
+#		$(PYTHON) tools/vocab.py --verbosity ERROR -s $(CACHE) load $${src_file} ; \
+#	done
 
 
 # === docs ===
