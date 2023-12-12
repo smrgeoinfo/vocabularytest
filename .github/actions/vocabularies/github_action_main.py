@@ -24,18 +24,22 @@ def main():
         # Change to 777 so subsequent steps that deal with the directory don't run into permissions issues
         os.chmod(path, 777)
         print(f"Created {path} since it didn't exist.")
+
+    #  essfrole_earthenv_sampled_feature_role  spec_earthenv_specimen_type
     if command == "uijson":
         print("Generating uijson for inclusion in webUI build")
         _run_make_in_container("cache")
-        _run_uijson_in_container(os.path.join(path, "material_hierarchy.json"), "mat:materialsvocabulary")
-        _run_uijson_in_container(os.path.join(path, "sampledFeature_hierarchy.json"), "sf:sampledfeaturevocabulary")
-        _run_uijson_in_container(os.path.join(path, "specimenType_hierarchy.json"), "spec:specimentypevocabulary")
+        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.json"), "ming:earthenv_material_extension_mineral_group")
+        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.json"), "rksd:earthenv_material_extension_rock_sediment")
+        _run_uijson_in_container(os.path.join(path, "earthenv_sampled_feature_role.json"), "essfrole:earthenv_sampled_feature_role")
+        _run_uijson_in_container(os.path.join(path, "earthenv_specimen_type.json"), "spec:earthenv_specimen_type")
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
-        _run_docs_in_container(os.path.join(path, "mat_materialsvocabulary.md"), "mat:materialsvocabulary")
-        _run_docs_in_container(os.path.join(path, "sf_sampledfeaturevocabulary.md"), "sf:sampledfeaturevocabulary")
-        _run_docs_in_container(os.path.join(path, "spec_specimentypevocabulary.md"), "spec:specimentypevocabulary")
+        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:earthenv_material_extension_mineral_group")
+        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:earthenv_material_extension_rock_sediment")
+        _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:earthenv_sampled_feature_role")
+        _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "spec:earthenv_specimen_type")
     else:
         print(f"Unknown command {command}.  Exiting.")
         sys.exit(-1)
