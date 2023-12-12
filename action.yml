@@ -1,0 +1,17 @@
+# action.yml
+name: 'iSamples Vocabulary Action'
+description: 'Runs various scripts associated with the iSamples vocabulary repository'
+inputs:
+  action:  # id of input
+    description: 'Which action to run -- defaults to uijson'
+    required: true
+    default: 'uijson'
+  path: 
+    description: 'Path to the output directory for script output'
+    required: true
+runs:
+  using: 'docker'
+  image: './Dockerfile'
+  args:
+    - ${{ inputs.action }}
+    - ${{ inputs.path }}

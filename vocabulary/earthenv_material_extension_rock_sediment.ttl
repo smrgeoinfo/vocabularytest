@@ -697,7 +697,8 @@ rksd:Tuffite
   rdf:type skos:Concept ;
   dct:source "LeMaitre et al. 2002; Murawski and Meyer 1998"@en ;
   rdfs:comment "In practice, it is likely that any rock for which there is suspicion that it may consist of redeposited pyroclastic material, usually based on sedimentary structures, irrespective of the presence or percentage of clearly epiclastic particles, would be called a tuffite. 50 percent cutoff with epiclastic rock is in contrast with LeMaitre et al., but is used for consistentency with other sedimentary rock categories following the pattern that the rock name reflects the predominant constituent."@en ;
-  rdfs:comment "synonym: volcaniclastic rock" ;
+  rdfs:comment "Rock consists of more than 50 percent particles of indeterminate pyroclastic or epiclastic origin and less than 75 percent particles of clearly pyroclastic origin. commonly the rock is laminated or exhibits size grading. (based on LeMaitre et al. 2002; Murawski and Meyer 1998)."@en ;
+  rdfs:comment "synonym: volcaniclastic rock"@en ;
   rdfs:label "tuffit"@de ;
   rdfs:label "tuffite"@en ;
   skos:broader mat:rock ;
