@@ -52,16 +52,21 @@ LOG_LEVELS = {
     "CRITICAL": logging.CRITICAL,
 }
 
+# CURRENT_ISAMPLES_VOCABULARIES = [
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/sampledFeature.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/materialType.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/materialSampleType.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/mineralGroup.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/iSamplesGeoMaterials.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/rockSedimentExtension.ttl",
+#     "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/OpenContextMaterial.ttl",
+# ]
 CURRENT_ISAMPLES_VOCABULARIES = [
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/sampledFeature.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/materialType.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/materialSampleType.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/mineralGroup.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/iSamplesGeoMaterials.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/rockSedimentExtension.ttl",
-    "https://raw.githubusercontent.com/isamplesorg/metadata/develop/src/vocabularies/OpenContextMaterial.ttl",
+    "https://raw.githubusercontent.com/isamplesorg/metadata_profile_earth_science/main/vocabulary/earthenv_material_extension_mineral_group.ttl",
+    "https://raw.githubusercontent.com/isamplesorg/metadata_profile_earth_science/main/vocabulary/earthenv_material_extension_rock_sediment.ttl",
+    "https://raw.githubusercontent.com/isamplesorg/metadata_profile_earth_science/main/vocabulary/earthenv_sampled_feature_role.ttl",
+    "https://raw.githubusercontent.com/isamplesorg/metadata_profile_earth_science/main/vocabulary/earthenv_specimen_type.ttl"
 ]
-
 
 def getLogger():
     return logging.getLogger("navocab")
@@ -78,9 +83,7 @@ def getDefaultVocabulary(vs, abbreviate=False):
 
 @click.group()
 @click.pass_context
-@click.option(
-    "-s", "--store", default="vocabularies.db", help="SQLite db for vocabularies"
-)
+@click.option("-s", "--store", default="vocabularies.db", help="SQLite db for vocabularies" )
 @click.option("--verbosity", default="ERROR", help="Logging level")
 def main(ctx, store, verbosity) -> int:
     verbosity = verbosity.upper()
