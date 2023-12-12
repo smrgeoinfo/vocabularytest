@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Vocabulary action
-        uses: isamplesorg/vocabularies@main
+        uses: isamplesorg/metadata_profile_earth_science@main
         with:
           action: uijson
           path: ${{ github.workspace }}
