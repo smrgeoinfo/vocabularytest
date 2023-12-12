@@ -5,7 +5,7 @@ COPY ./Makefile .
 COPY ./tools ./tools
 COPY ./vocabulary ./vocabulary
 #add copy docs
-COPY ./docs  ./docs
+#COPY ./docs  ./docs
 
 #debugging
 RUN chmod a+x /app/github_action_main.py
