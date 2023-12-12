@@ -5,7 +5,7 @@ COPY ./Makefile .
 COPY ./tools ./tools
 COPY ./vocabulary ./vocabulary
 #debugging
-chmod a+x /app/github_action_main.py
+RUN chmod a+x /app/github_action_main.py
 #debugging
 RUN apt-get update && apt-get install -y make
 RUN pip install -r /app/tools/requirements.txt
