@@ -1,9 +1,9 @@
 FROM python:3-slim
 WORKDIR /app
-COPY .github/actions/vocabularies/github_action_main.py .
+COPY .github/actions/metadata_profile_earth_science/github_action_main.py .
 COPY ./Makefile .
 COPY ./tools ./tools
-COPY ./src ./src
+COPY ./vocabulary ./vocabulary
 RUN apt-get update && apt-get install -y make
 RUN pip install -r /app/tools/requirements.txt
 ENV PYTHONPATH /app
