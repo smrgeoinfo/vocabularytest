@@ -33,7 +33,8 @@ help:
 # === cache ===
 # Cache is a triple store containing all the vocabularies and extensions
 .PHONY: cache
-cache: _$(CACHE_DIR) cache_root cache_extensions
+#cache: _$(CACHE_DIR) cache_root cache_extensions
+cache: _$(CACHE_DIR) cache_root 
 
 _$(CACHE_DIR):
 	mkdir -p $(CACHE_DIR)
