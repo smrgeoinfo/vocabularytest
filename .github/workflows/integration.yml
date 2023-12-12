@@ -14,5 +14,5 @@ jobs:
       - name: Vocabulary action
         uses: isamplesorg/metadata_profile_earth_science@main
         with:
-          action: uijson
+          action: docs
           path: ${{ github.workspace }}
