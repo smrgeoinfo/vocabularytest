@@ -316,6 +316,7 @@ def describeNarrowerTerms(g, v, r, depth=0, level=[]):
 def describeVocabulary(G, V):
     res = []
     level = [1, ]
+    print("vocab, frm vocab2md/describeVocab:", V)
     title = getObjects(G, V, skosT("prefLabel"))[0]
     res.append("---")
     res.append("comment: | \n  WARNING: This file is generated. Any edits will be lost!")
