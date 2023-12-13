@@ -32,7 +32,7 @@ help:
 
 # === cache ===
 # Cache is a triple store containing all the vocabularies and extensions
-.PHOcd NY: cache
+.PHONY: cache
 #cache: _$(CACHE_DIR) cache_root cache_extensions
 cache: _$(CACHE_DIR) cache_root 
 
