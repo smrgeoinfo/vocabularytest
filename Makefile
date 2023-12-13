@@ -9,7 +9,7 @@ SRC := vocabulary
 # EXTENSIONS := $(SRC)/extensions
 
 ROOT_VOCAB_SOURCES := earthenv_material_extension_mineral_group earthenv_material_extension_rock_sediment earthenv_sampled_feature_role earthenv_specimen_type
-ROOT_VOCAB_URIS := ming_earthenv_material_extension_mineral_group rksd_earthenv_material_extension_rock_sediment essfrole_earthenv_sampled_feature_role  spec_earthenv_specimen_type
+ROOT_VOCAB_URIS := ming_mineralgroupvocabulary rksd_rocksedimentvocabulary essfrole_sfrolevocabulary  esmat_essampletype
 # EXTENSION_VOCABS := $(wildcard $(EXTENSIONS)/*.ttl)
 
 # RDFLib triplestore cache
@@ -32,7 +32,7 @@ help:
 
 # === cache ===
 # Cache is a triple store containing all the vocabularies and extensions
-.PHONY: cache
+.PHOcd NY: cache
 #cache: _$(CACHE_DIR) cache_root cache_extensions
 cache: _$(CACHE_DIR) cache_root 
 
