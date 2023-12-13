@@ -45,14 +45,6 @@ cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 %.ttl:
 	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
 
-#.PHONY: cache_extensions
-#cache_extensions: $(EXTENSION_VOCABS)
-#	for src_file in $^ ; do \
-#		echo "Loading $${src_file} ..." ; \
-#		$(PYTHON) tools/vocab.py --verbosity ERROR -s $(CACHE) load $${src_file} ; \
-#	done
-
-
 # === docs ===
 # Docs are markdown generated from the vocabularies.
 # Basically ordered hierarchies of concepts with associated descriptions
