@@ -48,6 +48,7 @@ def main():
 
 
 def _run_make_in_container(target: str):
+    print("make in container, target: ", target)
     subprocess.run(["/usr/bin/make", "-C", "/app", "-f", "/app/Makefile", target])
 
 
