@@ -82,6 +82,10 @@ ming:mineralgroupvocabulary
   skos:hasTopConcept mat:mineral ;
   skos:prefLabel "iSamples Mineral Group Vocabulary "@en ;
 .
+
+mat:mineral   skos:topConceptOf ming:mineralgroupvocabulary ;
+	skos:prefLabel "mineral"@en .
+
 ming:nativeelementmineral
   rdf:type owl:NamedIndividual ;
   rdf:type skos:Concept ;
