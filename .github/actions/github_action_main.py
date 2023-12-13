@@ -15,7 +15,9 @@ def main():
 #    print(f"environment variables are {os.environ}")
 
     command = os.environ["INPUT_ACTION"]
+    print("command ", command)
     path = os.environ["INPUT_PATH"]
+    print("input path ", path)
     if path is None:
         print("Did not receive a valid path argument so we cannot run.")
         sys.exit(-1)
