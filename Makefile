@@ -40,7 +40,7 @@ _$(CACHE_DIR):
 .PHONY: cache_root
 cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 %.ttl:
-	${PYTHON} tools/vocab.py --verbosity DEBUG -s $(CACHE) load $(SRC)/$@
+	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
 
 # === docs ===
 # Docs are markdown generated from the vocabularies.
