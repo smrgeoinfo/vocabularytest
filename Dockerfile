@@ -38,8 +38,3 @@ ENTRYPOINT ["/app/github_action_main.py"]
 # This is for debugging the Docker image build process, ensures the container stays up
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
 
-
-RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
-RUN gdebi --non-interactive quarto-linux-amd64.deb
-
-CMD ["bash"]
