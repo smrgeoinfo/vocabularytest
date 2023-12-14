@@ -17,7 +17,7 @@ def main():
     command = os.environ["INPUT_ACTION"]
     print("command ", command)
     path = os.environ["INPUT_PATH"]
-    path = os.path.join(path, "/tools/output"]
+    path = os.path.join(path, "/tools/output")
     print("input path ", path)
     if path is None:
         print("Did not receive a valid path argument so we cannot run.")
