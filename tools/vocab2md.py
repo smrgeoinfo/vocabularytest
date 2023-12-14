@@ -253,11 +253,12 @@ def main(source, vocabulary):
     source = f"sqlite:///{source}"
     store = navocab.VocabularyStore(storage_uri=source)
     print("vocablist:",store.vocabulary_list())
+    print("graph to pass to describe vocab:", repr(store._g))
     res = []
 
     #TODO: This is a bit of quick hack using the internal graph of VocabularyStore.
     #      describeVocabulary should leverage functionality of navocab to
-    #      access the vocaulary graphs.
+    #      access the vocabulary graphs.
 
     vocabulary = store.expand_name(vocabulary)
     res.append(describeVocabulary(store._g, vocabulary))
