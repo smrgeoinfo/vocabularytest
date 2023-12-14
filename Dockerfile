@@ -17,15 +17,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     gdebi-core
 
-RUN install.r \
-    shiny \
-    jsonlite \
-    ggplot2 \
-    htmltools \
-    remotes \
-    renv \
-    knitr \
-    quarto
+#RUN install.r \
+#    shiny \
+#    jsonlite \
+#    ggplot2 \
+#    htmltools \
+#    remotes \
+#    renv \
+#    knitr \
+#    quarto
 
 RUN pip install -r /app/tools/requirements.txt
 
