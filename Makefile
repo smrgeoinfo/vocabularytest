@@ -5,9 +5,6 @@ PYTHON := python3
 # The vocabulary sources, should contain the root vocabularies only, ./src/*.ttl
 SRC := vocabulary
 
-# Vocabulary extensions, ./src/extensions/*.ttl
-# EXTENSIONS := $(SRC)/extensions
-
 ROOT_VOCAB_SOURCES := earthenv_material_extension_mineral_group earthenv_material_extension_rock_sediment earthenv_sampled_feature_role earthenv_specimen_type
 ROOT_VOCAB_URIS := ming_mineralgroupvocabulary rksd_rocksedimentvocabulary essfrole_sfrolevocabulary  esmat_essampletype
 # EXTENSION_VOCABS := $(wildcard $(EXTENSIONS)/*.ttl)
