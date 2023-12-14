@@ -1,17 +1,28 @@
 # action.yml
+# see https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+#  for information on how this works
+
 name: 'iSamples Vocabulary Action'
-description: 'Runs various scripts associated with the iSamples vocabulary repository'
+author: 'Dave Vieglais'
+description: 'creates a docker container to run python routines that 
+       1) load skos (rdf/turtle) vocabularies into an sqlAlchmey
+       2) generate markdown from the skos vocabularies using Quarto markdown'
 inputs:
-  action:  # id of input
+  action:  # id of input; GitHub stores input parameters as environment variables
     description: 'Which action to run -- defaults to uijson'
     required: true
     default: 'uijson'
   path: 
     description: 'Path to the output directory for script output'
     required: true
-runs:
+runs:   # see https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-docker-container-actions
+        #   for documentation
   using: 'docker'
   image: './Dockerfile'
+  # To access the environment variable in a Docker container action, you must pass
+  #  the input using the args keyword in the action metadata file.
+  #  For more information about the action metadata file for Docker container actions,
+  #  see "Creating a Docker container action."
   args:
     - ${{ inputs.action }}
     - ${{ inputs.path }}

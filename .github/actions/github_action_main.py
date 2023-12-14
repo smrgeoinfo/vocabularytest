@@ -25,7 +25,7 @@ def main():
     command = os.environ["INPUT_ACTION"]
     print("Github action command ", command)
     path = os.environ["INPUT_PATH"]
-    path = os.path.join(path, "\docs\markdown")
+    path = os.path.join(path, "docs")
     print("target path for output: ", path)
     if path is None:
         print("Did not receive a valid path argument so we cannot run.")

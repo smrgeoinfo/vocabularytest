@@ -1,5 +1,5 @@
 # Integration test harness useful for testing the GitHub Action itself
-
+# Setup for this action is defined in action.yml
 # This can be run locally using act (https://github.com/nektos/act) like this:
 # act -v -j build --
 # This will build the docker image that packages the GitHub Action and run it,
@@ -14,10 +14,12 @@ jobs:
       - uses: actions/checkout@master
       - name: Vocabulary action
         uses: isamplesorg/metadata_profile_earth_science@main
+        # input variables 'action' and 'path' are defined in action.yml, and assigned values here
+        # GitHub creates an environment variable for the input with the name INPUT_<VARIABLE_NAME>
         with:
           action: docs
           path: ${{ github.workspace }}
       - name: write message
-        run: echo "this is the end of integration.yml"
+        run: echo "github workspace " ${{ github.workspace }}
       - name: List Contents
         run: ls -R ${{ github.workspace }}
