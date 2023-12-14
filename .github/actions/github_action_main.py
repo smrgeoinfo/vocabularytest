@@ -28,21 +28,20 @@ def main():
         os.chmod(path, 777)
         print(f"Created {path} since it didn't exist.")
 
-    #  essfrole_earthenv_sampled_feature_role  spec_earthenv_specimen_type
     if command == "uijson":
         print("Generating uijson for inclusion in webUI build")
         _run_make_in_container("cache")
-        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.json"), "ming:earthenv_material_extension_mineral_group")
-        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.json"), "rksd:earthenv_material_extension_rock_sediment")
-        _run_uijson_in_container(os.path.join(path, "earthenv_sampled_feature_role.json"), "essfrole:earthenv_sampled_feature_role")
-        _run_uijson_in_container(os.path.join(path, "earthenv_specimen_type.json"), "spec:earthenv_specimen_type")
+        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.json"), "ming:mineralgroupvocabulary")
+        _run_uijson_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.json"), "rksd:rocksedimentvocabulary")
+        _run_uijson_in_container(os.path.join(path, "earthenv_sampled_feature_role.json"), "essfrole:sfrolevocabulary")
+        _run_uijson_in_container(os.path.join(path, "earthenv_specimen_type.json"), "esmat:essampletype")
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
-        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:earthenv_material_extension_mineral_group")
-        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:earthenv_material_extension_rock_sediment")
-        _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:earthenv_sampled_feature_role")
-        _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "spec:earthenv_specimen_type")
+        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
+        _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
+        _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
+        _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "esmat:essampletype")
     else:
         print(f"Unknown command {command}.  Exiting.")
         sys.exit(-1)
@@ -53,16 +52,16 @@ def _run_make_in_container(target: str):
     subprocess.run(["/usr/bin/make", "-C", "/app", "-f", "/app/Makefile", target])
 
 
-def _run_uijson_in_container(output_path: str, vocab_type: str):
+def _run_uijson_in_container(output_path: str, vocab_uri: str):
     with open(output_path, "w") as f:
-        vocab_args = ["-s", "/app/cache/vocabularies.db", "uijson", vocab_type, "-e"]
+        vocab_args = ["-s", "/app/cache/vocabularies.db", "uijson", vocab_uri, "-e"]
         _run_python_in_container("/app/tools/vocab.py", vocab_args, f)
         print(f"Successfully wrote uijson file to {output_path}")
 
 
-def _run_docs_in_container(output_path: str, vocab_type: str):
+def _run_docs_in_container(output_path: str, vocab_uri: str):
     with open(output_path, "w") as f:
-        docs_args = ["/app/cache/vocabularies.db", vocab_type]
+        docs_args = ["/app/cache/vocabularies.db", vocab_uri]
         _run_python_in_container("/app/tools/vocab2md.py", docs_args, f)
         print(f"Successfully wrote doc file to {output_path}")
         resultfile = open(output_path, "r")
