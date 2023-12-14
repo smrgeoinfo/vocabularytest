@@ -1,7 +1,15 @@
 #!/usr/local/bin/python
 """
-Driver file for the vocabularies GitHub Action.  Runs inside of a Docker container, with all of the vocabularies tools
-and dependencies copied into the Docker container.
+Driver file for the vocabularies GitHub Action.  Runs inside a Docker container,
+with all of the vocabularies tools and dependencies copied into the Docker container.
+
+the github workflow needs to copy output files to the \docs\markdown directory
+in the public github, else they disappear with the docker container when workflow
+completes
+original code by Dave Vieglais for iSamples project
+modified by SM Richard 2023-12-14
+
+input argumets are grabbed from environmental variables
 """
 
 import logging
@@ -15,10 +23,10 @@ def main():
 #    print(f"environment variables are {os.environ}")
 
     command = os.environ["INPUT_ACTION"]
-    print("command ", command)
+    print("Github action command ", command)
     path = os.environ["INPUT_PATH"]
-    path = os.path.join(path, "/tools/output")
-    print("input path ", path)
+    path = os.path.join(path, "\docs\markdown")
+    print("target path for output: ", path)
     if path is None:
         print("Did not receive a valid path argument so we cannot run.")
         sys.exit(-1)
@@ -58,7 +66,6 @@ def _run_uijson_in_container(output_path: str, vocab_uri: str):
         _run_python_in_container("/app/tools/vocab.py", vocab_args, f)
         print(f"Successfully wrote uijson file to {output_path}")
 
-
 def _run_docs_in_container(output_path: str, vocab_uri: str):
     with open(output_path, "w") as f:
         docs_args = ["/app/cache/vocabularies.db", vocab_uri]
@@ -67,14 +74,13 @@ def _run_docs_in_container(output_path: str, vocab_uri: str):
         # resultfile = open(output_path, "r")
         # print("output path content: ", resultfile.read())
         # resultfile.close()
+
 def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     subprocess_args = [sys.executable, path_to_python_script]
     subprocess_args.extend(args)
     result = subprocess.run(subprocess_args, stdout=f)
     print("container call result ", result.returncode)
 #    print("container call args: ", result.args)
-
-
 
 if __name__ == "__main__":
     main()
