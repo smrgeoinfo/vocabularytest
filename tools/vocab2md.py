@@ -92,7 +92,8 @@ def getObjects(g, s, p):
         ?subject ?predicate ?o .
     }""")
     qres = g.query(q, initBindings={'subject':s, 'predicate':p})
-    print("GetObjects q result: ", qres)
+    print("getObjects query", q)
+    print("GetObjects q result len: ", len(qres))
     res = []
     for row in qres:
         res.append(row[0])
