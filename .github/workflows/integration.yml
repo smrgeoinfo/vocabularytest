@@ -16,3 +16,7 @@ jobs:
         with:
           action: docs
           path: ${{ github.workspace }}
+      - name: write message
+        run: echo "this is the end of integration.yml"
+      - name: List Contents
+        run: ls -R ${{ github.workspace }}
