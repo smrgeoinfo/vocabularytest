@@ -23,7 +23,7 @@ jobs:
         run: echo "github workspace " ${{ github.workspace }}
       - name: List Contents
         run: ls -R ${{ github.workspace }}
-      -  name: list app
+      - name: list app folder
         run: ls /app
 #      - name: quarto check
 #        run: quarto check
