@@ -15,17 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pandoc \
 #    pandoc-citeproc \
     curl \
-    gdebi-core
-
-#RUN install.r \
-#    shiny \
-#    jsonlite \
-#    ggplot2 \
-#    htmltools \
-#    remotes \
-#    renv \
-#    knitr \
-#    quarto
+    gdebi-core \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -r /app/tools/requirements.txt
 
