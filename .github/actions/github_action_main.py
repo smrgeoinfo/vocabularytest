@@ -73,6 +73,8 @@ def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     result = subprocess.run(subprocess_args, stdout=f)
     print("container call result ", result.returncode)
     print("container call args: ", result.args)
+    print("file contents: ", f.read())
+
 
 if __name__ == "__main__":
     main()
