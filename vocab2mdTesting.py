@@ -194,7 +194,6 @@ def describeNarrowerTerms(g, v, r, depth=0, level=[]):
 def describeVocabulary(G, V):
     res = []
     level = [1, ]
-    print("vocab, frm vocab2md/describeVocab:", V)
     title = getObjects(G, V, skosT("prefLabel"))[0]
     res.append("---")
     res.append("comment: | \n  WARNING: This file is generated. Any edits will be lost!")
@@ -236,25 +235,29 @@ def describeVocabulary(G, V):
         res.append("")
     return res
 
-@click.command()
-@click.argument("source")
-@click.argument("vocabulary")
-def main(source, vocabulary):
+#@click.command()
+#@click.argument("source")
+#@click.argument("vocabulary")
+#def main(source, vocabulary):
+def main():
+
     """Generate Pandoc markdown from a SKOS vocabulary.
-
-    SOURCE is a navocab triplestore (sqlite database created by rdflib).
-
+    SOURCE is a navocab triplestore (sqlite database created by rdflib).\
     VOCABULARY is a URI for a vocabulary root within SOURCE
-
     Output to STDOUT.
     """
-    source = f"sqlite:///{source}"
+
+    source = 'sqlite:///../cache/vocabularies.db'
+    # source = f"sqlite:///{source}"
     store = navocab.VocabularyStore(storage_uri=source)
-    print("vocablist:",store.vocabulary_list())
     res = []
     #TODO: This is a bit of quick hack using the internal graph of VocabularyStore.
     #      describeVocabulary should leverage functionality of navocab to
-    #      access the vocaulary graphs.
+    #      access the vocabulary graphs.
+
+    #debug
+    vocabulary="esmat:essampletype"
+    #debug
     vocabulary = store.expand_name(vocabulary)
     res.append(describeVocabulary(store._g, vocabulary))
     for doc in res:
