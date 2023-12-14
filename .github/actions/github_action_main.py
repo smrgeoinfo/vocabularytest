@@ -64,15 +64,15 @@ def _run_docs_in_container(output_path: str, vocab_uri: str):
         docs_args = ["/app/cache/vocabularies.db", vocab_uri]
         _run_python_in_container("/app/tools/vocab2md.py", docs_args, f)
         print(f"Successfully wrote doc file to {output_path}")
-        resultfile = open(output_path, "r")
-        print("output path content: ", resultfile.read())
-        resultfile.close()
+        # resultfile = open(output_path, "r")
+        # print("output path content: ", resultfile.read())
+        # resultfile.close()
 def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     subprocess_args = [sys.executable, path_to_python_script]
     subprocess_args.extend(args)
     result = subprocess.run(subprocess_args, stdout=f)
     print("container call result ", result.returncode)
-    print("container call args: ", result.args)
+#    print("container call args: ", result.args)
 
 
 

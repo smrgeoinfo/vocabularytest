@@ -92,8 +92,8 @@ def getObjects(g, s, p):
         ?subject ?predicate ?o .
     }""")
     qres = g.query(q, initBindings={'subject':s, 'predicate':p})
-    print(f"getObjects query:\n {PFX} select ?o where {s} {p} ?o")
-    print("GetObjects q result len: ", len(qres))
+#    print(f"getObjects query:\n {PFX} select ?o where {s} {p} ?o")
+#    print("GetObjects q result len: ", len(qres))
     res = []
     for row in qres:
         res.append(row[0])
@@ -196,7 +196,7 @@ def describeNarrowerTerms(g, v, r, depth=0, level=[]):
 def describeVocabulary(G, V):
     res = []
     level = [1, ]
-    print("vocab, frm vocab2md/describeVocab:", V)
+#    print("vocab, frm vocab2md/describeVocab:", V)
     title = getObjects(G, V, skosT("prefLabel"))[0]
     res.append("---")
     res.append("comment: | \n  WARNING: This file is generated. Any edits will be lost!")
@@ -252,8 +252,8 @@ def main(source, vocabulary):
     """
     source = f"sqlite:///{source}"
     store = navocab.VocabularyStore(storage_uri=source)
-    print("vocablist:",store.vocabulary_list())
-    print("graph to pass to describe vocab:", repr(store._g))
+#    print("vocablist:",store.vocabulary_list())
+#    print("graph to pass to describe vocab:", repr(store._g))
     res = []
 
     #TODO: This is a bit of quick hack using the internal graph of VocabularyStore.
