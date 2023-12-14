@@ -21,5 +21,7 @@ jobs:
           path: ${{ github.workspace }}
       - name: write message
         run: echo "github workspace " ${{ github.workspace }}
-      - name: List Contents
-        run: ls -R ${{ github.workspace }}
+#      - name: List Contents
+#        run: ls -R ${{ github.workspace }}
+      - name: quarto check
+        run: quarto check
