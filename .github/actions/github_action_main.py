@@ -49,7 +49,7 @@ def main():
 
 
 def _run_make_in_container(target: str):
-    print("make in container, target: ", target)
+    print("In githubActionMain: make in container, target: ", target)
     subprocess.run(["/usr/bin/make", "-C", "/app", "-f", "/app/Makefile", target])
 
 
@@ -70,8 +70,9 @@ def _run_docs_in_container(output_path: str, vocab_type: str):
 def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     subprocess_args = [sys.executable, path_to_python_script]
     subprocess_args.extend(args)
-    subprocess.run(subprocess_args, stdout=f)
-
+    result = subprocess.run(subprocess_args, stdout=f)
+    print("container call result ", result.returncode)
+    print("container call args: ", result.args)
 
 if __name__ == "__main__":
     main()
