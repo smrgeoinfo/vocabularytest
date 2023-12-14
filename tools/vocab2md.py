@@ -252,9 +252,11 @@ def main(source, vocabulary):
     store = navocab.VocabularyStore(storage_uri=source)
     print("vocablist:",store.vocabulary_list())
     res = []
+
     #TODO: This is a bit of quick hack using the internal graph of VocabularyStore.
     #      describeVocabulary should leverage functionality of navocab to
     #      access the vocaulary graphs.
+
     vocabulary = store.expand_name(vocabulary)
     res.append(describeVocabulary(store._g, vocabulary))
     for doc in res:
