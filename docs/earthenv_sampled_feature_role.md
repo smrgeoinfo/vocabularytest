@@ -2,7 +2,7 @@
 comment: | 
   WARNING: This file is generated. Any edits will be lost!
 title: "Earth and Environmental Science sampled feature role extension"
-date: "2023-12-15T00:25:24.482925+00:00"
+date: "2023-12-15T01:49:58.072995+00:00"
 subtitle: |
   Terms to categorize the relation of a sampled feature to its context. In the Earth Science realm this is typically relation of sampled feature to a containing rock body or rock body part.
 execute:

@@ -30,8 +30,9 @@ help:
 # === cache ===
 # Cache is a triple store containing all the vocabularies and extensions
 .PHONY: cache
-#cache: _$(CACHE_DIR) cache_root cache_extensions
+
 cache: _$(CACHE_DIR) cache_root 
+	@echo "in cache makefile"
 
 _$(CACHE_DIR):
 	mkdir -p $(CACHE_DIR)
@@ -49,6 +50,7 @@ cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 docs: setup_docs $(ROOT_VOCAB_URIS)
 
 setup_docs:
+	@echo "in set_up docs makefile"
 	mkdir -p $(DOCS)
 
 %:
