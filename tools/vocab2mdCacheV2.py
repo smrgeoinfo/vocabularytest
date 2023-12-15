@@ -244,10 +244,9 @@ def describeNarrowerTerms(g, v, r, depth=0, level=[]):
 def describeVocabulary(G, V):
     res = []
     level = [1, ]
-    title = getObjects(G, V, skosT("prefLabel"))[0]
+    # this is the header for Quarto in the markdown output
     res.append("---")
     res.append("comment: | \n  WARNING: This file is generated. Any edits will be lost!")
-#    res.append(f"title: \"{title.strip()}\"")
     res.append("format:")
     res.append("  html:")
     res.append("    ascii: true")
@@ -260,18 +259,28 @@ def describeVocabulary(G, V):
     res.append("  echo: false")
 #    res.append("categories: [\"vocabulary\"]")
     res.append("---")
-    res.append("")
+    # end of Quarto qmd header
 
+    res.append("")
+    gobj = getObjects(G, V, skosT("prefLabel"))
+    if len(gobj)>0:
+        scheme = gobj[0]
+    else:
+        print("vocabulary root object must have a skos:prefLabel")
+        return 1
     scheme = getObjects(G, V, skosT("prefLabel"))[0]
     lscheme = scheme.replace(" ","")
     res.append("[]{" + f"#{lscheme}" + "}")
     res.append("")
+    # bold heading 1
     res.append(f"# **Concept scheme:** {scheme}")
     res.append("")
-
-    modified = getObjects(G, V, dctT("modified"))[0]
-    res.append(f"Vocabulary last modified:  {modified}")
-    res.append("")
+    try:
+        modified = getObjects(G, V, dctT("modified"))[0]
+        res.append(f"Vocabulary last modified:  {modified}")
+        res.append("")
+    except:
+        print("expected a skos:modified date for most recent update to vocabulary")
 
     res.append("subtitle: ")
     for comment in getObjects(G, V, skosT("definition")) + getObjects(G, V, rdfsT("comment")):
