@@ -46,14 +46,22 @@ def main():
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
+        _quarto_render_html("blank","blank")
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "esmat:essampletype")
+# quarto render "${DEST_FOLDER}${fname}" --to html
+
+
     else:
         print(f"Unknown command {command}.  Exiting.")
         sys.exit(-1)
 
+def _quarto_render_html(markdown_in:str, target:str):
+    print("In githubActionMain: Quarto render: ",markdown_in,  target)
+    result=subprocess.run(["/opt/quarto/bin/quarto", "check"])
+    print("quarto check: ",result.stdout)
 
 def _run_make_in_container(target: str):
     print("In githubActionMain: make in container, target: ", target)
@@ -81,6 +89,9 @@ def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     result = subprocess.run(subprocess_args, stdout=f)
     print("container call result ", result.returncode)
 #    print("container call args: ", result.args)
+
+
+
 
 if __name__ == "__main__":
     main()
