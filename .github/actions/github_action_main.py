@@ -46,7 +46,7 @@ def main():
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
-        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
+        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),os.path.join(path, "test.txt"))
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
