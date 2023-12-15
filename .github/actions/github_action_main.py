@@ -3,7 +3,7 @@
 Driver file for the vocabularies GitHub Action.  Runs inside a Docker container,
 with all of the vocabularies tools and dependencies copied into the Docker container.
 
-the github workflow needs to copy output files to the \docs\markdown directory
+the github workflow needs to copy output files to the docs.markdown directory
 in the public github, else they disappear with the docker container when workflow
 completes
 original code by Dave Vieglais for iSamples project
@@ -23,10 +23,10 @@ def main():
 #    print(f"environment variables are {os.environ}")
 
     command = os.environ["INPUT_ACTION"]
-    print("Github action command ", command)
+    print("github_action_main: INPUT_ACTION: ", command)
     path = os.environ["INPUT_PATH"]
     path = os.path.join(path, "docs")
-    print("target path for output: ", path)
+    print("github_action_main: target path for output: ", path)
     if path is None:
         print("Did not receive a valid path argument so we cannot run.")
         sys.exit(-1)
@@ -46,8 +46,8 @@ def main():
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
-        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
+        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "esmat:essampletype")
@@ -61,8 +61,10 @@ def main():
 def _quarto_render_html(markdown_in:str, output_path:str):
      print("In githubActionMain: Quarto render: ",markdown_in,  output_path)
 
-     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "--to html"])
-
+     result = subprocess.run(["/opt/quarto/bin/quarto", "check"])
+     print("Quarto check result ", result.returncode)
+     
+     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, " -t html"])
      print("Quarto call result ", result.returncode)
 #    resultfile = open(output_path, "r")
 #    print("output path content: ", resultfile.read())

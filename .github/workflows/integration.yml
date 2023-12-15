@@ -21,8 +21,9 @@ jobs:
           path: ${{ github.workspace }}
       - name: write message
         run: echo "github workspace " ${{ github.workspace }}
-      - name: List Contents
-        run: ls -R ${{ github.workspace }}
+      - name: check Quarto 
+        # run: ls -R ${{ github.workspace }}
+        run: quarto check
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

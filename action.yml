@@ -20,7 +20,7 @@ runs:   # see https://docs.github.com/en/actions/creating-actions/metadata-synta
   using: 'docker'
   image: './Dockerfile'
   # To access the environment variable in a Docker container action, you must pass
-  #  the input using the args keyword in the action metadata file.
+  #  the input using the args keyword in the action.yml metadata file.
   #  For more information about the action metadata file for Docker container actions,
   #  see "Creating a Docker container action."
   args:

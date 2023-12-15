@@ -13,6 +13,8 @@ DOCS := docs
 
 # all is the default rule if no rule is specified in the make call
 .PHONY: all
+#all: docs cache
+# testing. calling docs is redundant with github_action_main.py
 all: docs cache
 
 # === cache ===
@@ -26,6 +28,13 @@ _$(CACHE_DIR):
 .PHONY: cache_root
 cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 
+# this rule applies to any target name with a .ttl extension. This will run on all
+#  the $(ROOT_VOCAB_SOURCES)  becasue of the cache_root rule.
+%.ttl:
+	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
+	@echo "running vocab.py on "  $@
+
+
 # === docs ===
 # Docs are markdown generated from the vocabularies.
 # Basically ordered hierarchies of concepts with associated descriptions
@@ -34,13 +43,6 @@ docs: setup_docs $(ROOT_VOCAB_URIS)
 setup_docs:
 	@echo "in set_up docs makefile"
 	mkdir -p $(DOCS)
-
-
-# this rule applies to any target name with a .ttl extension. This will run on all
-#  the $(ROOT_VOCAB_SOURCES)  becasue of the cache_root rule.
-%.ttl:
-	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
-	@echo "running vocab.py on "  $@
 
 # this rule applies to any target name/ will run al the $(ROOT_VOCAB_URIS)
 #  becasue of the docs: rule

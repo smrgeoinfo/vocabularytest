@@ -12,7 +12,7 @@ RUN chmod a+x /app/github_action_main.py
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
-    pandoc \
+#    quarto \
 #    pandoc-citeproc \
     curl \
     gdebi-core \
