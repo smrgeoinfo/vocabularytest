@@ -46,7 +46,7 @@ def main():
     elif command == "docs":
         print("Generating markdown docs")
         _run_make_in_container("cache")
-        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),os.path.join(path, "test.txt"))
+        _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
         _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
@@ -61,11 +61,11 @@ def main():
 def _quarto_render_html(markdown_in:str, output_path:str):
     with open(output_path, "w") as f:
         print("In githubActionMain: Quarto render: ",markdown_in,  output_path)
-        result = subprocess.run(["/opt/quarto/bin/quarto", "check"], stdout=f)
+        result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "--to html"], stdout=f)
         print("Quarto call result ", result.returncode)
-    resultfile = open(output_path, "r")
-    print("output path content: ", resultfile.read())
-    resultfile.close()
+#    resultfile = open(output_path, "r")
+#    print("output path content: ", resultfile.read())
+#    resultfile.close()
 
 def _run_make_in_container(target: str):
     print("In githubActionMain: make in container, target: ", target)

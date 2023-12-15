@@ -23,8 +23,7 @@ jobs:
         run: echo "github workspace " ${{ github.workspace }}
       - name: List Contents
         run: ls -R ${{ github.workspace }}
-#      - name: quarto check
-#        run: quarto check
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
