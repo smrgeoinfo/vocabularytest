@@ -1,7 +1,7 @@
 #!/usr/local/bin/python
 """
-Driver file for the vocabularies GitHub Action.  Runs inside of a Docker container, with all of the vocabularies tools
-and dependencies copied into the Docker container.
+This is a version of github_action_main.py set up to run offline in
+an IDE environment for testing; not used by github action.
 """
 
 import logging

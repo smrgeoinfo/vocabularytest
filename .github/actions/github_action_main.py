@@ -49,8 +49,13 @@ def main():
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
         _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_rock_sediment.md"), "rksd:rocksedimentvocabulary")
+        _quarto_render_html((os.path.join(path, "earthenv_material_extension_rock_sediment.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_sampled_feature_role.md"), "essfrole:sfrolevocabulary")
+        _quarto_render_html((os.path.join(path, "earthenv_sampled_feature_role.md")),path)
         _run_docs_in_container(os.path.join(path, "earthenv_specimen_type.md"), "esmat:essampletype")
+        _quarto_render_html((os.path.join(path, "earthenv_specimen_type.md")),path)
+
+
 # quarto render "${DEST_FOLDER}${fname}" --to html
 
 
@@ -64,7 +69,7 @@ def _quarto_render_html(markdown_in:str, output_path:str):
      result = subprocess.run(["/opt/quarto/bin/quarto", "check"])
      print("Quarto check result ", result.returncode)
      
-     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, " -t html"])
+     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "-t", "html"])
      print("Quarto call result ", result.returncode)
 #    resultfile = open(output_path, "r")
 #    print("output path content: ", resultfile.read())

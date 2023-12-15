@@ -10,6 +10,7 @@ import click
 import navocab
 import rdflib
 
+# dictionary to lookup namespace uris
 NS = {
     "rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
     "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
@@ -19,16 +20,14 @@ NS = {
     "geosciml": "http://resource.geosciml.org/classifier/cgi/lithology"
 }
 
-
+# define namespace prefixs for rdflib calls to access skos vocab files
 PFX = """
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 """
-
 INDENT = "  "
-
 
 def skosT(term):
     return rdflib.URIRef(f"{NS['skos']}{term}")
@@ -246,7 +245,7 @@ def main(source, vocabulary):
 
     SOURCE is a navocab triplestore (sqlite database created by rdflib).
 
-    VOCABULARY is a URI for a vocabulary root within SOURCE
+    VOCABULARY is a URI for a vocabulary root (e.g. the skos:ConceptScheme) within SOURCE
 
     Output to STDOUT.
     """

@@ -2,7 +2,7 @@
 comment: | 
   WARNING: This file is generated. Any edits will be lost!
 title: "iSamples rock and sediment vocabulary extension"
-date: "2023-12-15T15:52:13.970919+00:00"
+date: "2023-12-15T17:30:14.725002+00:00"
 subtitle: |
   Kinds of rock material.
   Rock and sediment categories for iSamples materialType classification. Remove anthropogenic materials and classes for consolidated or non-consolidated material; remove leaf classes subjectively based on abundance of material type and number of subclasses. There are 83 'mat:rock' subclasses; these include some classes that are non-consolidated material (e.g. fault gouge) but these are not sediment and adding 'material' classes that are independent of consolidation seems like more overhead than needed. Note that a given material is likely to fit in more that one class; for example the sediment subclasses include compositional classes (e.g. carbonate, clastic) as well as grain size classes (gravel-size sediment). A calcareous ooze sample would be both 'mud-size sediment' and 'carbonate sediment'.   Change owl:class to skos:concept, and rdfs:subClassOf to skos:broader.
