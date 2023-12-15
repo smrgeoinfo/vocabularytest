@@ -2,7 +2,7 @@
 comment: | 
   WARNING: This file is generated. Any edits will be lost!
 title: "Earth and Environmental Science specimen type extension"
-date: "2023-12-15T17:30:20.838618+00:00"
+date: "2023-12-15T22:08:55.342703+00:00"
 subtitle: |
   This concept scheme contains skos concepts for categorizing kinds of Earth Material sample types, extending the iSamples Material Sample Type vocabulary. Defintions from SESAR, ODM2, wikipedia, ESS-DIVE, and other sources; sources are cited with each term.
 execute:
