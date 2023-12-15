@@ -266,7 +266,7 @@ def describeVocabulary(G, V):
     if len(gobj)>0:
         scheme = gobj[0]
     else:
-        print("vocabulary root object must have a skos:prefLabel")
+        print(f"{V} object must have a skos:prefLabel")
         return 1
     scheme = getObjects(G, V, skosT("prefLabel"))[0]
     lscheme = scheme.replace(" ","")
