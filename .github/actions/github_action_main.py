@@ -59,9 +59,13 @@ def main():
         sys.exit(-1)
 
 def _quarto_render_html(markdown_in:str, target:str):
-    print("In githubActionMain: Quarto render: ",markdown_in,  target)
-    result=subprocess.run(["/opt/quarto/bin/quarto", "check"], capture_output=True )
-    print("quarto check: ",result.stdout)
+    with open(output_path, "w") as f:
+        print("In githubActionMain: Quarto render: ",markdown_in,  target)
+        result = subprocess.run(["/opt/quarto/bin/quarto", "check"], f)
+        print("Quarto call result ", result.returncode)
+    resultfile = open(output_path, "r")
+    print("output path content: ", resultfile.read())
+    resultfile.close()
 
 def _run_make_in_container(target: str):
     print("In githubActionMain: make in container, target: ", target)
