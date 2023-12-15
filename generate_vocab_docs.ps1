@@ -12,7 +12,7 @@ foreach ($src in $SOURCES) {
     Write-Host $src
     $fname = [System.IO.Path]::ChangeExtension($src, "md")
     Write-Host "Generating $fname..."
-#    & python "vocab2mdSMR.py" ("{0}{1}" -f $SOURCE_BASE, $src) | Out-File -FilePath ("{0}{1}" -f $DEST_FOLDER, $fname)
+#    & python "vocab2mdFileV2.py" ("{0}{1}" -f $SOURCE_BASE, $src) | Out-File -FilePath ("{0}{1}" -f $DEST_FOLDER, $fname)
     & "C:\Users\smrTu\miniconda3\Scripts\conda.exe" run -n quarto python "C:\Users\smrTu\OneDrive\Documents\GithubC\iSamples\metadata_profile_earth_science\vocab2mdSMR.py" ("{0}{1}" -f $SOURCE_BASE, $src) | Out-File -FilePath ("{0}{1}" -f $DEST_FOLDER, $fname)
 
 }

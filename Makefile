@@ -33,7 +33,7 @@ cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 # this rule applies to any target name with a .ttl extension. This will run on all
 #  the $(ROOT_VOCAB_SOURCES)  because of the cache_root rule.
 #  vocab.py loads the vocabs into the local squAlchemy database that is 
-#  called by vocab2md.py, and used by tools/navocab
+#  called by vocab2mdCache.py, and used by tools/navocab
 %.ttl:
 	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
 	@echo "running vocab.py on "  $@
@@ -52,12 +52,12 @@ setup_docs:
 
 # this rule applies to any target name/ will run all the $(ROOT_VOCAB_URIS)
 #  becasue of the docs: rule
-#  vocab2md.py generates a markdown file in the docs directory, using the vocabulary
+#  vocab2mdCache.py generates a markdown file in the docs directory, using the vocabulary
 #  baseURI (the uri for the conceptScheme in the )
 %:
 	@echo $(subst _,:,$@)
 	@echo "running vocab2md on " $@
-	${PYTHON} tools/vocab2md.py $(CACHE) $(subst _,:,$@) > $(DOCS)/$@.md
+	${PYTHON} tools/vocab2mdCacheV2.py $(CACHE) $(subst _,:,$@) > $(DOCS)/$@.md
 
 # ===HELP===
 .PHONY: help

@@ -10,7 +10,7 @@ import subprocess
 import sys
 import click
 import vocab
-import vocab2md
+import vocab2mdCache
 
 @click.option("--command", default="docs", help="docs or uijson")
 @click.option("--path", default="../vocabulary", help="path to turtle files")
@@ -66,7 +66,7 @@ def _run_uijson_in_container(output_path: str, vocab_type: str):
 def _run_docs_in_container(output_path: str, vocab_type: str):
     with open(output_path, "w") as f:
         docs_args = ["../cache/vocabularies.db", vocab_type]
-        _run_python_in_container("vocab2md.py", docs_args, f)
+        _run_python_in_container("vocab2mdCache.py", docs_args, f)
         print(f"Successfully wrote doc file to {output_path}")
 
 

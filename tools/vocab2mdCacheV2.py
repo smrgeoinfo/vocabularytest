@@ -8,10 +8,13 @@ Internet of Samples: Toward an Interdisciplinary Cyberinfrastructure
 for Material Samples, Award Number:2004815; 
 
 S.M. Richard 2023-02-27 Updated to show some other SKOS properties 
-and change formating
+and change formatting
 
-This code reads a skos vocabulary file, serialized as turtle, 
-from a URL and writes a markdown file to the stdout. 
+This code reads a skos vocabulary file from a sqlAlchemy database
+located at ../cache/vocabularies. Vocabularies are represented using SKOS
+RDF vocabulary and Turtle serialization. Vocabularies are identified with
+the  URI of the skos:ConceptScheme. The vocabualary representation is transformed
+from SKOS/rdf/turtle to stdout as a text Markdown file using Quarto conventions.
 The markdown uses some special syntax that is interpreted by 
 Quarto for better html rendering
 
@@ -27,6 +30,8 @@ import textwrap
 import click
 import rdflib
 import datetime
+import navocab  # this is a local python package with routines for
+                # for interacting with skos rdf in an sqlAlchemy database
 
 NS = {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -321,29 +326,29 @@ def conceptschemelist(G):
     return res
 
 @click.command()
-@click.argument("ttl")
-def main(ttl):
-    # ttl is argument, remove for debugging
+@click.argument("source")
+@click.argument("vocabulary")
+# @click.argument("ttl")  #this is from the text file version
+#def main(ttl):
+def main(source, vocabulary):
     """Generate Pandoc markdown from a SKOS vocabulary in Turtle.
-
     TTL may be a local file or URL.
     Output to STDOUT.
     """
-    #for debugging
-    #ttl = "https://raw.githubusercontent.com/smrgeoinfo/vocabulary/main/geochemistry/AnalyticalTechniqueMerg2.ttl"
-    #  ttl = "C:\\Workspace\\GithubC\\iSamples\\vocabularies\\src\\extensions\\specimenTypeExtension.ttl"
-    #ttl = "C:\\Users\\smrTu\\OneDrive\\Documents\\GithubC\\iSamples\\metadata_profile_earth_science\\vocabulary\\earthenv_sampled_feature_role.ttl"
-    vgraph = rdflib.ConjunctiveGraph()
-    vgraph.parse(ttl, format="text/turtle")
-    for k, v in NS.items():
-        vgraph.bind(k, v)
-    vocabs = listVocabularies(vgraph)
+    # vgraph = rdflib.ConjunctiveGraph()
+    # vgraph.parse(ttl, format="text/turtle")
+    # for k, v in NS.items():
+    #     vgraph.bind(k, v)
+    # vocabs = listVocabularies(vgraph)
+    # res = []
+    # res.append(conceptschemelist(vgraph))
+
+    source = f"sqlite:///{source}"
+    store = navocab.VocabularyStore(storage_uri=source)
     res = []
 
-    res.append(conceptschemelist(vgraph))
-
-    for vocab in vocabs:
-        res.append(describeVocabulary(vgraph, vocab))
+    vocabulary = store.expand_name(vocabulary)
+    res.append(describeVocabulary(store._g, vocabulary))
 
     for doc in res:
         for line in doc:

@@ -240,13 +240,10 @@ def describeVocabulary(G, V):
 @click.command()
 @click.argument("source")
 @click.argument("vocabulary")
-def main(source, vocabulary):
+def main(source , vocabulary):
     """Generate Pandoc markdown from a SKOS vocabulary.
-
     SOURCE is a navocab triplestore (sqlite database created by rdflib).
-
     VOCABULARY is a URI for a vocabulary root (e.g. the skos:ConceptScheme) within SOURCE
-
     Output to STDOUT.
     """
     source = f"sqlite:///{source}"

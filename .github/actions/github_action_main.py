@@ -71,9 +71,13 @@ def _quarto_render_html(markdown_in:str, output_path:str):
      
      result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "-t", "html"])
      print("Quarto call result ", result.returncode)
-#    resultfile = open(output_path, "r")
-#    print("output path content: ", resultfile.read())
-#    resultfile.close()
+     if (result == 0):
+         print(f"Quarto call successful for {markdown_in}")
+         return 0
+     else:
+         print(f"Quarto had problem processing {markdown_in}")
+         return 1
+
 
 def _run_make_in_container(target: str):
     print("In githubActionMain: make in container, target: ", target)
@@ -83,24 +87,31 @@ def _run_make_in_container(target: str):
 def _run_uijson_in_container(output_path: str, vocab_uri: str):
     with open(output_path, "w") as f:
         vocab_args = ["-s", "/app/cache/vocabularies.db", "uijson", vocab_uri, "-e"]
-        _run_python_in_container("/app/tools/vocab.py", vocab_args, f)
-        print(f"Successfully wrote uijson file to {output_path}")
+        testflag = _run_python_in_container("/app/tools/vocab.py", vocab_args, f)
+        if (testflag == 0):
+            print(f"Successfully wrote uijson file to {output_path}")
+            return 0
+        else:
+            print(f"problem processing {vocab_uri}")
+            return 1
 
 def _run_docs_in_container(output_path: str, vocab_uri: str):
     with open(output_path, "w") as f:
         docs_args = ["/app/cache/vocabularies.db", vocab_uri]
-        _run_python_in_container("/app/tools/vocab2md.py", docs_args, f)
-        print(f"Successfully wrote doc file to {output_path}")
-        # resultfile = open(output_path, "r")
-        # print("output path content: ", resultfile.read())
-        # resultfile.close()
+        testflag = _run_python_in_container("/app/tools/vocab2mdCacheV2.py", docs_args, f)
+        if (testflag == 0):
+            print(f"Successfully wrote doc file to {output_path}")
+            return 0
+        else:
+            print(f"problem processing {vocab_uri}")
+            return 1
 
 def _run_python_in_container(path_to_python_script: str, args: list[str], f):
     subprocess_args = [sys.executable, path_to_python_script]
     subprocess_args.extend(args)
     result = subprocess.run(subprocess_args, stdout=f)
     print("container call result ", result.returncode)
-#    print("container call args: ", result.args)
+    return result.returncode
 
 
 
