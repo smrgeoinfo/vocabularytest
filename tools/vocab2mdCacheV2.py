@@ -39,7 +39,7 @@ NS = {
     "owl": "http://www.w3.org/2002/07/owl#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "obo": "http://purl.obolibrary.org/obo/",
-    "dcterms": "http://purl.org/dc/terms/"
+    "dcterm": "http://purl.org/dc/terms/"
 }
 
 PFX = """
@@ -64,7 +64,7 @@ def rdfsT(term):
     return rdflib.URIRef(f"{NS['rdfs']}{term}")
 
 def dctT(term):
-    return rdflib.URIRef(f"{NS['dcterms']}{term}")
+    return rdflib.URIRef(f"{NS['dcterm']}{term}")
 
 
 def listVocabularies(g):
