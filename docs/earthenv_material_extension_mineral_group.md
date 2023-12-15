@@ -1,21 +1,32 @@
 ---
 comment: | 
   WARNING: This file is generated. Any edits will be lost!
-title: "iSamples Mineral Group Vocabulary"
-date: "2023-12-15T22:08:38.633249+00:00"
-subtitle: |
-  Vocabulary to extend the mineral material type category with the top level mineral group categories. Uses the Nickel–Strunz mineral classes, which divide minerals into ten classes according to chemical composition and crystal structure. Nickel-Strunz group 10 is not included because that material would be mat:organiccompounds. Version 10 of the classification is modified from v 9 (Strunz and Nickel,2002) by Jim Ferraiolo and others, and now extended and maintained by mindat.org. Some scope notes from linked.data.gov.au.
+format:
+  html:
+    ascii: true
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    anchor-sections: false
+    number-depth: 8
 execute:
   echo: false
 ---
+
+[]{#iSamplesMineralGroupVocabulary}
+
+# **Concept scheme:** iSamples Mineral Group Vocabulary 
+
+Vocabulary last modified:  2022-08-27
+
+subtitle: 
+  Vocabulary to extend the mineral material type category with the top level mineral group categories. Uses the Nickel–Strunz mineral classes, which divide minerals into ten classes according to chemical composition and crystal structure. Nickel-Strunz group 10 is not included because that material would be mat:organiccompounds. Version 10 of the classification is modified from v 9 (Strunz and Nickel,2002) by Jim Ferraiolo and others, and now extended and maintained by mindat.org. Some scope notes from linked.data.gov.au.
 
 Namespace: 
 [`https://w3id.org/isample/vocabulary/mingroup/0.9/mineralgroupvocabulary`](https://w3id.org/isample/vocabulary/mingroup/0.9/mineralgroupvocabulary)
 
 **History**
 
-
-**Concepts**
 
 - [mineral](#mineral)
     - [Mineral-Borate](#boratemineral)
@@ -29,135 +40,185 @@ Namespace:
     - [Mineral-Sulfate, Selenate, or Tellurate](#sulfateselenatetelluratemineral)
     - [Mineral-Sulfide or Sulfosalt](#sulfidesulfosaltmineral)
 
-##  mineral
+**Concepts**
 
 []{#mineral}
 
-Concept: [`mineral`](https://w3id.org/isample/vocabulary/material/1.0/mineral)
+##  mineral
 
 
-###  Mineral-Borate
+- Concept URI token: mineral
+
 
 []{#boratemineral}
 
-Concept: [`boratemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/boratemineral)
+###  Mineral-Borate
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Minerals which contain a borate anion group.
+- Minerals which contain a borate anion group.
 
-###  Mineral-Carbonate or Nitrate
+- **Alternate labels:**
+Nickel-Strunz class 06
+
+- Concept URI token: boratemineral
+
 
 []{#carbonatenitratemineral}
 
-Concept: [`carbonatenitratemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/carbonatenitratemineral)
+###  Mineral-Carbonate or Nitrate
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Carbonate minerals are those minerals containing the carbonate ion
+- Carbonate minerals are those minerals containing the carbonate ion
 
-###  Mineral-Halide
+- **Alternate labels:**
+Nickel-Strunz class 05
+
+- Concept URI token: carbonatenitratemineral
+
 
 []{#halidemineral}
 
-Concept: [`halidemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/halidemineral)
+###  Mineral-Halide
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Minerals with a dominant halide anion.
+- Minerals with a dominant halide anion.
 
-###  Mineral-Native Element
+- **Alternate labels:**
+Nickel-Strunz class 03
+
+- Concept URI token: halidemineral
+
 
 []{#nativeelementmineral}
 
-Concept: [`nativeelementmineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/nativeelementmineral)
+###  Mineral-Native Element
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Elements that occur in nature in uncombined form with a distinct
+- Elements that occur in nature in uncombined form with a distinct
 mineral structure. Includes metals and intermetallic alloys;
 metalloids and nonmetals; carbides, silicides, nitrides, phosphides
 
-###  Mineral-Organic Compound
+- **Alternate labels:**
+Nickel-Strunz class 01
+
+- Concept URI token: nativeelementmineral
+
 
 []{#organicmineral}
 
-Concept: [`organicmineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/organicmineral)
+###  Mineral-Organic Compound
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Salts of organic acids, hydrocarbons, and miscellaneous organic
+- Salts of organic acids, hydrocarbons, and miscellaneous organic
 minerals formed as a result of geological processes. Includes
 hydrocarbons, formates, acetates, oxalates, benzine salts, cyanates.
 Chemical compounds in which one or more atoms of carbon are covalently
 linked to atoms of other elements, most commonly hydrogen, oxygen, or
 nitrogen (https://www.britannica.com/science/organic-compound).
 
-###  Mineral-Oxide
+- **Alternate labels:**
+Nickel-Strunz class 10, 
+Organic mineral, 
+
+- Concept URI token: organicmineral
+
 
 []{#oxidemineral}
 
-Concept: [`oxidemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/oxidemineral)
+###  Mineral-Oxide
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Includes class oxides, hydroxides, and arsenties. Oxides are minerals
-in which the oxide anion is bonded to one or more metal alloys. The
-hydroxide-bearing minerals are typically included in the oxide class.
-Arsenite minerals are very rare oxygen-bearing arsenic minerals.
+- Includes class oxides, hydroxides, and arsenties. Oxides are
+minerals in which the oxide anion is bonded to one or more metal
+alloys. The hydroxide-bearing minerals are typically included in the
+oxide class. Arsenite minerals are very rare oxygen-bearing arsenic
+minerals.
 
-###  Mineral-Phosphate, Arsenate, or Vanadate
+- **Alternate labels:**
+Nickel-Strunz class 04
+
+- Concept URI token: oxidemineral
+
 
 []{#phosphatearsenatevanadatemineral}
 
-Concept: [`phosphatearsenatevanadatemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/phosphatearsenatevanadatemineral)
+###  Mineral-Phosphate, Arsenate, or Vanadate
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Phosphate minerals contain the phosphate anion along sometimes with
+- Phosphate minerals contain the phosphate anion along sometimes with
 arsenate and vanadate substitutions, and chloride, fluoride, and
 hydroxide anions that also fit into the crystal structure. Arsenate
 minerals usually refer to the naturally occurring orthoarsenates.
 
-###  Mineral-Silicate or Germanate
+- **Alternate labels:**
+Nickel-Strunz class 08
+
+- Concept URI token: phosphatearsenatevanadatemineral
+
 
 []{#silicategermanatemineral}
 
-Concept: [`silicategermanatemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/silicategermanatemineral)
+###  Mineral-Silicate or Germanate
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Rock-forming minerals made up of silicate groups
+- Rock-forming minerals made up of silicate groups
 
-###  Mineral-Sulfate, Selenate, or Tellurate
+- **Alternate labels:**
+Nickel-Strunz class 09
+
+- Concept URI token: silicategermanatemineral
+
 
 []{#sulfateselenatetelluratemineral}
 
-Concept: [`sulfateselenatetelluratemineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/sulfateselenatetelluratemineral)
+###  Mineral-Sulfate, Selenate, or Tellurate
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-class of minerals that include the sulfate ion within their structure.
+- class of minerals that include the sulfate ion within their
+structure.
 
-###  Mineral-Sulfide or Sulfosalt
+- **Alternate labels:**
+Nickel-Strunz class 07
+
+- Concept URI token: sulfateselenatetelluratemineral
+
 
 []{#sulfidesulfosaltmineral}
 
-Concept: [`sulfidesulfosaltmineral`](https://w3id.org/isample/vocabulary/mingroup/0.9/sulfidesulfosaltmineral)
+###  Mineral-Sulfide or Sulfosalt
 
-Child of:
+
+- Child of:
  [`mineral`](#mineral)
 
-Sulfide minerals are a class of minerals containing sulfide or
+- Sulfide minerals are a class of minerals containing sulfide or
 disulfide as the major anion. Sulfosalt minerals are those complex
 sulfide minerals with the general formula: AmBnSp; where A represents
 a metal such as copper, lead, silver, iron, and rarely mercury, zinc,
@@ -167,5 +228,11 @@ and S is sulfur or rarely selenium or/and tellurium (m, n, and p are
 integer formula subscripts). Includes sulfides, selenides, tellurides;
 arsenides, antimonides, bismuthides; sulfarsenites, sulfantimonites,
 sulfbismuthites
+
+- **Alternate labels:**
+Nickel-Strunz class 02
+
+- Concept URI token: sulfidesulfosaltmineral
+
 
 

@@ -1,13 +1,26 @@
 ---
 comment: | 
   WARNING: This file is generated. Any edits will be lost!
-title: "Earth and Environmental Science specimen type extension"
-date: "2023-12-15T22:08:55.342703+00:00"
-subtitle: |
-  This concept scheme contains skos concepts for categorizing kinds of Earth Material sample types, extending the iSamples Material Sample Type vocabulary. Defintions from SESAR, ODM2, wikipedia, ESS-DIVE, and other sources; sources are cited with each term.
+format:
+  html:
+    ascii: true
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    anchor-sections: false
+    number-depth: 8
 execute:
   echo: false
 ---
+
+[]{#EarthandEnvironmentalSciencespecimentypeextension}
+
+# **Concept scheme:** Earth and Environmental Science specimen type extension
+
+Vocabulary last modified:  2023-07-27
+
+subtitle: 
+  This concept scheme contains skos concepts for categorizing kinds of Earth Material sample types, extending the iSamples Material Sample Type vocabulary. Defintions from SESAR, ODM2, wikipedia, ESS-DIVE, and other sources; sources are cited with each term.
 
 Namespace: 
 [`https://w3id.org/isample/1.0/esmaterialsample/essampletype`](https://w3id.org/isample/1.0/esmaterialsample/essampletype)
@@ -16,8 +29,6 @@ Namespace:
 
 * 2023-07-07 SMR add solid material sample and broader relations from classes it subsumes.
 * 2023-07-27 SMR modify base specimen type vocabulary, add 'Non biologic solid object' to replace 'solid material sample', change broader relations in this vocab to use that as parent class where appropriate. 'Solid material sample' is too closely linked to material type, created confusion. Intention is a specimen category for solid objects that are not biologic. Obviously there is some overlap with Research specimens.
-
-**Concepts**
 
 - [Analytical preparation](#analyticalpreparation)
     - [Cell culture](#cellculture)
@@ -79,179 +90,244 @@ Namespace:
     - [Glass slide smear](#glassslidesmear)
     - [Peel](#peel)
 
-##  Analytical preparation
+**Concepts**
 
 []{#analyticalpreparation}
 
-Concept: [`analyticalpreparation`](https://w3id.org/isample/vocabulary/specimentype/1.0/analyticalpreparation)
+##  Analytical preparation
 
 
-###  Cell culture
+- Concept URI token: analyticalpreparation
+
 
 []{#cellculture}
 
-Concept: [`cellculture`](https://w3id.org/isample/1.0/esmaterialsample/cellculture)
+###  Cell culture
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`bundlebiomeaggregation`](#bundlebiomeaggregation)
 
-a collection of cells are grown under controlled conditions, generally
-outside of their natural environment
+- a collection of cells are grown under controlled conditions,
+generally outside of their natural environment
 
-###  Dissolved chemical fraction
+- **Source:**
+https://en.wikipedia.org/wiki/Cell_culture
+
+- Concept URI token: cellculture
+
 
 []{#dissolvedchemicalfraction}
 
-Concept: [`dissolvedchemicalfraction`](https://w3id.org/isample/1.0/esmaterialsample/dissolvedchemicalfraction)
+###  Dissolved chemical fraction
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`fluidincontainer`](#fluidincontainer)
 
-A fluid concentrating some constituent of interest from a parent
+- A fluid concentrating some constituent of interest from a parent
 sample. The dissolved constituent is actually the sample material of
 interest.
 
-####  Eluate
+- **Source:**
+
+
+- Concept URI token: dissolvedchemicalfraction
+
 
 []{#eluate}
 
-Concept: [`eluate`](https://w3id.org/isample/vocabulary/specimentype/1.0/eluate)
+####  Eluate
 
-Child of:
+
+- Child of:
  [`dissolvedchemicalfraction`](#dissolvedchemicalfraction)
 
-The fluid product that contains the analyte of interest washed from a
-chromatography column
+- The fluid product that contains the analyte of interest washed from
+a chromatography column
 
-###  FIB lamella
+- **Source:**
+OSIRIS-Rex Sample types, 
+https://en.wikipedia.org/wiki/Elution, 
+https://osiris-rex.atlassian.net/wiki/spaces/UTDMP/pages/410288138#6.6-Liquids-and-Washes, 
+
+- Concept URI token: eluate
+
 
 []{#fiblamella}
 
-Concept: [`fiblamella`](https://w3id.org/isample/1.0/esmaterialsample/fiblamella)
+###  FIB lamella
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`solidmaterialspecimen`](#solidmaterialspecimen)
 
-very thin sheet of solid material milled from a larger sample using a
-focused ion beam. Used for TEM analysis.
+- very thin sheet of solid material milled from a larger sample using
+a focused ion beam. Used for TEM analysis.
 
-###  Glass slide smear
+- **Source:**
+https://osiris-rex.atlassian.net/wiki/spaces/UTDMP/pages/410288138#6.5-FIB-sections%2C-microtome-slices%2C-atom-probe-tips%2C-TEM-grids, 
+this vocabulary, 
+
+- Concept URI token: fiblamella
+
 
 []{#glassslidesmear}
 
-Concept: [`glassslidesmear`](https://w3id.org/isample/1.0/esmaterialsample/glassslidesmear)
+###  Glass slide smear
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`othersolidobject`](#othersolidobject)
 
-sample from a cell culture (or other microparticulate suspension)
+- sample from a cell culture (or other microparticulate suspension)
 spread into a thin layer on a glass slide for optical investigation
 
-###  Individual solid cube
+- **Source:**
+https://pubs.usgs.gov/of/2001/of01-041/htmldocs/methods/sslide.htm
+
+- Concept URI token: glassslidesmear
+
 
 []{#individualsolidcube}
 
-Concept: [`individualsolidcube`](https://w3id.org/isample/1.0/esmaterialsample/individualsolidcube)
+###  Individual solid cube
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`solidmaterialspecimen`](#solidmaterialspecimen)
 
-A sample that is a prepared cube of material, intended as a sample of
-that material.
+- A sample that is a prepared cube of material, intended as a sample
+of that material.
+
+- **Source:**
+SESAR vocabulary
+
+- Concept URI token: individualsolidcube
+
+
+[]{#magneticfraction}
 
 ###  Magnetic fraction
 
-[]{#magneticfraction}
 
-Concept: [`magneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/magneticfraction)
-
-Child of:
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-a collection of particles separated from a crushed rock sample based
+- a collection of particles separated from a crushed rock sample based
 on their attraction to a magnet.
 
-###  Mechanical fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: magneticfraction
+
 
 []{#mechanicalfraction}
 
-Concept: [`mechanicalfraction`](https://w3id.org/isample/1.0/esmaterialsample/mechanicalfraction)
+###  Mechanical fraction
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-defined by sample preparation involving mechanical processing, e.g.
+- defined by sample preparation involving mechanical processing, e.g.
 grain size, density, or grain shape separation.
 
-###  Mineral separate
+- **Source:**
+this vocabulary
+
+- Concept URI token: mechanicalfraction
+
 
 []{#mineralseparate}
 
-Concept: [`mineralseparate`](https://w3id.org/isample/1.0/esmaterialsample/mineralseparate)
+###  Mineral separate
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-an aggregation of particles of the same mineral extracted and
+- an aggregation of particles of the same mineral extracted and
 concentrated from a rock.
 
-####  Magnetic fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: mineralseparate
+
 
 []{#magneticfraction}
 
-Concept: [`magneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/magneticfraction)
+####  Magnetic fraction
 
-Child of:
+
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-a collection of particles separated from a crushed rock sample based
+- a collection of particles separated from a crushed rock sample based
 on their attraction to a magnet.
 
-####  Non-magnetic fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: magneticfraction
+
 
 []{#nonmagneticfraction}
 
-Concept: [`nonmagneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/nonmagneticfraction)
+####  Non-magnetic fraction
 
-Child of:
+
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-collection of particles from a crushed rock sample based on their lack
-of attraction to a magnet
+- collection of particles from a crushed rock sample based on their
+lack of attraction to a magnet
 
-###  Sectioned specimen
+- **Source:**
+this vocabulary
+
+- Concept URI token: nonmagneticfraction
+
 
 []{#mountedsection}
 
-Concept: [`mountedsection`](https://w3id.org/isample/1.0/esmaterialsample/mountedsection)
+###  Sectioned specimen
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`solidmaterialspecimen`](#solidmaterialspecimen)
 
-a thin slice of a solid material that has been mounted on a glass
+- a thin slice of a solid material that has been mounted on a glass
 slide for study
 
-####  Thick section
+- **Source:**
+this vocabulary
+
+- Concept URI token: mountedsection
+
 
 []{#thicksection}
 
-Concept: [`thicksection`](https://w3id.org/isample/1.0/esmaterialsample/thicksection)
+####  Thick section
 
-Child of:
+
+- Child of:
  [`mountedsection`](#mountedsection)
 
-Thick sections are like thin sections, but milled to a greater
+- Thick sections are like thin sections, but milled to a greater
 thickness. Typcially polished on one or both sides and used for fluid
 or melt inclusion studies, Raman analyses, and infrared spectroscopy
 analyses, and SEM or electron microprobe. The standard thickness for a
@@ -260,43 +336,59 @@ can be made at any thickness.  Thick sections can be attached to a
 glass slide, or can be prepared so that they can be removed from their
 mount as a stand-alone slice of rock.
 
-####  Thin section
+- **Source:**
+https://viva.pressbooks.pub/analyticalmethodsingeosciences/chapter/2-2-thin-section-and-thick-section-anatomy/
+
+- Concept URI token: thicksection
+
 
 []{#thinsection}
 
-Concept: [`thinsection`](https://w3id.org/isample/1.0/esmaterialsample/thinsection)
+####  Thin section
 
-Child of:
+
+- Child of:
  [`mountedsection`](#mountedsection)
 
-thin sliver of rock cut from a sample with a diamond saw and ground
+- thin sliver of rock cut from a sample with a diamond saw and ground
 optically flat, and then mounted on a glass slide and ground smooth
 using progressively finer abrasive grit until the sample is 30 microns
 thick.
 
-#####  Polished thin section
+- **Source:**
+ https://en.wikipedia.org/wiki/Thin_section, 
+http://vocabulary.odm2.org/specimentype/thinSection/ , 
+
+- Concept URI token: thinsection
+
 
 []{#polishedthinsection}
 
-Concept: [`polishedthinsection`](https://w3id.org/isample/1.0/esmaterialsample/polishedthinsection)
+#####  Polished thin section
 
-Child of:
+
+- Child of:
  [`thinsection`](#thinsection)
 
-a thin section that has its free surface polished until perfectly
+- a thin section that has its free surface polished until perfectly
 planar and free of pits and scratches. Used for reflected light
 petrography and for electron microprobe or SEM investigation.
 
-####  Ultra thin section
+- **Source:**
+http://www.minsocam.org/ammin/AM53/AM53_2070.pdf
+
+- Concept URI token: polishedthinsection
+
 
 []{#ultrathinsection}
 
-Concept: [`ultrathinsection`](https://w3id.org/isample/1.0/esmaterialsample/ultrathinsection)
+####  Ultra thin section
 
-Child of:
+
+- Child of:
  [`mountedsection`](#mountedsection)
 
-An ordinary thin section that is attached to the glass slide using a
+- An ordinary thin section that is attached to the glass slide using a
 soluble cement such as Canada balsam (soluble in ethanol) to allow
 both sides to be worked on. The section is polished on both sides
 using a fine diamond paste until it has a thickness in the range of
@@ -304,239 +396,332 @@ using a fine diamond paste until it has a thickness in the range of
 of very fine-grained carbonate rocks, and also in the preparation of
 mineral and rock specimens for transmission electron microscopy.
 
-###  Non-magnetic fraction
+- **Source:**
+http://vocabulary.odm2.org/specimentype/thinSection/  | https://en.wikipedia.org/wiki/Thin_section
+
+- Concept URI token: ultrathinsection
+
 
 []{#nonmagneticfraction}
 
-Concept: [`nonmagneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/nonmagneticfraction)
+###  Non-magnetic fraction
 
-Child of:
+
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-collection of particles from a crushed rock sample based on their lack
-of attraction to a magnet
+- collection of particles from a crushed rock sample based on their
+lack of attraction to a magnet
 
-###  Peel
+- **Source:**
+this vocabulary
+
+- Concept URI token: nonmagneticfraction
+
 
 []{#peel}
 
-Concept: [`peel`](https://w3id.org/isample/1.0/esmaterialsample/peel)
+###  Peel
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`othersolidobject`](#othersolidobject)
 
-Acetate peels are made by polishing a planar surface on a sample,
+- Acetate peels are made by polishing a planar surface on a sample,
 etching it with acid to give it some relief, and then chemically
 melting a piece of acetate onto that surface. The acetate is then
 pulled off for examination under a microscope. The acetate preserves a
 fingerprint of the internal structure of the sample surface. Used in
 paleontology to study complex fossils, e.g. bryozoan.
 
-###  Prepared powder
+- **Source:**
+https://strata.uga.edu/cincy/fauna/bryozoanStudy/acetatePeels.html
+
+- Concept URI token: peel
+
 
 []{#preparedpowder}
 
-Concept: [`preparedpowder`](https://w3id.org/isample/1.0/esmaterialsample/preparedpowder)
+###  Prepared powder
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-distinguish from particulate in that particulate is sampled as a
+- distinguish from particulate in that particulate is sampled as a
 micron-size aggregate, whereas this material is ground to a powder for
 subsequent analysis; it is a powder as a function of some preparation
 process (e.g. chemical precipitation)
 
-####  Prepared rock powder
+- **Alternate labels:**
+Powder
+
+
+- **Source:**
+this vocabulary
+
+- Concept URI token: preparedpowder
+
 
 []{#preparedrockpowder}
 
-Concept: [`preparedrockpowder`](https://w3id.org/isample/1.0/esmaterialsample/preparedrockpowder)
+####  Prepared rock powder
 
-Child of:
+
+- Child of:
  [`preparedpowder`](#preparedpowder)
 
-a powder manufactured by pulverizing a rock.
+- a powder manufactured by pulverizing a rock.
 
-###  Pressed pellet
+- **Source:**
+https://www.geosamples.org/vocabularies/sample-type-object
+
+- Concept URI token: preparedrockpowder
+
 
 []{#pressedpellet}
 
-Concept: [`pressedpellet`](https://w3id.org/isample/1.0/esmaterialsample/pressedpellet)
+###  Pressed pellet
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`solidmaterialspecimen`](#solidmaterialspecimen)
 
-a sample prepared by grinding a parent sample to a fine powder, mixing
-it with a binder, and pressing the mixture into a die at a pressure of
-between 15 and 35 tons to produce a solid disc for subsequent
-analysis, typically by X-Ray fluorescence.
+- a sample prepared by grinding a parent sample to a fine powder,
+mixing it with a binder, and pressing the mixture into a die at a
+pressure of between 15 and 35 tons to produce a solid disc for
+subsequent analysis, typically by X-Ray fluorescence.
 
-###  Residual material
+- **Source:**
+this vocabulary
+
+- Concept URI token: pressedpellet
+
 
 []{#residualmaterial}
 
-Concept: [`residualmaterial`](https://w3id.org/isample/1.0/esmaterialsample/residualmaterial)
+###  Residual material
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
 
-Sample is material remaining after processing to extract some other
+- Sample is material remaining after processing to extract some other
 components of interest from the sample.
 
-###  Slab
+- **Alternate labels:**
+Residue
+
+
+- **Source:**
+this vocabulary
+
+- Concept URI token: residualmaterial
+
 
 []{#slab}
 
-Concept: [`slab`](https://w3id.org/isample/1.0/esmaterialsample/slab)
+###  Slab
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`solidmaterialspecimen`](#solidmaterialspecimen)
 
-a relatively planar rock sample,cut from a large sample to produce a
+- a relatively planar rock sample,cut from a large sample to produce a
 tabular peice of rock with the irregular outline of the original
 sample on the diameter where the cut was mate.
 
+- **Source:**
+this vocabulary
 
-##  Bundle biome aggregation
+- Concept URI token: slab
+
+
 
 []{#bundlebiomeaggregation}
 
-Concept: [`bundlebiomeaggregation`](https://w3id.org/isample/vocabulary/specimentype/1.0/bundlebiomeaggregation)
+##  Bundle biome aggregation
 
 
-###  Cell culture
+- Concept URI token: bundlebiomeaggregation
+
 
 []{#cellculture}
 
-Concept: [`cellculture`](https://w3id.org/isample/1.0/esmaterialsample/cellculture)
+###  Cell culture
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`bundlebiomeaggregation`](#bundlebiomeaggregation)
 
-a collection of cells are grown under controlled conditions, generally
-outside of their natural environment
+- a collection of cells are grown under controlled conditions,
+generally outside of their natural environment
+
+- **Source:**
+https://en.wikipedia.org/wiki/Cell_culture
+
+- Concept URI token: cellculture
 
 
-##  Fluid in container
 
 []{#fluidincontainer}
 
-Concept: [`fluidincontainer`](https://w3id.org/isample/vocabulary/specimentype/1.0/fluidincontainer)
+##  Fluid in container
 
 
-###  Direct fluid sample
+- Concept URI token: fluidincontainer
+
 
 []{#directfluidsample}
 
-Concept: [`directfluidsample`](https://w3id.org/isample/1.0/esmaterialsample/directfluidsample)
+###  Direct fluid sample
 
-Child of:
+
+- Child of:
  [`fluidincontainer`](#fluidincontainer)
 
-a fluid collected from the sampled feature (e.g. water body,
+- a fluid collected from the sampled feature (e.g. water body,
 hydrothermal vent, atmosphere...) with no processing. (e.g.
 filtration, addition of preservatives).
 
-###  Dissolved chemical fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: directfluidsample
+
 
 []{#dissolvedchemicalfraction}
 
-Concept: [`dissolvedchemicalfraction`](https://w3id.org/isample/1.0/esmaterialsample/dissolvedchemicalfraction)
+###  Dissolved chemical fraction
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`fluidincontainer`](#fluidincontainer)
 
-A fluid concentrating some constituent of interest from a parent
+- A fluid concentrating some constituent of interest from a parent
 sample. The dissolved constituent is actually the sample material of
 interest.
 
-####  Eluate
+- **Source:**
+
+
+- Concept URI token: dissolvedchemicalfraction
+
 
 []{#eluate}
 
-Concept: [`eluate`](https://w3id.org/isample/vocabulary/specimentype/1.0/eluate)
+####  Eluate
 
-Child of:
+
+- Child of:
  [`dissolvedchemicalfraction`](#dissolvedchemicalfraction)
 
-The fluid product that contains the analyte of interest washed from a
-chromatography column
+- The fluid product that contains the analyte of interest washed from
+a chromatography column
 
-###  Processed fluid sample
+- **Source:**
+OSIRIS-Rex Sample types, 
+https://en.wikipedia.org/wiki/Elution, 
+https://osiris-rex.atlassian.net/wiki/spaces/UTDMP/pages/410288138#6.6-Liquids-and-Washes, 
+
+- Concept URI token: eluate
+
 
 []{#processedfluidsample}
 
-Concept: [`processedfluidsample`](https://w3id.org/isample/1.0/esmaterialsample/processedfluidsample)
+###  Processed fluid sample
 
-Child of:
+
+- Child of:
  [`fluidincontainer`](#fluidincontainer)
 
-fluid sample that has been processed in some way during or after
+- fluid sample that has been processed in some way during or after
 collection, e.g. by filtering, addition of preservatives.
 
-####  Filtrate
+- **Source:**
+this vocabulary
+
+- Concept URI token: processedfluidsample
+
 
 []{#filtrate}
 
-Concept: [`filtrate`](https://w3id.org/isample/1.0/esmaterialsample/filtrate)
+####  Filtrate
 
-Child of:
+
+- Child of:
  [`processedfluidsample`](#processedfluidsample)
 
-A sample that has gone through a filtration process to separate solids
-from fluids (liquids or gases), using a filter medium through which
-only the fluid can pass. Must be associated with a filter size.
+- A sample that has gone through a filtration process to separate
+solids from fluids (liquids or gases), using a filter medium through
+which only the fluid can pass. Must be associated with a filter size.
+
+- **Source:**
+https://github.com/ess-dive-community/essdive-sample-id-metadata/blob/master/terms/objectType.md
+
+- Concept URI token: filtrate
 
 
-##  genericAggregation
 
 []{#genericaggregation}
 
-Concept: [`genericaggregation`](https://w3id.org/isample/vocabulary/specimentype/1.0/genericaggregation)
+##  genericAggregation
 
 
-###  Boxed core
+- Concept URI token: genericaggregation
+
 
 []{#boxedcore}
 
-Concept: [`boxedcore`](https://w3id.org/isample/1.0/esmaterialsample/boxedcore)
+###  Boxed core
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-A collection of core peices that are stored in an individual box.
+- A collection of core peices that are stored in an individual box.
 Typically the box will contain core peices from the same core.
 
-###  Composite sample
+- **Source:**
+this vocabulary
+
+- Concept URI token: boxedcore
+
 
 []{#compositesample}
 
-Concept: [`compositesample`](https://w3id.org/isample/1.0/esmaterialsample/compositesample)
+###  Composite sample
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-a sample composed of multiple peices, representative of some material,
-or representative of some site. The peices do not all originate from
-the same object.
+- a sample composed of multiple peices, representative of some
+material, or representative of some site. The peices do not all
+originate from the same object.
 
-####  Chip Channel Sample
+- **Source:**
+this vocabulary
+
+- Concept URI token: compositesample
+
 
 []{#chipchannelsample}
 
-Concept: [`chipchannelsample`](https://w3id.org/isample/1.0/esmaterialsample/chipchannelsample)
+####  Chip Channel Sample
 
-Child of:
+
+- Child of:
  [`compositesample`](#compositesample)
 
-small chips of rock collected over a specified interval, with the
+- small chips of rock collected over a specified interval, with the
 objective to obtain a representative sample for that interval. Most of
 the time chip channel samples are collected in succession along a
 sample line which is laid out in advance using a tape.  The freshest
@@ -546,256 +731,362 @@ ranging from 30cm to 7m. Due to the method of sampling, chip channel
 samples tend to be rather large (up to 20 pounds for a five foot
 interval)
 
-####  High Grade Sample
+- **Source:**
+http://earthsci.org/mineral/rockmin/sampling/sampling.html#Rock%20Sampling
+
+- Concept URI token: chipchannelsample
+
 
 []{#highgradesample}
 
-Concept: [`highgradesample`](https://w3id.org/isample/1.0/esmaterialsample/highgradesample)
+####  High Grade Sample
 
-Child of:
+
+- Child of:
  [`compositesample`](#compositesample)
 
-in mineral exploration, selective pieces of the most highly
+- in mineral exploration, selective pieces of the most highly
 mineralized material from a mineralize site, intentionally excluding
 less mineralized material. A high grade sample might be collected to
 indicate what the best possible values are, or to provide material for
 certain types of trace element analyses.
 
-####  Site composite sample
+- **Source:**
+http://earthsci.org/mineral/rockmin/sampling/sampling.html#Rock%20Sampling
+
+- Concept URI token: highgradesample
+
 
 []{#sitecompositesample}
 
-Concept: [`sitecompositesample`](https://w3id.org/isample/1.0/esmaterialsample/sitecompositesample)
+####  Site composite sample
 
-Child of:
+
+- Child of:
  [`compositesample`](#compositesample)
 
-an aggregation of peices of uniform material collected over some area
-(generally greater than 2.5m across). These are the ideal
+- an aggregation of peices of uniform material collected over some
+area (generally greater than 2.5m across). These are the ideal
 'representative' samples used in mineral exploration. A composite
 sample might be collected to determine the background values of trace
 elements in a particular type of rock, or to determine if ore grade
 mineralization is present over a large area.
 
-###  Core Catcher
+- **Source:**
+http://earthsci.org/mineral/rockmin/sampling/sampling.html#Rock%20Sampling
+
+- Concept URI token: sitecompositesample
+
 
 []{#corecatcher}
 
-Concept: [`corecatcher`](https://w3id.org/isample/1.0/esmaterialsample/corecatcher)
+###  Core Catcher
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-material recovered from the core catcher of a sedimentary core and
+- material recovered from the core catcher of a sedimentary core and
 which is treated as a separate section from the core. The core catcher
 is a device at the bottom of the core barrel that prevents the core
 from sliding out while the barrel is retrieved from the hole.
 (http://publications.iodp.org/proceedings/323/102/102_.htm)
 
-###  Cuttings
+- **Source:**
+https://www.geosamples.org/vocabularies/sample-type-object
+
+- Concept URI token: corecatcher
+
 
 []{#cuttings}
 
-Concept: [`cuttings`](https://w3id.org/isample/1.0/esmaterialsample/cuttings)
+###  Cuttings
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-unconsolidated Earth material produced by the grinding action of a
+- unconsolidated Earth material produced by the grinding action of a
 drill bit during drilling of a borehole.
 
-###  Dredge
+- **Source:**
+http://vocabulary.odm2.org/specimentype/cuttings/
+
+- Concept URI token: cuttings
+
 
 []{#dredge}
 
-Concept: [`dredge`](https://w3id.org/isample/1.0/esmaterialsample/dredge)
+###  Dredge
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-an aggregation of material sampled by dragging a collection bucket
+- an aggregation of material sampled by dragging a collection bucket
 (dredge) across the bottom of a water body
 
-###  Material Captured in Filter
+- **Source:**
+https://www.geosamples.org/vocabularies/sample-type-object
+
+- Concept URI token: dredge
+
 
 []{#materialcapturedinfilter}
 
-Concept: [`materialcapturedinfilter`](https://w3id.org/isample/1.0/esmaterialsample/materialcapturedinfilter)
+###  Material Captured in Filter
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-A material sample captured in filter, for example from a water sample
-that was filtered. Must be associated with filter size field.
+- A material sample captured in filter, for example from a water
+sample that was filtered. Must be associated with filter size field.
 
-###  Mechanical fraction
+- **Source:**
+https://github.com/ess-dive-community/essdive-sample-id-metadata/blob/master/terms/objectType.md
+
+- Concept URI token: materialcapturedinfilter
+
 
 []{#mechanicalfraction}
 
-Concept: [`mechanicalfraction`](https://w3id.org/isample/1.0/esmaterialsample/mechanicalfraction)
+###  Mechanical fraction
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-defined by sample preparation involving mechanical processing, e.g.
+- defined by sample preparation involving mechanical processing, e.g.
 grain size, density, or grain shape separation.
 
-###  Mineral separate
+- **Source:**
+this vocabulary
+
+- Concept URI token: mechanicalfraction
+
 
 []{#mineralseparate}
 
-Concept: [`mineralseparate`](https://w3id.org/isample/1.0/esmaterialsample/mineralseparate)
+###  Mineral separate
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-an aggregation of particles of the same mineral extracted and
+- an aggregation of particles of the same mineral extracted and
 concentrated from a rock.
 
-####  Magnetic fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: mineralseparate
+
 
 []{#magneticfraction}
 
-Concept: [`magneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/magneticfraction)
+####  Magnetic fraction
 
-Child of:
+
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-a collection of particles separated from a crushed rock sample based
+- a collection of particles separated from a crushed rock sample based
 on their attraction to a magnet.
 
-####  Non-magnetic fraction
+- **Source:**
+this vocabulary
+
+- Concept URI token: magneticfraction
+
 
 []{#nonmagneticfraction}
 
-Concept: [`nonmagneticfraction`](https://w3id.org/isample/1.0/esmaterialsample/nonmagneticfraction)
+####  Non-magnetic fraction
 
-Child of:
+
+- Child of:
  [`mineralseparate`](#mineralseparate)
  [`analyticalpreparation`](#analyticalpreparation)
 
-collection of particles from a crushed rock sample based on their lack
-of attraction to a magnet
+- collection of particles from a crushed rock sample based on their
+lack of attraction to a magnet
 
-###  Natural aggregate specimen
+- **Source:**
+this vocabulary
+
+- Concept URI token: nonmagneticfraction
+
 
 []{#naturalaggregate}
 
-Concept: [`naturalaggregate`](https://w3id.org/isample/1.0/esmaterialsample/naturalaggregate)
+###  Natural aggregate specimen
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-E.g beach sand, soil, river sediment, scoop of regolith.
-Specimen is aggregate of non-consolidated material formed by natural
+- E.g beach sand, soil, river sediment, scoop of regolith.
+- Specimen is aggregate of non-consolidated material formed by natural
 processes. Particles have not been intentionally modified from the
 sampled feature.
 
-###  Prepared powder
+- **Alternate labels:**
+Aggregate sample
+
+
+- **Source:**
+this vocabulary
+
+- Concept URI token: naturalaggregate
+
 
 []{#preparedpowder}
 
-Concept: [`preparedpowder`](https://w3id.org/isample/1.0/esmaterialsample/preparedpowder)
+###  Prepared powder
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`genericaggregation`](#genericaggregation)
 
-distinguish from particulate in that particulate is sampled as a
+- distinguish from particulate in that particulate is sampled as a
 micron-size aggregate, whereas this material is ground to a powder for
 subsequent analysis; it is a powder as a function of some preparation
 process (e.g. chemical precipitation)
 
-####  Prepared rock powder
+- **Alternate labels:**
+Powder
+
+
+- **Source:**
+this vocabulary
+
+- Concept URI token: preparedpowder
+
 
 []{#preparedrockpowder}
 
-Concept: [`preparedrockpowder`](https://w3id.org/isample/1.0/esmaterialsample/preparedrockpowder)
+####  Prepared rock powder
 
-Child of:
+
+- Child of:
  [`preparedpowder`](#preparedpowder)
 
-a powder manufactured by pulverizing a rock.
+- a powder manufactured by pulverizing a rock.
 
-###  Trawl
+- **Source:**
+https://www.geosamples.org/vocabularies/sample-type-object
+
+- Concept URI token: preparedrockpowder
+
 
 []{#trawl}
 
-Concept: [`trawl`](https://w3id.org/isample/1.0/esmaterialsample/trawl)
+###  Trawl
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-an aggregation of biogenic or non-biogenic material extracted from a
+- an aggregation of biogenic or non-biogenic material extracted from a
 water body
 
-###  Resonance ionization mass spectrometry
+- **Source:**
+this vocabulary
+
+- Concept URI token: trawl
+
 
 []{#temgrid}
 
-Concept: [`temgrid`](https://w3id.org/isample/vocabulary/specimentype/1.0/temgrid)
+###  Resonance ionization mass spectrometry
 
-Child of:
+
+- Child of:
  [`genericaggregation`](#genericaggregation)
 
-FIB sections and microtome slices set onto a small grid for handling,
-transport, and analysis using a transmission electron microscope
-(TEM). The grid itself can be given a single sample identifier
-(similar to how there are multiple grains in a grain mount). The
-linkage from the individual samples in the grid to their parent
-sample(s) should be documented
+- FIB sections and microtome slices set onto a small grid for
+handling, transport, and analysis using a transmission electron
+microscope (TEM). The grid itself can be given a single sample
+identifier (similar to how there are multiple grains in a grain
+mount). The linkage from the individual samples in the grid to their
+parent sample(s) should be documented
+
+- **Source:**
+OSIRIS-Rex Sample types, 
+https://osiris-rex.atlassian.net/wiki/spaces/UTDMP/pages/410288138#6.5-FIB-sections%2C-microtome-slices%2C-atom-probe-tips%2C-TEM-grids, 
+
+- Concept URI token: temgrid
 
 
-##  Other solid Object
 
 []{#othersolidobject}
 
-Concept: [`othersolidobject`](https://w3id.org/isample/vocabulary/specimentype/1.0/othersolidobject)
+##  Other solid Object
 
 
-###  Dust wipe
+- Concept URI token: othersolidobject
+
 
 []{#dustwipe}
 
-Concept: [`dustwipe`](https://w3id.org/isample/1.0/esmaterialsample/dustwipe)
+###  Dust wipe
 
-Child of:
+
+- Child of:
  [`othersolidobject`](#othersolidobject)
 
-a pre-weighed and packaged paper towel (wipe) used to wipe over a
+- a pre-weighed and packaged paper towel (wipe) used to wipe over a
 surface to collect particulates from the surface
 
-###  Glass slide smear
+- **Source:**
+https://www.cdc.gov/nceh/lead/docs/publications/Environmental_Sampling.pdf, dust wipe sampling
+
+- Concept URI token: dustwipe
+
 
 []{#glassslidesmear}
 
-Concept: [`glassslidesmear`](https://w3id.org/isample/1.0/esmaterialsample/glassslidesmear)
+###  Glass slide smear
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`othersolidobject`](#othersolidobject)
 
-sample from a cell culture (or other microparticulate suspension)
+- sample from a cell culture (or other microparticulate suspension)
 spread into a thin layer on a glass slide for optical investigation
 
-###  Peel
+- **Source:**
+https://pubs.usgs.gov/of/2001/of01-041/htmldocs/methods/sslide.htm
+
+- Concept URI token: glassslidesmear
+
 
 []{#peel}
 
-Concept: [`peel`](https://w3id.org/isample/1.0/esmaterialsample/peel)
+###  Peel
 
-Child of:
+
+- Child of:
  [`analyticalpreparation`](#analyticalpreparation)
  [`othersolidobject`](#othersolidobject)
 
-Acetate peels are made by polishing a planar surface on a sample,
+- Acetate peels are made by polishing a planar surface on a sample,
 etching it with acid to give it some relief, and then chemically
 melting a piece of acetate onto that surface. The acetate is then
 pulled off for examination under a microscope. The acetate preserves a
 fingerprint of the internal structure of the sample surface. Used in
 paleontology to study complex fossils, e.g. bryozoan.
+
+- **Source:**
+https://strata.uga.edu/cincy/fauna/bryozoanStudy/acetatePeels.html
+
+- Concept URI token: peel
+
 
 
