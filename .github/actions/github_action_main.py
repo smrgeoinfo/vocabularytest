@@ -60,7 +60,9 @@ def main():
 
 def _quarto_render_html(markdown_in:str, output_path:str):
      print("In githubActionMain: Quarto render: ",markdown_in,  output_path)
-     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "--to html"], stdout=f)
+
+     result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "--to html"])
+
      print("Quarto call result ", result.returncode)
 #    resultfile = open(output_path, "r")
 #    print("output path content: ", resultfile.read())
