@@ -60,7 +60,7 @@ def main():
 
 def _quarto_render_html(markdown_in:str, target:str):
     print("In githubActionMain: Quarto render: ",markdown_in,  target)
-    result=subprocess.run(["/opt/quarto/bin/quarto", "check"])
+    result=subprocess.run(["/opt/quarto/bin/quarto", "check"], capture_output=True )
     print("quarto check: ",result.stdout)
 
 def _run_make_in_container(target: str):
