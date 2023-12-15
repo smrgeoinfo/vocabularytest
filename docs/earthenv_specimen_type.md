@@ -1,1 +1,1 @@
-vocabulary root object must have a skos:prefLabel
+esmat:essampletype object must have a skos:prefLabel

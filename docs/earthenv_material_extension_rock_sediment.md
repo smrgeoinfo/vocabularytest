@@ -1,1 +1,1 @@
-vocabulary root object must have a skos:prefLabel
+rksd:rocksedimentvocabulary object must have a skos:prefLabel

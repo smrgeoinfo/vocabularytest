@@ -1,1 +1,1 @@
-vocabulary root object must have a skos:prefLabel
+essfrole:sfrolevocabulary object must have a skos:prefLabel
