@@ -93,6 +93,8 @@ def getObjects(g, s, p):
     qres = g.query(q, initBindings={'subject':s, 'predicate':p})
 #    print(f"getObjects query:\n {PFX} select ?o where {s} {p} ?o")
 #    print("GetObjects q result len: ", len(qres))
+    if len(gres)<1:
+        return "missing"
     res = []
     for row in qres:
         res.append(row[0])
