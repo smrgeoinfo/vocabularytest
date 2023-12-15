@@ -44,7 +44,7 @@ def main():
         _run_uijson_in_container(os.path.join(path, "earthenv_sampled_feature_role.json"), "essfrole:sfrolevocabulary")
         _run_uijson_in_container(os.path.join(path, "earthenv_specimen_type.json"), "esmat:essampletype")
     elif command == "docs":
-        print("Generating markdown docs")
+        print("Generating markdown and html docs")
         _run_make_in_container("cache")
         _run_docs_in_container(os.path.join(path, "earthenv_material_extension_mineral_group.md"), "ming:mineralgroupvocabulary")
         _quarto_render_html((os.path.join(path, "earthenv_material_extension_mineral_group.md")),path)
