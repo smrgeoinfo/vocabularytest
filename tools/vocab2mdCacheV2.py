@@ -358,14 +358,11 @@ def main(source, vocabulary):
 
     vocabulary = store.expand_name(vocabulary)
     res.append(describeVocabulary(store._g, vocabulary))
-    if len(res)>1:
-        for doc in res:
-            for line in doc:
-                print(line)
-        return 0
-    else:
-        print(f"problem in vocab2mdCache {vocabulary}, {res[0]}")
-        return 1
+    for doc in res:
+        for line in doc:
+            print(line)
+    return 0
+    
 
 
 if __name__ == "__main__":
