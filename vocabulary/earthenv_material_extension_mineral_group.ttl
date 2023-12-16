@@ -2,7 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix : <https://w3id.org/isample/vocabulary/mingroup/0.9/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix mat: <https://w3id.org/isample/vocabulary/material/1.0/> .
 @prefix ming: <https://w3id.org/isample/vocabulary/mingroup/0.9/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -12,13 +12,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dct:created
+dcterm:created
   rdf:type owl:AnnotationProperty ;
 .
-dct:license
+dcterm:license
   rdf:type owl:AnnotationProperty ;
 .
-dct:modified
+dcterm:modified
   rdf:type owl:AnnotationProperty ;
 .
 <https://orcid.org/0000-0001-6041-5302>
@@ -71,11 +71,11 @@ ming:mineralgroupvocabulary
   rdf:type owl:NamedIndividual ;
   rdf:type owl:Ontology ;
   rdf:type skos:ConceptScheme ;
-  dct:created "2022-08-27"^^xsd:date ;
-  dct:creator <https://orcid.org/0000-0001-6041-5302> ;
-  dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
-  dct:modified "2022-08-27"^^xsd:date ;
-  dct:source "MINERALOGICAL TABLES: by Hugo Strunz and Ernest H. Nickel. E. Schweizerbart’sche Verlagsbuchhandlung, 2002, Stuttgart, Germany (9th edition). 870 p. ISBN number 3-510-65188-X." ;
+  dcterm:created "2022-08-27"^^xsd:date ;
+  dcterm:creator <https://orcid.org/0000-0001-6041-5302> ;
+  dcterm:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
+  dcterm:modified "2022-08-27"^^xsd:date ;
+  dcterm:source "MINERALOGICAL TABLES: by Hugo Strunz and Ernest H. Nickel. E. Schweizerbart’sche Verlagsbuchhandlung, 2002, Stuttgart, Germany (9th edition). 870 p. ISBN number 3-510-65188-X." ;
   rdf:seeAlso "https://www.mindat.org/strunz.php" ;
   rdf:seeAlso "https://www.webmineral.com/help/StrunzClass.shtml" ;
   rdfs:label "iSamples Mineral Group Vocabulary"@en ;
