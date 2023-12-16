@@ -20,13 +20,4 @@ jobs:
           action: docs
           path: ${{ github.workspace }}
       - name: write message
-        run: echo "github workspace " ${{ github.workspace }}
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main # The branch the action should deploy to.
-          folder: docs # The folder the action should deploy.
-          target-folder: docs  #push the contents of the deployment folder into a
-                                 # specific directory on the deployment branch
-          commit-message: "new build of vocab docs"
+        run: echo "done with integration test. have a look at the workflow log"
