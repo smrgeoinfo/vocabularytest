@@ -267,7 +267,7 @@ def describeVocabulary(G, V):
         scheme = gobj[0]
     else:
         print(f"{V} object must have a skos:prefLabel")
-        return 1
+        return "1"
     scheme = getObjects(G, V, skosT("prefLabel"))[0]
     lscheme = scheme.replace(" ","")
     res.append("[]{" + f"#{lscheme}" + "}")
@@ -358,11 +358,14 @@ def main(source, vocabulary):
 
     vocabulary = store.expand_name(vocabulary)
     res.append(describeVocabulary(store._g, vocabulary))
-
-    for doc in res:
-        for line in doc:
-            print(line)
-    return 0
+    if len(res)>1:
+        for doc in res:
+            for line in doc:
+                print(line)
+        return 0
+    else:
+        print(f"problem in vocab2mdCache {vocabulary}, {res[0]}")
+        return 1
 
 
 if __name__ == "__main__":
