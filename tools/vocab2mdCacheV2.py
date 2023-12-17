@@ -266,7 +266,7 @@ def describeVocabulary(G, V):
     if len(gobj)>0:
         scheme = gobj[0]
     else:
-        print(f"vocab2md: {V} object must have a skos:prefLabel")
+#        print(f"vocab2md: {V} object must have a skos:prefLabel")
         return 1
 #    scheme = getObjects(G, V, skosT("prefLabel"))[0]
     lscheme = scheme.replace(" ","")
@@ -280,8 +280,9 @@ def describeVocabulary(G, V):
         res.append(f"Vocabulary last modified:  {modified}")
         res.append("")
     except:
-        print("expected a skos:modified date for most recent update to vocabulary")
-
+#        print("expected a skos:modified date for most recent update to vocabulary")
+        res.append("no modified date")
+        res.append("")
     res.append("subtitle: ")
     for comment in getObjects(G, V, skosT("definition")) + getObjects(G, V, rdfsT("comment")):
         res.append(f"  {comment.strip()}")
@@ -352,7 +353,7 @@ def main(source, vocabulary):
     res = []
 
     vocabulary = store.expand_name(vocabulary)
-    print(f"vocabulary name: {vocabulary}")
+#    print(f"vocabulary name: {vocabulary}")
     theMarkdown = describeVocabulary(store._g, vocabulary)
     res.append(theMarkdown)
 

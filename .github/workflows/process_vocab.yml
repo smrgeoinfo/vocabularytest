@@ -41,7 +41,7 @@ jobs:
           #    used for output files with the appropriate extension.
           inputttl: test_01|test_02
           # these are the URIs for the ConceptScheme; there must be a conceptScheme defined in each vocabulary.
-          inputvocaburi: test2:testvocabulary|test2:testvocabulary
+          inputvocaburi: test1:testvocabulary|test2:testvocabulary
 
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@v4

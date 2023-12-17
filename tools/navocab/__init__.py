@@ -85,7 +85,7 @@ PREFIX rdfs: <{NS['rdfs']}>
 
     def _initialize_store(self, purge=False):
         """Sets up the rdf store using an Sqlite cache."""
-        print("initialize SQLAlchemy datastore")
+    #    print("initialize SQLAlchemy datastore")
         graph = rdflib.ConjunctiveGraph("SQLAlchemy", identifier=self.store_identifier)
         
         
