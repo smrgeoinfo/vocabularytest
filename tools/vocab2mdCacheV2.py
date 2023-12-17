@@ -267,8 +267,8 @@ def describeVocabulary(G, V):
         scheme = gobj[0]
     else:
         print(f"{V} object must have a skos:prefLabel")
-        return "1"
-    scheme = getObjects(G, V, skosT("prefLabel"))[0]
+        return 1
+#    scheme = getObjects(G, V, skosT("prefLabel"))[0]
     lscheme = scheme.replace(" ","")
     res.append("[]{" + f"#{lscheme}" + "}")
     res.append("")
@@ -301,12 +301,7 @@ def describeVocabulary(G, V):
     for root in roots:
         res += termTree(G, V, root, depth=0)
         res.append("")
-    # res.append("```{ojs}")
-    # res.append("import {Tree} from '@d3/tree'")
-    # res.append(TREE_CHART_SCRIPT)
-    # res.append(f"vocab_terms=JSON.parse({json.dumps(json.dumps(termJsonTree(G, V, roots[0], depth=0)))});")
-    # res.append(TREE_CHART_BLOCK)
-    # res.append("```")
+
     res.append("**Concepts**")
     res.append("")
     for aroot in roots:
@@ -357,7 +352,9 @@ def main(source, vocabulary):
     res = []
 
     vocabulary = store.expand_name(vocabulary)
-    res.append(describeVocabulary(store._g, vocabulary))
+    theMarkdown = describeVocabulary(store._g, vocabulary)
+    res.append(theMarkdown)
+
     for doc in res:
         for line in doc:
             print(line)
