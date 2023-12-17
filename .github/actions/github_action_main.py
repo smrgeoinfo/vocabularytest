@@ -77,6 +77,7 @@ def main():
     elif command == "docs":
         print("Generating markdown and html docs")
         index = 0
+        print(f"input markdown file: {inputttl[index]}, vocab uri: {inputvocaburi[index]}")
         while index < len(inputttl):
             _run_docs_in_container(os.path.join(path, inputttl[index]+".md"), inputvocaburi[index])
             _quarto_render_html((os.path.join(path, inputttl[index]+".md")),path)
