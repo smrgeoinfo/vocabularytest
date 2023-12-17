@@ -105,6 +105,7 @@ def load(ctx, uri):
     L = getLogger()
     _s = ctx.obj["store"]
     uris = [uri, ]
+    L.debug(f"uri to load: {uri}")
     if uri =="known":
         uris = CURRENT_ISAMPLES_VOCABULARIES
     for uri in uris:

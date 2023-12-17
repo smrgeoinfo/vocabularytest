@@ -4,16 +4,15 @@ COPY ./.github/actions/github_action_main.py .
 COPY ./Makefile .
 COPY ./tools ./tools
 COPY ./vocabulary ./vocabulary
-#add copy docs
-#COPY ./docs  ./docs
+COPY ./docs  ./docs
+COPY ./cache ./cache
 
-# Quarto install instructions from https://www.r-bloggers.com/2022/07/how-to-set-up-quarto-with-docker-part-1-static-content/
+# RUN chmod a+x /app/github_action_main.py
 RUN chmod a+x /app/github_action_main.py
 
+# Quarto install instructions from https://www.r-bloggers.com/2022/07/how-to-set-up-quarto-with-docker-part-1-static-content/
 RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
-#    quarto \
-#    pandoc-citeproc \
     curl \
     gdebi-core \
     && rm -rf /var/lib/apt/lists/*

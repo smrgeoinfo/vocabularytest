@@ -15,6 +15,13 @@ inputs:
   path: 
     description: 'Path to the output directory for script output'
     required: true
+  inputttl:
+    description: 'list of skos rdf/turtle files with .ttl extension'
+    required: true
+  inputvocaburi:
+    description: 'list of ConceptScheme URIs for the skos vocabularies in this repo. The URIs will be matched with the .ttl files based on order'
+    required: true
+
 runs:   # see https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-docker-container-actions
         #   for documentation
   using: 'docker'
@@ -26,3 +33,5 @@ runs:   # see https://docs.github.com/en/actions/creating-actions/metadata-synta
   args:
     - ${{ inputs.action }}
     - ${{ inputs.path }}
+    - ${{ inputs.inputttl }}
+    - ${{ inputs.inputvocaburi }}

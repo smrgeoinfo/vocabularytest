@@ -32,7 +32,7 @@ cache_root: $(patsubst %,%.ttl,$(ROOT_VOCAB_SOURCES))
 
 # this rule applies to any target name with a .ttl extension. This will run on all
 #  the $(ROOT_VOCAB_SOURCES)  because of the cache_root rule.
-#  vocab.py loads the vocabs into the local squAlchemy database that is 
+#  vocab.py loads the vocabs into the local sqlAlchemy database that is 
 #  called by vocab2mdCache.py, and used by tools/navocab
 %.ttl:
 	${PYTHON} tools/vocab.py --verbosity ERROR -s $(CACHE) load $(SRC)/$@
