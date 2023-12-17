@@ -1,4 +1,19 @@
-# iSamples Vocabularies 
+#  Vocabulary presentation template
+
+This repository hosts python code and github actions to support maintenance and presentation of vocabularies represented using the SKOS RDF vocabulary, serialized using Turtle. 
+
+The code and actions are set up assuming the file structure in this template, with content as follows:
+The root of the repo contains:
+- a readme.md file (this file), which in a deployed version of this templat should replace this section of the readme with a description of the vocabularies that are hosted in the repository
+- Dockerfile. file containing instructions for building a Docker container with the code that converts the SKOS turtle files to Markdown and HTML representations
+- License. License for use of the artifacts in the repository. This template is Licensed with the Apache 2.0 license
+- action.yml. Configuration file for the Github actions that automate updates to the Markdown and HTML files when the repository is updated
+  
+Subdirectories are:
+Cache
+Docs
+Tools
+Vocabulary
 
 ## Vocabulary github action
 
