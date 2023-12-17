@@ -8,12 +8,12 @@ import logging
 import os
 import subprocess
 import sys
-import click
+#import click
 import vocab
 import vocab2mdCache
 
-@click.option("--command", default="docs", help="docs or uijson")
-@click.option("--path", default="../vocabulary", help="path to turtle files")
+# @click.option("--command", default="docs", help="docs or uijson")
+# @click.option("--path", default="../vocabulary", help="path to turtle files")
 
 def main(command, path):
 #    logging.debug(f"environment variables are {os.environ}")
@@ -21,14 +21,18 @@ def main(command, path):
 
 #    command = os.environ["INPUT_ACTION"]
 #    path = os.environ["INPUT_PATH"]
-    if path is None:
-        print("Did not receive a valid path argument so we cannot run.")
-        sys.exit(-1)
-    if not os.path.exists(path):
-        os.makedirs(path)
-        # Change to 777 so subsequent steps that deal with the directory don't run into permissions issues
-        os.chmod(path, 777)
-        print(f"Created {path} since it didn't exist.")
+#     if path is None:
+#         print("Did not receive a valid path argument so we cannot run.")
+#         sys.exit(-1)
+#     if not os.path.exists(path):
+#         os.makedirs(path)
+#         # Change to 777 so subsequent steps that deal with the directory don't run into permissions issues
+#         os.chmod(path, 777)
+#         print(f"Created {path} since it didn't exist.")
+
+    command = 'docs'
+#    command = 'uijson'
+    path = 'vocabularyTemplate'
 
     #  essfrole_earthenv_sampled_feature_role  spec_earthenv_specimen_type
     if command == "uijson":
