@@ -2,13 +2,14 @@
 # see https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
 #  for information on how this works
 
-name: 'iSamples Vocabulary Action'
-author: 'Dave Vieglais'
+name: 'Vocabulary Action'
+author: 'Dave Vieglais( https://orcid.org/0000-0002-6513-4996), 
+         Stephen M Richard (https://orcid.org/0000-0001-6041-5302)'
 description: 'creates a docker container to run python routines that 
        1) load skos (rdf/turtle) vocabularies into an sqlAlchmey
        2) generate markdown from the skos vocabularies using Quarto markdown'
 inputs:
-  action:  # id of input; GitHub stores input parameters as environment variables
+  action:  
     description: 'Which action to run -- defaults to uijson'
     required: true
     default: 'uijson'
@@ -16,10 +17,11 @@ inputs:
     description: 'Path to the output directory for script output'
     required: true
   inputttl:
-    description: 'list of skos rdf/turtle files with .ttl extension'
+    description: 'list of skos rdf/turtle files **without** the .ttl extension'
     required: true
   inputvocaburi:
-    description: 'list of ConceptScheme URIs for the skos vocabularies in this repo. The URIs will be matched with the .ttl files based on order'
+    description: 'list of ConceptScheme URIs for the skos vocabularies in this repo. 
+                   The URIs will be matched with the SKOS files based on order'
     required: true
 
 runs:   # see https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-docker-container-actions
