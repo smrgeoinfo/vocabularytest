@@ -66,7 +66,7 @@ Finally, the `deploy ...` steps in the workflow defined by .github/workflows/pro
 ## Github configuration
 - fork this repository
 - enable github actions
-- enable github pages, based on the docs directory and main branch
+- enable github pages, based on the docs directory and main branch.  HTML pages can be viewed in a browser at https://{yourOrgName}.github.io/{theNAMEyouGiveTheForkedRepo}/{vocabFileName}.html
 
 ### Testing
 There is a test file at `.github/workflows/integration.yml`, which can be run manually using the workflow dispatch option.  It contains the necessary instruction to check out the repository and run it as a GitHub action.
