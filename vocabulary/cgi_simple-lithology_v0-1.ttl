@@ -1,4 +1,4 @@
-# baseURI: file:/C:/Workspace/GithubC/smrgeoinfo/vocabulary/lithology/cgi_simple-lithology_v0-1.ttl
+# baseURI: http://resource.geosciml.org/classifierscheme/cgi/2023.12/simplelithology
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix csw: <http://semantic-web.at/ontologies/csw.owl#> .
@@ -10,6 +10,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://resource.geosciml.org/classifierscheme/cgi/2023.12/>
+
 
 rdf:type
   rdf:type rdf:Property ;
@@ -18,10 +20,7 @@ rdf:type
   rdfs:range rdfs:Class ;
   rdfs:subPropertyOf rdf:type ;
 .
-<file:/C:/Workspace/GithubC/smrgeoinfo/vocabulary/lithology/cgi_simple-lithology_v0-1.ttl>
-  rdf:type owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-.
+
 <http://editor.vocabs.ands.org.au/user/CGI-Geoscience-Terminology-Working-Group>
   rdf:type dcterms:Agent ;
   rdf:type rdfs:Resource ;
@@ -339,7 +338,7 @@ lith:acidic_igneous_material
   dcterms:source "after LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_material ;
   skos:definition "Igneous material with more than 63 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:acidic_igneous_rock ;
   skos:prefLabel "acidic igneous material"@en ;
 .
@@ -351,7 +350,7 @@ lith:acidic_igneous_rock
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock with more than 63 percent SiO2."@en ;
   skos:example "siliceous igneous rock"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:dacite ;
   skos:narrower lith:granitoid ;
   skos:narrower lith:quartz_rich_igneous_rock ;
@@ -364,7 +363,7 @@ lith:alkali-olivine_basalt
   dcterms:source "http://en.wikipedia.org/wiki/Basalt; Carmichael, I.S. Turner, F.J., Verhoogen, John, 1974, Igneous petrology: New York, McGraw HIll Book Co., p.42-43."@en ;
   skos:broader lith:basalt ;
   skos:definition "Alkali olivine basalt is silica-undersaturated, characterized by the absence of orthopyroxene, absence of quartz, presence of olivine, and typically contains some feldspathoid mineral, alkali feldspar or phlogopite in the groundmass. Feldspar phenocrysts typically are labradorite to andesine in composition. Augite is rich in titanium compared to augite in tholeiitic basalt. Alkali olivine basalt is relatively rich in sodium."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "The definition of tholeiite and alkali basalt here are more prescriptive than those found in most reference authorities. This is to actually provide some descriptive criteria to allow assignment of rocks on a hand sample basis to the tholeiite or alkali basalt categories if detailed petrographic or chemical data are available."@en ;
   skos:prefLabel "alkali olivine basalt"@en ;
 .
@@ -376,7 +375,7 @@ lith:alkali_feldspar_granite
   skos:definition "Granitic rock that has a plagioclase to total feldspar ratio less than 0.1. QAPF field 2."@en ;
   skos:example "alaskite"@en ;
   skos:example "peralkaline granite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "alkali feldspar granite"@en ;
 .
 lith:alkali_feldspar_rhyolite
@@ -387,7 +386,7 @@ lith:alkali_feldspar_rhyolite
   skos:definition "Rhyolitoid in which the ratio of plagioclase to total feldspar is less than 0.1. QAPF field 2."@en ;
   skos:example "alkali feldspar liparite"@en ;
   skos:example "peralkaline rhyolite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "alkali feldspar rhyolite"@en ;
 .
 lith:alkali_feldspar_syenite
@@ -396,7 +395,7 @@ lith:alkali_feldspar_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_syenitic_rock ;
   skos:definition "Alkali feldspar syenitic rock that contains 0-5 percent quartz and no feldspathoid in the QAPF fraction. QAPF field 6."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "alkali feldspar syenite"@en ;
 .
 lith:alkali_feldspar_syenitic_rock
@@ -405,7 +404,7 @@ lith:alkali_feldspar_syenitic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitoid ;
   skos:definition "Syenitoid with a plagioclase to total feldspar ratio of less than 0.1. QAPF fields 6, 6*, and 6'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_syenite ;
   skos:narrower lith:foid_bearing_alkali_feldspar_syenite ;
   skos:narrower lith:quartz_alkali_feldspar_syenite ;
@@ -417,7 +416,7 @@ lith:alkali_feldspar_trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_trachytic_rock ;
   skos:definition "Trachytoid that has a plagioclase to total feldspar ratio less than 0.1, between 0 and 5 percent quartz in the QAPF fraction, and no feldspathoid minerals. QAPF field 6."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "alkali feldspar trachyte"@en ;
 .
 lith:alkali_feldspar_trachytic_rock
@@ -426,7 +425,7 @@ lith:alkali_feldspar_trachytic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytoid ;
   skos:definition "Trachytoid that has a plagioclase to total feldspar ratio less than 0.1. QAPF fields 6, 6', and 6*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_trachyte ;
   skos:narrower lith:foid_bearing_alkali_feldspar_trachyte ;
   skos:narrower lith:quartz_alkali_feldspar_trachyte ;
@@ -438,7 +437,7 @@ lith:amphibolite
   dcterms:source "Coutinho et al. 2007, IUGS SCMR chapter 8 (http://www.bgs.ac.uk/SCMR/)"@en ;
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock mainly consisting of green, brown or black amphibole and plagioclase (including albite), which combined form 75 percent or more of the rock, and both of which are present as major constituents. The amphibole constitutes 50 percent or more of the total mafic constituents and is present in an amount of 30 percent or more; other common minerals include quartz, clinopyroxene, garnet, epidote-group minerals, biotite, titanite and scapolite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "amphibolite"@en ;
 .
 lith:andesite
@@ -451,7 +450,7 @@ lith:andesite
   skos:example "basaltic andesite"@en ;
   skos:example "leuco-basalt"@en ;
   skos:example "mela-andesite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:boninite ;
   skos:note "Note the mela-andesite and leuco-basalt categories are not recommended in this system. If chemical analytical data are available to constrain the silica content, the basalt or andesite category should be used."@en ;
   skos:prefLabel "andesite"@en ;
@@ -462,7 +461,7 @@ lith:anorthosite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:anorthositic_rock ;
   skos:definition "Anorthositic rock that contains between 0 and 5 percent quartz and no feldspathoid mineral in the QAPF fraction. QAPF field 10."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "anorthosite"@en ;
 .
 lith:anorthositic_rock
@@ -471,7 +470,7 @@ lith:anorthositic_rock
   dcterms:source "LeMaitre et al. 2002; This vocabulary"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Leucocratic phaneritic crystalline igneous rock consisting essentially of plagioclase, often with small amounts of pyroxene. By definition, colour index M is less than 10, and plagiclase to total feldspar ratio is greater than 0.9. Less than 20 percent quartz and less than 10 percent feldspathoid in the QAPF fraction. QAPF field 10, 10*, and 10'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anorthosite ;
   skos:narrower lith:foid_bearing_anorthosite ;
   skos:narrower lith:quartz_anorthosite ;
@@ -485,7 +484,7 @@ lith:anthracite_coal
   skos:altLabel "High rank coal"@en ;
   skos:broader lith:coal ;
   skos:definition "Coal that has vitrinite mean random reflectance greater than 2.0% (determined in conformance with ISO 7404-5). Less than 12-14 percent volatiles (dry, ash free), greater than 91 percent fixed carbon (dry, ash free basis). The highest rank coal; very hard, glossy, black, with semimetallic luster, semi conchoidal fracture."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "anthracite"@en ;
   skos:prefLabel "anthrazit"@de ;
 .
@@ -495,7 +494,7 @@ lith:anthropogenic_material
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Material known to have artificial (human-related) origin; insufficient information to classify in more detail."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anthropogenic_unconsolidated_material ;
   skos:prefLabel "anthropogenic material"@en ;
 .
@@ -506,7 +505,7 @@ lith:anthropogenic_unconsolidated_material
   skos:broader lith:anthropogenic_material ;
   skos:broader lith:unconsolidated_material ;
   skos:definition "Unconsolidated material known to have artificial (human-related) origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "anthropogenic unconsolidated material"@en ;
 .
 lith:aphanite
@@ -515,7 +514,7 @@ lith:aphanite
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:rock ;
   skos:definition "Rock that is too fine grained to categorize in more detail."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "aphanite"@en ;
 .
 lith:aplite
@@ -524,7 +523,7 @@ lith:aplite
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Light coloured crystalline rock, characterized by a fine grained allotriomorphic-granular (aplitic, saccharoidal or xenomorphic) texture; typically granitic composition, consisting of quartz, alkali feldspar and sodic plagioclase."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "aplite"@en ;
 .
 lith:arenite
@@ -533,7 +532,7 @@ lith:arenite
   dcterms:source "Pettijohn, Potter, Siever, 1972, Sand and Sandstone: New York, Springer Verlag, 681 p."@en ;
   skos:broader lith:clastic_sandstone ;
   skos:definition "Clastic sandstone that contains less than 10 percent matrix. Matrix is mud-size silicate minerals (clay, feldspar, quartz, rock fragments, and alteration products) of detrital or diagenetic nature."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "arenit"@de ;
   skos:prefLabel "arenite"@en ;
 .
@@ -543,7 +542,7 @@ lith:ash_and_lapilli
   dcterms:source "Schmid 1981; LeMaitre et al. 2002"@en ;
   skos:broader lith:tephra ;
   skos:definition "Tephra in which less than 25 percent of fragments are greater than 64 mm in longest dimension"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "ash and lapilli"@en ;
 .
 lith:ash_breccia_bomb_or_block_tephra
@@ -552,7 +551,7 @@ lith:ash_breccia_bomb_or_block_tephra
   dcterms:source "Schmid 1981; LeMaitre et al. 2002"@en ;
   skos:broader lith:tephra ;
   skos:definition "Tephra in which more than 25 percent of particles are greater than 64 mm in largest dimension. Includes ash breccia, bomb tephra and block tephra of Gillespie and Styles (1999)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "ash breccia bomb or block tephra"@en ;
 .
 lith:ash_tuff_lapillistone_and_lapilli_tuff
@@ -561,7 +560,7 @@ lith:ash_tuff_lapillistone_and_lapilli_tuff
   dcterms:source "Schmid 1981; LeMaitre et al. 2002"@en ;
   skos:broader lith:pyroclastic_rock ;
   skos:definition "Pyroclastic rock in which less than 25 percent of rock by volume are more than 64 mm in longest diameter. Includes tuff, lapilli tuff, and lapillistone."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "ash tuff lapillistone and lapilli tuff"@en ;
 .
 lith:basalt
@@ -575,7 +574,7 @@ lith:basalt
   skos:example "mela-andesite"@en ;
   skos:example "picrite"@en ;
   skos:example "picrobasalt"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali-olivine_basalt ;
   skos:narrower lith:tholeiitic_basalt ;
   skos:prefLabel "basalt"@en ;
@@ -586,7 +585,7 @@ lith:basanite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:tephritoid ;
   skos:definition "Tephritoid that has a plagioclase to total feldspar ratio greater than 0.9, and contains more than 10 percent normative (CIPW) olivine."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "basanite"@en ;
 .
 lith:basanitic_foidite
@@ -595,7 +594,7 @@ lith:basanitic_foidite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foiditoid ;
   skos:definition "Foiditoid that contains less than 90 percent feldspathoid minerals in the QAPF fraction, and has a plagioclase to total feldspar ratio that is greater than 0.5, with greater than 10 percent normative olivine."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "basanitic foidite"@en ;
 .
 lith:basic_igneous_material
@@ -604,7 +603,7 @@ lith:basic_igneous_material
   dcterms:source "after LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_material ;
   skos:definition "Igneous material with between 45 and 52 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:basic_igneous_rock ;
   skos:prefLabel "basic igneous material"@en ;
 .
@@ -615,7 +614,7 @@ lith:basic_igneous_rock
   skos:broader lith:basic_igneous_material ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock with between 45 and 52 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:basalt ;
   skos:narrower lith:gabbroic_rock ;
   skos:prefLabel "basic igneous rock"@en ;
@@ -626,7 +625,7 @@ lith:bauxite
   dcterms:source "Eggleton 2001"@en ;
   skos:broader lith:material_formed_in_surficial_environment ;
   skos:definition "Highly aluminous material containing abundant aluminium hydroxides (gibbsite, less commonly boehmite, diaspore) and aluminium-substituted iron oxides or hydroxides and generally minor or negligible kaolin minerals; may contain up to 20 percent quartz. commonly has a pisolitic or nodular texture, and may be cemented."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "bauxite"@en ;
 .
 lith:biogenic_sediment
@@ -635,7 +634,7 @@ lith:biogenic_sediment
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sediment ;
   skos:definition "Sediment composed of greater than 50 percent material of biogenic origin. Because the biogenic material may be skeletal remains that are not organic, all biogenic sediment is not necessarily organic-rich."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:ooze ;
   skos:narrower lith:organic_rich_sediment ;
   skos:note "Corresponding biogenic sedimentary material and biogenic sedimentary rock categories are not included based on the interpretation that biogenic sedimentary rock will be in a different category, e.g. carbonate sedimentary rock or organic rich sedimentary rock."@en ;
@@ -652,7 +651,7 @@ lith:biogenic_silica_sedimentary_rock
   skos:example "radiolarite"@en ;
   skos:example "spicularite"@en ;
   skos:example "spiculite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "biogenic silica sedimentary rock"@en ;
 .
 lith:bituminous_coal
@@ -667,7 +666,7 @@ lith:bituminous_coal
   skos:example "gasflammkohle"@de ;
   skos:example "gaskohle"@de ;
   skos:example "glanzkohle"@de ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "bituminous coal"@en ;
 .
 lith:boninite
@@ -677,7 +676,7 @@ lith:boninite
   skos:broader lith:andesite ;
   skos:broader lith:high_magnesium_fine_grained_igneous_rocks ;
   skos:definition "andesitic rock that contains more than 8 percent MgO. Typically consists of phenocrysts of protoenstatite, orthopyroxene, clinopyroxene, and olivine in a glassy base full of crystallites, and exhibits textures characterisitc of rapid crystal growth."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "boninite"@en ;
 .
 lith:boulder_gravel_size_sediment
@@ -686,7 +685,7 @@ lith:boulder_gravel_size_sediment
   dcterms:source "Wentworth size scale"@en ;
   skos:broader lith:gravel_size_sediment ;
   skos:definition "Sediment containing greater than 30 percent boulder-size particles (greater than 256 mm in diameter)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "boulder gravel size sediment"@en ;
 .
 lith:boundstone
@@ -695,7 +694,7 @@ lith:boundstone
   dcterms:source "Hallsworth and Knox 1999; SLTTs 2004"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Sedimentary carbonate rock with preserved biogenic texture, whose original components were bound and encrusted together during deposition by the action of plants and animals during deposition, and remained substantially in the position of growth."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "boundstone"@en ;
 .
 lith:breccia
@@ -704,7 +703,7 @@ lith:breccia
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Coarse-grained material composed of angular broken rock fragments; the fragments typically have sharp edges and unworn corners. The fragments may be held together by a mineral cement or in a fine-grained matrix, and consolidated or nonconsolidated. Clasts may be of any composition or origin. In sedimentary environments, breccia is used for material that consists entirely of angular fragments, mostly derived from a single source rock body, as in a rock avalanche deposit, and matrix is interpreted to be the product of comminution of clasts during transport. Diamictite or diamicton is used when the material reflects mixing of rock from a variety of sources, some sub angular or subrounded clasts may be present, and matrix is pre-existing fine grained material that is not a direct product of the brecciation/deposition process."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "breccia"@en ;
 .
 lith:breccia_gouge_series
@@ -713,7 +712,7 @@ lith:breccia_gouge_series
   dcterms:source "SLTTm 2004"@en ;
   skos:broader lith:fault_related_material ;
   skos:definition "Fault material with features such as void spaces (filled or unfilled), or unconsolidated matrix material between fragments, indicating loss of cohesion during deformation. Includes fault-related breccia and gouge."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "breccia gouge series"@en ;
 .
 lith:calcareous_carbonate_sediment
@@ -723,7 +722,7 @@ lith:calcareous_carbonate_sediment
   skos:broader lith:calcareous_carbonate_sedimentary_material ;
   skos:broader lith:carbonate_sediment ;
   skos:definition "Carbonate sediment with a calcite (plus aragonite) to dolomite ratio greater than 1 to 1. Includes lime-sediments."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:impure_calcareous_carbonate_sediment ;
   skos:narrower lith:pure_calcareous_carbonate_sediment ;
   skos:prefLabel "calcareous carbonate sediment"@en ;
@@ -734,7 +733,7 @@ lith:calcareous_carbonate_sedimentary_material
   dcterms:source "after Hallsworth and Knox 1999"@en ;
   skos:broader lith:carbonate_sedimentary_material ;
   skos:definition "Carbonate sedimentary material of unspecified consolidation state with a calcite (plus aragonite) to dolomite ratio greater than 1 to 1. Includes lime-sediments, limestone and dolomitic limestone."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:calcareous_carbonate_sediment ;
   skos:narrower lith:calcareous_carbonate_sedimentary_rock ;
   skos:prefLabel "calcareous carbonate sedimentary material"@en ;
@@ -746,7 +745,7 @@ lith:calcareous_carbonate_sedimentary_rock
   skos:broader lith:calcareous_carbonate_sedimentary_material ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate sedimentary rock with a calcite (plus aragonite) to dolomite ratio greater than 1 to 1. Includes limestone and dolomitic limestone."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:impure_limestone ;
   skos:narrower lith:limestone ;
   skos:prefLabel "calcareous carbonate sedimentary rock"@en ;
@@ -759,7 +758,7 @@ lith:carbonate_mud
   skos:broader lith:carbonate_sediment ;
   skos:broader lith:mud_size_sediment ;
   skos:definition "Carbonate sediment composed of less than 25 percent clasts that have a maximum diameter more than 2 mm, and the ratio of sand size to mud size clasts is less than one."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_ooze ;
   skos:prefLabel "carbonate mud"@en ;
 .
@@ -772,7 +771,7 @@ lith:carbonate_mudstone
   skos:broader lith:generic_mudstone ;
   skos:definition "Mudstone that consists of greater than 50 percent carbonate minerals of any origin in the mud size fraction."@en ;
   skos:example "calcareous loess"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:pure_carbonate_mudstone ;
   skos:note "Not a subcategory of carbonate sedimentary rock because definition does not specify 'carbonate minerals of intrabasinal origin', but is agnostic on origin of carbonate. Schnurrenberger et al. 2003 point out that it is very difficult (at least in lacustrine rocks) to distinguish chemically precipitated or diagenetic carbonate from primary biogenic carbonate. This distinction between biogenic, detrital, and pedogenic or authigenic carbonate material is thus not a good one to use in a general purpose classification system. Schnurrenberger, D., Russell, J. and Kelts, K., 2003, Classification of lacustrine sediments based on sedimentary components: Journal of Paleolimnology, v.29, p141-154."@en ;
   skos:prefLabel "carbonate mudstone"@en ;
@@ -785,7 +784,7 @@ lith:carbonate_ooze
   skos:broader lith:carbonate_mud ;
   skos:broader lith:ooze ;
   skos:definition "ooze that consists of more than 50 percent carbonate skeletal remains"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "carbonate ooze"@en ;
 .
 lith:carbonate_rich_mud
@@ -796,7 +795,7 @@ lith:carbonate_rich_mud
   skos:altLabel "marl"@en ;
   skos:broader lith:mud_size_sediment ;
   skos:definition "Mud size sediment that contains between 10 and 50 percent carbonate minerals in any size fraction. Carbonate origin is not specified."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "carbonate rich mud"@en ;
 .
 lith:carbonate_rich_mudstone
@@ -807,7 +806,7 @@ lith:carbonate_rich_mudstone
   skos:broader lith:generic_mudstone ;
   skos:definition "Mudstone that contains between 10 and 50 percent carbonate minerals in the mud size fraction. Carbonate origin is not specified."@en ;
   skos:example "calcareous loess"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Carbonate-rich mudstone' definition limits carbonate to mud-size fraction to avoid overlap with 'impure carbonate sedimentary rock'. If carbonate minerals are in sand or gravel size fractions, use 'impure carbonate sedimentary rock'. The operational test typically used to identify this category is if the rock fizzes when hydrochloric acid is applied. The '10 percent carbonate' criteria is a fuzzy boundary."@en ;
   skos:prefLabel "carbonate rich mudstone"@en ;
   skos:related lith:clastic_sedimentary_rock ;
@@ -819,7 +818,7 @@ lith:carbonate_sediment
   skos:broader lith:carbonate_sedimentary_material ;
   skos:broader lith:sediment ;
   skos:definition "Sediment in which at least 50 percent of the primary and/or recrystallized constituents are composed of one (or more) of the carbonate minerals calcite, aragonite and dolomite, in particles of intrabasinal origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:calcareous_carbonate_sediment ;
   skos:narrower lith:carbonate_mud ;
   skos:narrower lith:dolomitic_sediment ;
@@ -833,7 +832,7 @@ lith:carbonate_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material in which at least 50 percent of the primary and/or recrystallized constituents are composed of one (or more) of the carbonate minerals calcite, aragonite and dolomite, in particles of intrabasinal origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:calcareous_carbonate_sedimentary_material ;
   skos:narrower lith:carbonate_sediment ;
   skos:narrower lith:carbonate_sedimentary_rock ;
@@ -848,7 +847,7 @@ lith:carbonate_sedimentary_rock
   skos:broader lith:carbonate_sedimentary_material ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock in which at least 50 percent of the primary and/or recrystallized constituents are composed of one (or more) of the carbonate minerals calcite, aragonite, magnesite or dolomite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:boundstone ;
   skos:narrower lith:calcareous_carbonate_sedimentary_rock ;
   skos:narrower lith:carbonate_mudstone ;
@@ -869,7 +868,7 @@ lith:carbonate_wackestone
   dcterms:source "Dunham 1962"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate sedimentary rock with discernible mud supported depositional texture and containing greater than 10 percent allochems, and constituent particles are of intrabasinal origin. If particles are not intrabasinal, categorization as a mudstone or wackestone should be considered."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "carbonate wackestone"@en ;
   skos:related lith:carbonate_mudstone ;
 .
@@ -879,7 +878,7 @@ lith:carbonatite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:exotic_composition_igneous_rock ;
   skos:definition "Igneous rock composed of more than 50 percent modal carbonate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "carbonatite"@en ;
 .
 lith:cataclasite_series
@@ -889,7 +888,7 @@ lith:cataclasite_series
   skos:broader lith:composite_genesis_rock ;
   skos:broader lith:fault_related_material ;
   skos:definition "Fault-related rock that maintained primary cohesion during deformation, with matrix comprising greater than 10 percent of rock mass; matrix is fine-grained material formed through grain size reduction by fracture as opposed to crystal plastic process that operate in mylonitic rock. Includes cataclasite, protocataclasite and ultracataclasite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "cataclasite series"@en ;
 .
 lith:chalk
@@ -898,7 +897,7 @@ lith:chalk
   dcterms:source "http://en.wikipedia.org/wiki/Chalk; C.S. Harris, 2009, unpublished web page, http://www.geologyshop.co.uk/chalk.htm"@en ;
   skos:broader lith:limestone ;
   skos:definition "A generally soft, white, very fine-grained, extremely pure, porous limestone. It forms under marine conditions from the gradual accumulation of skeletal elements from minute planktonic green algae (cocoliths), associated with varying proportions of larger microscopic fragments of bivalves, foraminifera and ostracods. It is common to find flint and chert nodules embedded in chalk."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "chalk"@en ;
   skos:related lith:pure_carbonate_mudstone ;
 .
@@ -908,7 +907,7 @@ lith:chemical_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material that consists of at least 50 percent material produced by inorganic chemical processes within the basin of deposition. Includes inorganic siliceous, carbonate, evaporite, iron-rich, and phosphatic sediment classes."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:evaporite ;
   skos:narrower lith:iron_rich_sedimentary_material ;
   skos:narrower lith:travertine ;
@@ -922,7 +921,7 @@ lith:chlorite_actinolite_epidote_metamorphic_rock
   skos:definition "Metamorphic rock characterized by 50 percent or more of combined chlorite, actinolite and epidote. Category for rocks generally named greenschist or greenstone."@en ;
   skos:example "greenschist"@en ;
   skos:example "greenstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Rock classified as Greenschist is difficult to categorize in the CGI SimpleLithology scheme. This stems in part from the variation in usage and the general fuzzy definition of the term. The definition of greenschist is generally something along the lines of 'metamorphosed rock with a greenish colour, characterized by the presence of actinolite, chlorite and epidote, and containing a planar or linear fabric. The presence or absence of schistose fabric in rocks called 'greenschist' is problematic. The fabric present in many rocks called greenschist is too weak or variably developed to meet the definition of 'schist' per CGI SimpleLithology. Generally if the rock has achieved metamorphic grade such that the term 'gneiss' is applicable, it would not be called greenschist. Thus, 'greenschist' would correspond most closely to a chlorite + actinolite rich 'Foliated metamorphic rock', but if it actually meets the definition of 'Schist' it would be a chlorite + actinolite 'Schist'."@en ;
   skos:prefLabel "chlorite actinolite epidote metamorphic rock"@en ;
 .
@@ -934,7 +933,7 @@ lith:clastic_conglomerate
   skos:broader lith:clastic_sedimentary_rock ;
   skos:broader lith:generic_conglomerate ;
   skos:definition "Clastic sedimentary rock composed of at least 30 percent rounded to subangular fragments larger than 2 mm in diameter; typically contains finer grained material in interstices between larger fragments. If more than 15 percent of the fine grained matrix is of indeterminant clastic or diagenetic origin and the fabric is matrix supported, may also be categorized as wackestone. If rock has unsorted or poorly sorted texture with a wide range of particle sizes, may also be categorized as diamictite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Note this category is equivlanet to category labeled 'Conglomeratic rock in SLTTs (2004), not to the category labeled 'Conglomerate' in that system."@en ;
   skos:prefLabel "conglomerate"@en ;
 .
@@ -948,7 +947,7 @@ lith:clastic_mudstone
   skos:broader lith:generic_mudstone ;
   skos:definition "Clastic sedimentary rock consisting of less than 30 percent gravel-size (2 mm) particles and with a mud to sand ratio greater than 1."@en ;
   skos:example "argillite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:claystone ;
   skos:narrower lith:shale ;
   skos:narrower lith:siltstone ;
@@ -964,7 +963,7 @@ lith:clastic_sandstone
   skos:broader lith:clastic_sedimentary_rock ;
   skos:broader lith:generic_sandstone ;
   skos:definition "Clastic sedimentary rock in which less than 30 percent of particles are greater than 2 mm in diameter (gravel) and the sand to mud ratio is at least 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:arenite ;
   skos:narrower lith:wacke ;
   skos:note "Note this category is equivalent to cagetory labeled 'sandy rock' in SLTTs (2004), not to the much more restricted category labeled 'Sandstone' in that system."@en ;
@@ -977,7 +976,7 @@ lith:clastic_sediment
   skos:broader lith:clastic_sedimentary_material ;
   skos:broader lith:sediment ;
   skos:definition "Sediment in which at least 50 percent of the constituent particles were derived from erosion, weathering, or mass-wasting of pre-existing earth materials, and transported to the place of deposition by mechanical agents such as water, wind, ice and gravity."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:diamicton ;
   skos:narrower lith:gravel ;
   skos:narrower lith:mud ;
@@ -991,7 +990,7 @@ lith:clastic_sedimentary_material
   dcterms:source "SLTTs 2004; Neuendorf et al. 2005"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material of unspecified consolidation state in which at least 50 percent of the constituent particles were derived from erosion, weathering, or mass-wasting of pre-existing earth materials, and transported to the place of deposition by mechanical agents such as water, wind, ice and gravity."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:clastic_sediment ;
   skos:narrower lith:clastic_sedimentary_rock ;
   skos:prefLabel "clastic sedimentary material"@en ;
@@ -1003,7 +1002,7 @@ lith:clastic_sedimentary_rock
   skos:broader lith:clastic_sedimentary_material ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock in which at least 50 percent of the constituent particles were derived from erosion, weathering, or mass-wasting of pre-existing earth materials, and transported to the place of deposition by mechanical agents such as water, wind, ice and gravity."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:clastic_conglomerate ;
   skos:narrower lith:clastic_mudstone ;
   skos:narrower lith:clastic_sandstone ;
@@ -1017,7 +1016,7 @@ lith:clay
   dcterms:source "based on SLTTs 2004; Neuendorf et al. 2005; particle size from Wentworth grade scale"@en ;
   skos:broader lith:mud ;
   skos:definition "Mud that consists of greater than 50 percent particles with grain size less than 0.004 mm"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "clay"@en ;
 .
 lith:claystone
@@ -1026,7 +1025,7 @@ lith:claystone
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:clastic_mudstone ;
   skos:definition "Mudstone that contains no detectable silt, inferred to consist virtually entirely of clay-size particles."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "claystone"@en ;
   skos:related lith:clastic_mudstone ;
 .
@@ -1036,7 +1035,7 @@ lith:coal
   dcterms:source "Economic commission for Europe, committee on Sustainable Energy- United Nations (ECE-UN), 1998, International Classification of in-Seam Coals: Energy 19, 41 pp."@en ;
   skos:broader lith:organic_rich_sedimentary_rock ;
   skos:definition "A consolidated organic sedimentary material having less than 75% moisture. This category includes low, medium, and high rank coals according to International Classification of In-Seam Coal (United Nations, 1998), thus including lignite. Sapropelic coal is not distinguished in this category from humic coals. Formed from the compaction or induration of variously altered plant remains similar to those of peaty deposits."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anthracite_coal ;
   skos:narrower lith:bituminous_coal ;
   skos:narrower lith:lignite ;
@@ -1049,7 +1048,7 @@ lith:cobble_gravel_size_sediment
   dcterms:source "Wentworth size scale"@en ;
   skos:broader lith:gravel_size_sediment ;
   skos:definition "Sediment containing greater than 30 percent cobble-size particles (64-256 mm in diameter)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "cobble gravel size sediment"@en ;
 .
 lith:composite_genesis_material
@@ -1058,7 +1057,7 @@ lith:composite_genesis_material
   dcterms:source "SLTTm 2004"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Material of unspecified consolidation state formed by geological modification of pre-existing materials outside the realm of igneous and sedimentary processes. Includes rocks formed by impact metamorphism, standard dynamothermal metamorphism, brittle deformation, weathering, metasomatism and hydrothermal alteration (diagenesis is a sedimentary process in this context)."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:composite_genesis_rock ;
   skos:narrower lith:fault_related_material ;
   skos:narrower lith:impact_generated_material ;
@@ -1072,7 +1071,7 @@ lith:composite_genesis_rock
   skos:broader lith:composite_genesis_material ;
   skos:broader lith:rock ;
   skos:definition "Rock formed by geological modification of pre-existing rocks outside the realm of igneous and sedimentary processes. Includes rocks formed by impact metamorphism, standard dynamothermal metamorphism, brittle deformation, weathering, metasomatism and hydrothermal alteration (diagenesis is a sedimentary process in this context)."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:cataclasite_series ;
   skos:narrower lith:duricrust ;
   skos:narrower lith:metamorphic_rock ;
@@ -1084,7 +1083,7 @@ lith:compound_material
   rdf:type skos:Concept ;
   dcterms:source "NADM C1 2004"@en ;
   skos:definition "An Earth Material composed of an aggregation of particles of Earth Material, possibly including other compound Materials. This is 'top' of lithology category hierarchy, and should be used to indicate 'any rock or unconsolidated material'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anthropogenic_material ;
   skos:narrower lith:breccia ;
   skos:narrower lith:composite_genesis_material ;
@@ -1093,7 +1092,7 @@ lith:compound_material
   skos:narrower lith:sedimentary_material ;
   skos:narrower lith:unconsolidated_material ;
   skos:prefLabel "compound material"@en ;
-  skos:topConceptOf <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:topConceptOf ex:simplelithology ;
 .
 lith:crystalline_carbonate
   rdf:type rdfs:Resource ;
@@ -1101,7 +1100,7 @@ lith:crystalline_carbonate
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate rock of indeterminate mineralogy in which diagenetic processes have obliterated any original depositional texture."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "crystalline carbonate"@en ;
 .
 lith:dacite
@@ -1112,7 +1111,7 @@ lith:dacite
   skos:broader lith:fine_grained_igneous_rock ;
   skos:definition "Fine grained or porphyritic crystalline rock that contains less than 90 percent mafic minerals, between 20 and 60 percent quartz in the QAPF fraction, and has a plagioclase to total feldspar ratio greater than 0.65. Includes rocks defined modally in QAPF fields 4 and 5 or chemically in TAS Field O3. Typcially composed of quartz and sodic plagioclase with minor amounts of biotite and/or hornblende and/or pyroxene; fine-grained equivalent of granodiorite and tonalite."@en ;
   skos:example "rhyodacite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "dacite"@en ;
 .
 lith:diamictite
@@ -1122,7 +1121,7 @@ lith:diamictite
   skos:broader lith:clastic_sedimentary_rock ;
   skos:definition "Unsorted or poorly sorted, clastic sedimentary rock with a wide range of particle sizes including a muddy matrix. Biogenic materials that have such texture are excluded. Distinguished from conglomerate, sandstone, mudstone based on polymodality and lack of structures related to transport and deposition of sediment by moving air or water. If more than 10 percent of the fine grained matrix is of indeterminant clastic or diagenetic origin and the fabric is matrix supported, may also be categorized as wacke."@en ;
   skos:example "pebbly mudstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "diamictite"@en ;
   skos:related lith:clastic_conglomerate ;
   skos:related lith:wacke ;
@@ -1133,7 +1132,7 @@ lith:diamicton
   dcterms:source "Fairbridge and Bourgeois 1978"@en ;
   skos:broader lith:clastic_sediment ;
   skos:definition "Unsorted or poorly sorted, clastic sediment with a wide range of particle sizes, including a muddy matrix. Biogenic materials that have such texture are excluded. Distinguished from conglomerate, sandstone, mudstone based on polymodality and lack of structures related to transport and deposition of sediment by moving air or water. Assignment to an other size class can be used in conjunction to indicate the dominant grain size."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "definition amplified to help distinguish diamicton, conglomerate and wackestone in this version"@en ;
   skos:prefLabel "diamicton"@en ;
 .
@@ -1143,7 +1142,7 @@ lith:diorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:dioritic_rock ;
   skos:definition "Phaneritic crystalline rock consisting of intermediate plagioclase, commonly with hornblende and often with biotite or augite; colour index M less than 90, sodic plagioclase (An0-An50), no feldspathoid, and between 0 and 5 percent quartz. Includes rocks defined modally in QAPF field 10 as diorite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "diorite"@en ;
 .
 lith:dioritic_rock
@@ -1152,7 +1151,7 @@ lith:dioritic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:dioritoid ;
   skos:definition "Phaneritic crystalline rock with M less than 90, consisting of intermediate plagioclase, commonly with hornblende and often with biotite or augite. A dioritoid with a plagioclase to total feldspar ratio (in the QAPF fraction) greater than 0.9. Includes rocks defined modally in QAPF fields 10, 10' and 10*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:diorite ;
   skos:narrower lith:foid_bearing_diorite ;
   skos:narrower lith:quartz_diorite ;
@@ -1165,7 +1164,7 @@ lith:dioritoid
   skos:broader lith:intermediate_composition_igneous_rock ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock with M less than 90, consisting of intermediate plagioclase, commonly with hornblende and often with biotite or augite. Plagioclase to total feldspar ratio is greater that 0.65, and anorthite content of plagioclase is less than 50 percent. Less than 10 percent feldspathoid mineral and less than 20 percent quartz in the QAPF fraction. Includes rocks defined modally in QAPF fields 9 and 10 (and their subdivisions)."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:dioritic_rock ;
   skos:narrower lith:monzodioritic_rock ;
   skos:prefLabel "dioritoid"@en ;
@@ -1182,7 +1181,7 @@ lith:doleritic_rock
   skos:example "microdiorite"@en ;
   skos:example "microgabbro"@en ;
   skos:example "trap"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "doleritic rock"@en ;
   skos:related lith:andesite ;
   skos:related lith:basic_igneous_material ;
@@ -1195,7 +1194,7 @@ lith:dolomitic_or_magnesian_sedimentary_material
   dcterms:source "after SLTTs 2004, Hallsworth and Knox 1999"@en ;
   skos:broader lith:carbonate_sedimentary_material ;
   skos:definition "Carbonate sedimentary material of unspecified consolidation degree with a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1. Includes dolomite sediment, dolostone, lime dolostone and magnesite-stone."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:dolomitic_or_magnesian_sedimentary_rock ;
   skos:narrower lith:dolomitic_sediment ;
   skos:prefLabel "dolomitic or magnesian sedimentary material"@en ;
@@ -1207,7 +1206,7 @@ lith:dolomitic_or_magnesian_sedimentary_rock
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:broader lith:dolomitic_or_magnesian_sedimentary_material ;
   skos:definition "Carbonate sedimentary rock with a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1. Includes dolostone, lime dolostone and magnesite-stone."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:dolostone ;
   skos:narrower lith:impure_dolostone ;
   skos:prefLabel "dolomitic or magnesian sedimentary rock"@en ;
@@ -1219,7 +1218,7 @@ lith:dolomitic_sediment
   skos:broader lith:carbonate_sediment ;
   skos:broader lith:dolomitic_or_magnesian_sedimentary_material ;
   skos:definition "Carbonate sediment with a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:impure_dolomitic_sediment ;
   skos:narrower lith:pure_dolomitic_sediment ;
   skos:prefLabel "dolomitic sediment"@en ;
@@ -1233,7 +1232,7 @@ lith:dolostone
   skos:broader lith:dolomitic_or_magnesian_sedimentary_rock ;
   skos:broader lith:pure_carbonate_sedimentary_rock ;
   skos:definition "Pure carbonate sedimentary rock with a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "dolomite"@en ;
 .
 lith:duricrust
@@ -1243,7 +1242,7 @@ lith:duricrust
   skos:broader lith:composite_genesis_rock ;
   skos:broader lith:material_formed_in_surficial_environment ;
   skos:definition "Rock forming a hard crust or layer at or near the Earth's surface at the time of formation, e.g. in the upper horizons of a soil, characterized by structures indicative of pedogenic origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "duricrust"@en ;
 .
 lith:eclogite
@@ -1252,7 +1251,7 @@ lith:eclogite
   dcterms:source "IUGS SCMR 2007 (http://www.bgs.ac.uk/SCMR/)"@en ;
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock composed of 75 percent or more (by volume) omphacite and garnet, both of which are present as major constituents, the amount of neither of them being higher than 75 percent (by volume); the presence of plagioclase precludes classification as an eclogite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "eclogite"@en ;
 .
 lith:evaporite
@@ -1261,7 +1260,7 @@ lith:evaporite
   dcterms:source "Jackson 1997; SLTTs 2004"@en ;
   skos:broader lith:chemical_sedimentary_material ;
   skos:definition "Nonclastic sedimentary rock composed of at least 50 percent non-carbonate salts, including chloride, sulfate or borate minerals; formed through precipitation of mineral salts from a saline solution (non-carbonate salt rock)."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:exotic_evaporite ;
   skos:narrower lith:rock_gypsum_or_anhydrite ;
   skos:narrower lith:rock_salt ;
@@ -1287,7 +1286,7 @@ lith:exotic_alkaline_rock
   skos:example "verite"@en ;
   skos:example "wolgidite"@en ;
   skos:example "wyomingite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "exotic alkaline rock"@en ;
 .
 lith:exotic_composition_igneous_rock
@@ -1296,7 +1295,7 @@ lith:exotic_composition_igneous_rock
   dcterms:source "Gillespie and Styles 1999; LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Rock with 'exotic' mineralogical, textural or field setting characteristics; typically dark colored, with abundant phenocrysts. Criteria include: presence of greater than 10 percent melilite or leucite, or presence of kalsilite, or greater than 50 percent carbonate minerals. Includes Carbonatite, Melilitic rock, Kalsilitic rocks, Kimberlite, Lamproite, Leucitic rock and Lamprophyres."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonatite ;
   skos:narrower lith:exotic_alkaline_rock ;
   skos:narrower lith:kalsilitic_and_melilitic_rock ;
@@ -1308,7 +1307,7 @@ lith:exotic_evaporite
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:evaporite ;
   skos:definition "Evaporite that is not 50 percent halite or 50 percent gypsum or anhydrite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Category represents evaporite material that is not mostly gypsum/anhydrite or halite. These are generally not very common, thus the 'exotic' name"@en ;
   skos:prefLabel "exotic evaporite"@en ;
 .
@@ -1318,7 +1317,7 @@ lith:fault_related_material
   dcterms:source "This vocabulary; SLTTm 2004"@en ;
   skos:broader lith:composite_genesis_material ;
   skos:definition "Material formed as a result brittle faulting, composed of greater than 10 percent matrix; matrix is fine-grained material caused by tectonic grainsize reduction. Includes cohesive (cataclasite series) and non-cohesive (breccia-gouge series) material."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:breccia_gouge_series ;
   skos:narrower lith:cataclasite_series ;
   skos:narrower lith:mylonitic_rock ;
@@ -1331,7 +1330,7 @@ lith:fine_grained_igneous_rock
   skos:altLabel "volcanic rock"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock in which the framework of the rock consists of crystals that are too small to determine mineralogy with the unaided eye; framework may include up to 50 percent glass. A significant percentage of the rock by volume may be phenocrysts. Includes rocks that are generally called volcanic rocks."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:andesite ;
   skos:narrower lith:basalt ;
   skos:narrower lith:dacite ;
@@ -1350,7 +1349,7 @@ lith:foid_bearing_alkali_feldspar_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_syenitic_rock ;
   skos:definition "Alkali feldspar syenitic rock that contains 0-10 percent feldspathoid mineral and no quartz in the QAPF fraction. QAPF field 6'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing alkali feldspar syenite"@en ;
 .
 lith:foid_bearing_alkali_feldspar_trachyte
@@ -1359,7 +1358,7 @@ lith:foid_bearing_alkali_feldspar_trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_trachytic_rock ;
   skos:definition "Alkali feldspar trachytic rock that contains no quartz and between 0 and 10 percent feldspathoid mineral in the QAPF fraction. QAPF field 6'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing alkali feldspar trachyte"@en ;
 .
 lith:foid_bearing_anorthosite
@@ -1368,7 +1367,7 @@ lith:foid_bearing_anorthosite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:anorthositic_rock ;
   skos:definition "Anorthositic rock that contains between 0 and 10 percent feldspathoid mineral and no quartz in the QAPF fraction. QAPF field 10'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing anorthosite"@en ;
 .
 lith:foid_bearing_diorite
@@ -1377,7 +1376,7 @@ lith:foid_bearing_diorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:dioritic_rock ;
   skos:definition "Dioritic rock that contains between 0 and 10 percent feldspathoid minerals in the QAPF fraction. QAPF field 10'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing diorite"@en ;
 .
 lith:foid_bearing_gabbro
@@ -1386,7 +1385,7 @@ lith:foid_bearing_gabbro
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:gabbroic_rock ;
   skos:definition "Gabbroic rock that contains 0-10 percent feldspathoid minerals and no quartz in the QAPF fraction. QAPF field 10'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing gabbro"@en ;
 .
 lith:foid_bearing_latite
@@ -1395,7 +1394,7 @@ lith:foid_bearing_latite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:latitic_rock ;
   skos:definition "Latitic rock that contains no quartz and between 0 and 10 percent feldspathoid minerals in the QAPF fraction. QAPF field 8'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing latite"@en ;
 .
 lith:foid_bearing_monzodiorite
@@ -1404,7 +1403,7 @@ lith:foid_bearing_monzodiorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzodioritic_rock ;
   skos:definition "Monzodioritic rock that contains between 0 and 10 percent feldspathoid mineral."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing monzodiorite"@en ;
 .
 lith:foid_bearing_monzogabbro
@@ -1413,7 +1412,7 @@ lith:foid_bearing_monzogabbro
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzogabbroic_rock ;
   skos:definition "Monzogabbroic rock that contains 0 to 10 percent feldspathoid mineral in the QAPF fraction. QAPF field 9'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing monzogabbro"@en ;
 .
 lith:foid_bearing_monzonite
@@ -1422,7 +1421,7 @@ lith:foid_bearing_monzonite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzonitic_rock ;
   skos:definition "Monzonitic rock that contains 0-10 percent feldspathoid mineral and no quartz in the QAPF fraction. Includes rocks defined modally in QAPF Field 8'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing monzonite"@en ;
 .
 lith:foid_bearing_syenite
@@ -1431,7 +1430,7 @@ lith:foid_bearing_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitic_rock ;
   skos:definition "Syenitic rock that contains between 0 and 10 percent feldspathoid mineral and no quartz in the QAPF fraction. Defined modally in QAPF Field 7'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing syenite"@en ;
 .
 lith:foid_bearing_trachyte
@@ -1440,7 +1439,7 @@ lith:foid_bearing_trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytic_rock ;
   skos:definition "Trachytic rock that contains between 0 and 10 percent feldspathoid in the QAPF fraction, and no quartz. QAPF field 7'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid bearing trachyte"@en ;
 .
 lith:foid_diorite
@@ -1449,7 +1448,7 @@ lith:foid_diorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foid_dioritoid ;
   skos:definition "Foid dioritoid in which the plagioclase to total feldspar ratio is greater than 0.9. Includes rocks defined modally in QAPF field 14."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid diorite"@en ;
 .
 lith:foid_dioritoid
@@ -1458,7 +1457,7 @@ lith:foid_dioritoid
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock in which M is less than 90, the plagioclase to total feldspar ratio is greater than 0.5, feldspathoid minerals form 10-60 percent of the QAPF fraction, plagioclase has anorthite content less than 50 percent. These rocks typically contain large amounts of mafic minerals. Includes rocks defined modally in QAPF fields 13 and 14."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_diorite ;
   skos:narrower lith:foid_monzodiorite ;
   skos:prefLabel "foid dioritoid"@en ;
@@ -1473,7 +1472,7 @@ lith:foid_gabbro
   skos:example "nepheline gabbro"@en ;
   skos:example "teschenite"@en ;
   skos:example "theralite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid gabbro"@en ;
 .
 lith:foid_gabbroid
@@ -1482,7 +1481,7 @@ lith:foid_gabbroid
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock in which M is less than 90, the plagioclase to total feldspar ratio is greater than 0.5, feldspathoids form 10-60 percent of the QAPF fraction, and plagioclase has anorthite content greater than 50 percent. These rocks typically contain large amounts of mafic minerals. Includes rocks defined modally in QAPF fields 13 and 14."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_gabbro ;
   skos:narrower lith:foid_monzogabbro ;
   skos:prefLabel "foid gabbroid"@en ;
@@ -1494,7 +1493,7 @@ lith:foid_monzodiorite
   skos:broader lith:foid_dioritoid ;
   skos:definition "Foid dioritoid in which the plagioclase to total feldspar ratio is between 0.1 and 0.9. Includes rocks defined modally in QAPF field 13."@en ;
   skos:example "essexite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid monzodiorite"@en ;
 .
 lith:foid_monzogabbro
@@ -1504,7 +1503,7 @@ lith:foid_monzogabbro
   skos:broader lith:foid_gabbroid ;
   skos:definition "Foid gabbroid that has a plagioclase to total feldspar ratio between 0.5 and 0.9. Includes rocks defined modally in QAPF field 13."@en ;
   skos:example "essexite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid monzogabbro"@en ;
 .
 lith:foid_monzosyenite
@@ -1513,7 +1512,7 @@ lith:foid_monzosyenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foid_syenitoid ;
   skos:definition "Foid syenitoid rock that has a plagioclase to total feldspar ratio of between 0.1 and 0.5. Includes rocks defined modally in QAPF Field 12."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid monzosyenite"@en ;
 .
 lith:foid_syenite
@@ -1522,7 +1521,7 @@ lith:foid_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foid_syenitoid ;
   skos:definition "Foid syenitoid that has a plagioclase to total feldspar ratio of less than 0.1. Includes rocks defined modally in QAPF field 11."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foid syenite"@en ;
 .
 lith:foid_syenitoid
@@ -1531,7 +1530,7 @@ lith:foid_syenitoid
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock with M less than 90, contains between 10 and 60 percent feldspathoid mineral in the QAPF fraction, and has a plagioclase to total feldspar ratio less than 0.5. Includes QAPF fields 11 and 12."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_monzosyenite ;
   skos:narrower lith:foid_syenite ;
   skos:prefLabel "foid syenitoid"@en ;
@@ -1542,7 +1541,7 @@ lith:foidite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foiditoid ;
   skos:definition "Foiditoid that contains greater than 90 percent feldspathoid minerals in the QAPF fraction."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foidite"@en ;
 .
 lith:foiditoid
@@ -1553,7 +1552,7 @@ lith:foiditoid
   skos:altLabel "foiditic rock"@en ;
   skos:broader lith:fine_grained_igneous_rock ;
   skos:definition "Fine grained crystalline rock containing less than 90 percent mafic minerals and more than 60 percent feldspathoid minerals in the QAPF fraction. Includes rocks defined modally in QAPF field 15 or chemically in TAS field F."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:basanitic_foidite ;
   skos:narrower lith:foidite ;
   skos:narrower lith:phonolitic_foidite ;
@@ -1570,7 +1569,7 @@ lith:foidolite
   skos:example "melteigite"@en ;
   skos:example "nephelinolite"@en ;
   skos:example "urtite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "foidolite"@en ;
 .
 lith:foliated_metamorphic_rock
@@ -1581,7 +1580,7 @@ lith:foliated_metamorphic_rock
   skos:definition "Metamorphic rock in which 10 percent or more of the contained mineral grains are elements in a planar or linear fabric. Cataclastic or glassy character precludes classification with this concept."@en ;
   skos:example "tectonite"@en ;
   skos:example "whiteschist"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:gneiss ;
   skos:narrower lith:mylonitic_rock ;
   skos:narrower lith:phyllite ;
@@ -1595,7 +1594,7 @@ lith:fragmental_igneous_material
   dcterms:source "CGI concept definition task group"@en ;
   skos:broader lith:igneous_material ;
   skos:definition "igneous_material of unspecified consolidation state in which greater than 75 percent of the rock consists of fragments produced as a result of igneous rock-forming process."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:fragmental_igneous_rock ;
   skos:narrower lith:pyroclastic_material ;
   skos:prefLabel "fragmental igneous material"@en ;
@@ -1607,7 +1606,7 @@ lith:fragmental_igneous_rock
   skos:broader lith:fragmental_igneous_material ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock in which greater than 75 percent of the rock consists of fragments produced as a result of igneous rock-forming process. Includes pyroclastic rocks, autobreccia associated with lava flows and intrusive breccias. Excludes deposits reworked by epiclastic processes (see Tuffite)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:pyroclastic_rock ;
   skos:prefLabel "fragmental igneous rock"@en ;
 .
@@ -1617,7 +1616,7 @@ lith:framestone
   dcterms:source "Hallsworth and Knox 1999; SLTTs 2004, Table 15-3-1"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate reef rock consisting of a rigid framework of colonies, shells or skeletons, with internal cavities filled with fine sediment; usually created through the activities of colonial organisms."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "framestone"@en ;
 .
 lith:gabbro
@@ -1626,7 +1625,7 @@ lith:gabbro
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:gabbroic_rock ;
   skos:definition "Gabbroic rock that contains between 0 and 5 percent quartz and no feldspathoid mineral in the QAPF fraction. Includes rocks defined modally in QAPF Field 10 as gabbro."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Note that this category includes gabbro (sensu stricto) of LeMaitre et al. 2002, but is broader, including the other rock types defined by orthopyroxene-clinopyroxene-olivine-hornblende mineral ratios."@en ;
   skos:prefLabel "gabbro"@en ;
 .
@@ -1641,7 +1640,7 @@ lith:gabbroic_rock
   skos:example "gabbronorite"@en ;
   skos:example "norite"@en ;
   skos:example "troctolite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_gabbro ;
   skos:narrower lith:gabbro ;
   skos:narrower lith:quartz_gabbro ;
@@ -1653,7 +1652,7 @@ lith:gabbroid
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock that contains less than 90 percent mafic minerals, and up to 20 percent quartz or up to 10 percent feldspathoid in the QAPF fraction. The ratio of plagioclase to total feldspar is greater than 0.65, and anorthite content of the plagioclase is greater than 50 percent. Includes rocks defined modally in QAPF fields 9 and 10 and their subdivisions."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:gabbroic_rock ;
   skos:narrower lith:monzogabbroic_rock ;
   skos:prefLabel "gabbroid"@en ;
@@ -1665,7 +1664,7 @@ lith:generic_conglomerate
   dcterms:source "Neuendorf et al. 2005; SLTTs 2004; particle sizes defined from Krumbein phi scale (W C Krumbein and L L Sloss, Stratigraphy and Sedimentation, 2nd edition, Freeman, San Francisco, 1963; Krumbein and Pettijohn, 1938, Manual of Sedimentary Petrography: New York, Appleton Century Co., Inc.)"@en ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock composed of at least 30 percent rounded to subangular fragments larger than 2 mm in diameter; typically contains finer grained material in interstices between larger fragments. If more than 15 percent of the fine grained matrix is of indeterminant clastic or diagenetic origin and the fabric is matrix supported, may also be categorized as wackestone. If rock has unsorted or poorly sorted texture with a wide range of particle sizes, may also be categorized as diamictite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:clastic_conglomerate ;
   skos:prefLabel "generic conglomerate"@en ;
 .
@@ -1676,7 +1675,7 @@ lith:generic_mudstone
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock consisting of less than 30 percent gravel-size (2 mm) particles and with a mud to sand ratio greater than 1. Clasts may be of any composition or origin."@en ;
   skos:example "argillite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_mudstone ;
   skos:narrower lith:carbonate_rich_mudstone ;
   skos:narrower lith:clastic_mudstone ;
@@ -1692,7 +1691,7 @@ lith:generic_sandstone
   dcterms:source "SLTTs 2004; Neuendorf et al. 2005; particle sizes defined from Krumbein phi scale (W C Krumbein and L L Sloss, Stratigraphy and Sedimentation, 2nd edition, Freeman, San Francisco, 1963; Krumbein and Pettijohn, 1938, Manual of Sedimentary Petrography: New York, Appleton Century Co., Inc.)"@en ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock in which less than 30 percent of particles are greater than 2 mm in diameter (gravel) and the sand to mud ratio is at least 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:clastic_sandstone ;
   skos:prefLabel "generic sandstone"@en ;
   skos:related lith:grainstone ;
@@ -1703,7 +1702,7 @@ lith:glass_rich_igneous_rock
   dcterms:source "This vocabulary, based on Gillespie and Styles 1999"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock that contains greater than 50 percent massive glass."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:glassy_igneous_rock ;
   skos:prefLabel "glass rich igneous rock"@en ;
 .
@@ -1714,7 +1713,7 @@ lith:glassy_igneous_rock
   skos:broader lith:glass_rich_igneous_rock ;
   skos:definition "Igneous rock that consists of greater than 80 percent massive glass."@en ;
   skos:historyNote "Change percent criteria from 90 to 80 percent for version 2009."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Note that this category is used for massive glassy rocks. Much of the pyroclastic material in a pyroclastic rock may be composed of glass, but the rock is named based on its fragmental nature."@en ;
   skos:prefLabel "glassy igneous rock"@en ;
 .
@@ -1727,7 +1726,7 @@ lith:glaucophane_lawsonite_epidote_metamorphic_rock
   skos:definition "A metamorphic rock of roughly basaltic composition, defined by the presence of glaucophane with lawsonite or epidote. Other minerals that may be present include jadeite, albite, chlorite, garnet, and muscovite (phengitic white mica). Typically fine-grained, dark colored. Category for rocks commonly referred to as blueschist."@en ;
   skos:example "blueschist"@en ;
   skos:example "glaucophanite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Fabric is weakly developed in this rock in many cases, so the fabric categories 'foliated metamorphic rock, 'schist' or 'granofels' may apply."@en ;
   skos:prefLabel "glaucophane lawsonite epidote metamorphic rock"@en ;
   skos:prefLabel "glaukophanschiefer"@de ;
@@ -1738,7 +1737,7 @@ lith:gneiss
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:foliated_metamorphic_rock ;
   skos:definition "Foliated metamorphic rock with bands or lenticles rich in granular minerals alternating with bands or lenticles rich in minerals with a flaky or elongate prismatic habit. Mylonitic foliation or well developed, continuous schistosity (greater than 50 percent of the rock consists of grains participate in a planar or linear fabric) precludes classification with this concept."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:orthogneiss ;
   skos:narrower lith:paragneiss ;
   skos:prefLabel "gneiss"@en ;
@@ -1750,7 +1749,7 @@ lith:grainstone
   skos:altLabel "carbonate grainstone"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate sedimentary rock with recognizable depositional fabric that is grain-supported, and constituent particles are of intrabasinal origin; contains little or no mud matrix. Distinction from sandstone is based on interpretation of intrabasinal origin of clasts and grain-supported fabric, but grainstone definition does not include a grain size criteria."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "grainstone"@en ;
   skos:related lith:generic_sandstone ;
 .
@@ -1761,7 +1760,7 @@ lith:granite
   skos:broader lith:granitoid ;
   skos:definition "Phaneritic crystalline rock consisting of quartz, alkali feldspar and plagioclase (typically sodic) in variable amounts, usually with biotite and/or hornblende. Includes rocks defined modally in QAPF Field 3."@en ;
   skos:example "charnockite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:monzogranite ;
   skos:narrower lith:syenogranite ;
   skos:prefLabel "granite"@en ;
@@ -1774,7 +1773,7 @@ lith:granitoid
   skos:broader lith:acidic_igneous_rock ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock consisting of quartz, alkali feldspar and/or plagioclase. Includes rocks defined modally in QAPF fields 2, 3, 4 and 5 as alkali feldspar granite, granite, granodiorite or tonalite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_granite ;
   skos:narrower lith:granite ;
   skos:narrower lith:granodiorite ;
@@ -1787,7 +1786,7 @@ lith:granodiorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:granitoid ;
   skos:definition "Phaneritic crystalline rock consisting essentially of quartz, sodic plagioclase and lesser amounts of alkali feldspar with minor hornblende and biotite. Includes rocks defined modally in QAPF field 4."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "granodiorite"@en ;
 .
 lith:granofels
@@ -1796,7 +1795,7 @@ lith:granofels
   dcterms:source "SLTTm 2004"@en ;
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock with granoblastic fabric and very little or no foliation (less than 10 percent of the mineral grains in the rock are elements in a planar or linear fabric). Grainsize not specified."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:hornfels ;
   skos:prefLabel "granofels"@en ;
 .
@@ -1807,7 +1806,7 @@ lith:granulite
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock of high metamorphic grade in which Fe-Mg silicate minerals are dominantly hydroxl-free; feldspar must be present, and muscovite is absent; rock contains less than 90 percent mafic minerals, less than 75 percent calcite and/or dolomite, less than 75 percent quartz, less than 50 percent iron-bearing minerals (hematite, magnetite, limonite-group, siderite, iron-sulfides), and less than 50 percent calc-silicate minerals."@en ;
   skos:example "nebulite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Wimmenauer (1985) requires granulite to consist of at least 20 percent feldspar. Garnet is frequently present; some hornblende or biotite may be present. The rock has a granoblastic texture and gneissose to massive structure; grain size and fabric may be variable on a decimetric scale. Foliation is less well developed than in rock that would typically be called gneiss. The minerals present in a granulite vary depending on the protolith and the temperature and pressure conditions experienced during metamorphism. According to Fettes and Desmons (2007) the main calc-silicate minerals are calcic garnet, calcic plagioclase, calcic scapolite, diopside-hedenbergite, epidote group minerals, hydrogrossular, johannsenite, prehnite, pumpellyite, titanite, vesuvianite, wollastonite. Note that the shale and siltstone categories may apply to any of the mineralogically defined mudstone categories."@en ;
   skos:prefLabel "granulite"@en ;
   skos:related lith:gneiss ;
@@ -1820,7 +1819,7 @@ lith:gravel
   skos:broader lith:clastic_sediment ;
   skos:broader lith:gravel_size_sediment ;
   skos:definition "Clastic sediment containing greater than 30 percent gravel-size particles (greater than 2.0 mm diameter). Gravel in which more than half of the particles are of epiclastic origin"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "gravel"@en ;
 .
 lith:gravel_size_sediment
@@ -1829,7 +1828,7 @@ lith:gravel_size_sediment
   dcterms:source "SLTTs 2004; particle sizes defined from Krumbein phi scale (W C Krumbein and L L Sloss, Stratigraphy and Sedimentation, 2nd edition, Freeman, San Francisco, 1963; Krumbein and Pettijohn, 1938, Manual of Sedimentary Petrography: New York, Appleton Century Co., Inc.)"@en ;
   skos:broader lith:sediment ;
   skos:definition "Sediment containing greater than 30 percent gravel-size particles (greater than 2.0 mm diameter). Composition or gensis of clasts not specified."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:boulder_gravel_size_sediment ;
   skos:narrower lith:cobble_gravel_size_sediment ;
   skos:narrower lith:gravel ;
@@ -1844,7 +1843,7 @@ lith:high_magnesium_fine_grained_igneous_rocks
   skos:definition "fine-grained igneous rock that contains unusually high concentration of MgO. For rocks that contain greater than 52 percent silica, MgO must be greater than 8 percent. For rocks containing less than 52 percent silica, MgO must be greater than 12 percent."@en ;
   skos:example "boninite"@en ;
   skos:example "picrite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:boninite ;
   skos:narrower lith:komatiitic_rock ;
   skos:prefLabel "high magnesium fine grained igneous rock"@en ;
@@ -1856,7 +1855,7 @@ lith:hornblendite
   skos:broader lith:phaneritic_igneous_rock ;
   skos:broader lith:ultramafic_igneous_rock ;
   skos:definition "Ultramafic rock that consists of greater than 40 percent hornblende plus pyroxene and has a hornblende to pyroxene ratio greater than 1. Includes olivine hornblendite, olivine-pyroxene hornblendite, pyroxene hornblendite, and hornblendite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "hornblendite"@en ;
 .
 lith:hornfels
@@ -1866,7 +1865,7 @@ lith:hornfels
   skos:broader lith:granofels ;
   skos:definition "Granofels formed by contact metamorphism, composed of a mosaic of equidimensional grains in a characteristically granoblastic or decussate matrix; porphyroblasts or relict phenocrysts may be present. Typically fine grained."@en ;
   skos:example "skarn"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "hornfels"@en ;
 .
 lith:hybrid_sediment
@@ -1875,7 +1874,7 @@ lith:hybrid_sediment
   dcterms:source "Hallsworth and Knox, 1999"@en ;
   skos:broader lith:sediment ;
   skos:definition "Sediment that does not fit any of the other sediment composition/genesis categories. Sediment consisting of three or more components which form more than 5 percent but less than 50 precent of the material."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "hybrid sediment"@en ;
 .
 lith:hybrid_sedimentary_rock
@@ -1884,7 +1883,7 @@ lith:hybrid_sedimentary_rock
   dcterms:source "Hallsworth and Knox, 1999"@en ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock that does not fit any of the other composition/genesis categories. Sedimentary rock consisting of three or more components which form more than 5 percent but less than 50 precent of the material."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "hybrid sedimentary rock"@en ;
 .
 lith:igneous_material
@@ -1893,7 +1892,7 @@ lith:igneous_material
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Earth material formed as a result of igneous processes, eg. intrusion and cooling of magma in the crust, volcanic eruption."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:acidic_igneous_material ;
   skos:narrower lith:basic_igneous_material ;
   skos:narrower lith:fragmental_igneous_material ;
@@ -1908,7 +1907,7 @@ lith:igneous_rock
   skos:broader lith:igneous_material ;
   skos:broader lith:rock ;
   skos:definition "rock formed as a result of igneous processes, for example intrusion and cooling of magma in the crust, or volcanic eruption."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:acidic_igneous_rock ;
   skos:narrower lith:basic_igneous_rock ;
   skos:narrower lith:doleritic_rock ;
@@ -1934,7 +1933,7 @@ lith:impact_generated_material
   skos:example "suevite"@en ;
   skos:example "tagamite"@en ;
   skos:example "tektite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "impact generated material"@en ;
 .
 lith:impure_calcareous_carbonate_sediment
@@ -1945,7 +1944,7 @@ lith:impure_calcareous_carbonate_sediment
   skos:broader lith:calcareous_carbonate_sediment ;
   skos:broader lith:impure_carbonate_sediment ;
   skos:definition "Carbonate sediment in which between 50 and 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin, and a calcite (plus aragonite) to dolomite ratio greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "impure calcareous carbonate sediment"@en ;
 .
 lith:impure_carbonate_sediment
@@ -1955,7 +1954,7 @@ lith:impure_carbonate_sediment
   skos:altLabel "marl"@en ;
   skos:broader lith:carbonate_sediment ;
   skos:definition "Carbonate sediment in which between 50 and 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:impure_calcareous_carbonate_sediment ;
   skos:narrower lith:impure_dolomitic_sediment ;
   skos:prefLabel "impure carbonate sediment"@en ;
@@ -1968,7 +1967,7 @@ lith:impure_carbonate_sedimentary_rock
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Sedimentary rock in which between 50 and 90 percent of the primary and/or recrystallized constituents are composed of carbonate minerals."@en ;
   skos:example "marlstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:impure_dolostone ;
   skos:narrower lith:impure_limestone ;
   skos:prefLabel "impure carbonate sedimentary rock"@en ;
@@ -1981,7 +1980,7 @@ lith:impure_dolomitic_sediment
   skos:broader lith:dolomitic_sediment ;
   skos:broader lith:impure_carbonate_sediment ;
   skos:definition "Carbonate sediment in which between 50 and 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin, and the ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "impure dolomitic sediment"@en ;
 .
 lith:impure_dolostone
@@ -1995,7 +1994,7 @@ lith:impure_dolostone
   skos:broader lith:impure_carbonate_sedimentary_rock ;
   skos:definition "Impure carbonate sedimentary rock with a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1."@en ;
   skos:example "marlstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "impure dolomite"@en ;
 .
 lith:impure_limestone
@@ -2007,7 +2006,7 @@ lith:impure_limestone
   skos:broader lith:impure_carbonate_sedimentary_rock ;
   skos:definition "Impure carbonate sedimentary rock with a calcite (plus aragonite) to dolomite ratio greater than 1 to 1."@en ;
   skos:example "marlstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "impure limestone"@en ;
 .
 lith:intermediate_composition_igneous_material
@@ -2016,7 +2015,7 @@ lith:intermediate_composition_igneous_material
   dcterms:source "after LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_material ;
   skos:definition "Igneous material with between 52 and 63 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:intermediate_composition_igneous_rock ;
   skos:prefLabel "intermediate composition igneous material"@en ;
 .
@@ -2027,7 +2026,7 @@ lith:intermediate_composition_igneous_rock
   skos:broader lith:igneous_rock ;
   skos:broader lith:intermediate_composition_igneous_material ;
   skos:definition "Igneous rock with between 52 and 63 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:andesite ;
   skos:narrower lith:dioritoid ;
   skos:prefLabel "intermediate composition igneous rock"@en ;
@@ -2039,7 +2038,7 @@ lith:iron_rich_sediment
   skos:broader lith:iron_rich_sedimentary_material ;
   skos:broader lith:sediment ;
   skos:definition "Sediment that consists of at least 50 percent iron-bearing minerals (hematite, magnetite, limonite-group, siderite, iron-sulfides), as determined by hand-lens or petrographic analysis. Corresponds to a rock typically containing 15 percent iron by weight."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "iron rich sediment"@en ;
 .
 lith:iron_rich_sedimentary_material
@@ -2048,7 +2047,7 @@ lith:iron_rich_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:chemical_sedimentary_material ;
   skos:definition "Sedimentary material of unspecified consolidation state that consists of at least 50 percent iron-bearing minerals (hematite, magnetite, limonite-group, siderite, iron-sulfides), as determined by hand-lens or petrographic analysis. Corresponds to a rock typically containing 15 percent iron by weight."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:iron_rich_sediment ;
   skos:narrower lith:iron_rich_sedimentary_rock ;
   skos:prefLabel "iron rich sedimentary material"@en ;
@@ -2060,7 +2059,7 @@ lith:iron_rich_sedimentary_rock
   skos:broader lith:iron_rich_sedimentary_material ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock that consists of at least 50 percent iron-bearing minerals (hematite, magnetite, limonite-group, siderite, iron-sulfides), as determined by hand-lens or petrographic analysis. Corresponds to a rock typically containing 15 percent iron by weight."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "iron rich sedimentary rock"@en ;
 .
 lith:kalsilitic_and_melilitic_rock
@@ -2077,7 +2076,7 @@ lith:kalsilitic_and_melilitic_rock
   skos:example "melilitolite"@en ;
   skos:example "ugandite"@en ;
   skos:example "venanzite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "kalsilitic and melilitic rocks"@en ;
 .
 lith:komatiitic_rock
@@ -2089,7 +2088,7 @@ lith:komatiitic_rock
   skos:definition "Ultramafic, magnesium-rich volcanic rock, typically with spinifex texture of intergrown skeletal and bladed olivine and pyroxene crystals set in abundant glass. Includes komatiite and meimechite."@en ;
   skos:example "komatiite"@en ;
   skos:example "meimechite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "komatiitic rock"@en ;
 .
 lith:latite
@@ -2098,7 +2097,7 @@ lith:latite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:latitic_rock ;
   skos:definition "Latitic rock that contains between 0 and 5 percent quartz and no feldspathoid in the QAPF fraction. QAPF field 8."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "latite"@en ;
 .
 lith:latitic_rock
@@ -2107,7 +2106,7 @@ lith:latitic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytoid ;
   skos:definition "Trachytoid that has a plagioclase to total feldspar ratio between 0.35 and 0.65. QAPF fields 8, 8' and 8*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_latite ;
   skos:narrower lith:latite ;
   skos:narrower lith:quartz_latite ;
@@ -2124,7 +2123,7 @@ lith:lignite
   skos:example "metalignite"@en ;
   skos:example "ortholignite"@en ;
   skos:example "sub bituminous coal"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "lignite"@en ;
 .
 lith:limestone
@@ -2135,7 +2134,7 @@ lith:limestone
   skos:broader lith:pure_carbonate_sedimentary_rock ;
   skos:definition "Pure carbonate sedimentary rock with a calcite (plus aragonite) to dolomite ratio greater than 1 to 1. Includes limestone and dolomitic limestone."@en ;
   skos:example "dolomitic limestone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:chalk ;
   skos:narrower lith:travertine ;
   skos:prefLabel "limestone"@en ;
@@ -2146,7 +2145,7 @@ lith:marble
   dcterms:source "IUGS SCMR 2007 (http://www.bgs.ac.uk/SCMR/), SLTTm1.0 2004"@en ;
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock consisting of greater than 75 percent fine- to coarse-grained recrystallized calcite and/or dolomite; usually with a granoblastic, saccharoidal texture."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "marble"@en ;
 .
 lith:material_formed_in_surficial_environment
@@ -2155,7 +2154,7 @@ lith:material_formed_in_surficial_environment
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:composite_genesis_material ;
   skos:definition "Material that is the product of weathering processes operating on pre-existing rocks or deposits, analogous to hydrothermal or metasomatic rocks, but formed at ambient Earth surface temperature and pressure."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:bauxite ;
   skos:narrower lith:duricrust ;
   skos:narrower lith:residual_material ;
@@ -2169,7 +2168,7 @@ lith:metamorphic_rock
   skos:definition "Rock formed by solid-state mineralogical, chemical and/or structural changes to a pre-existing rock, in response to marked changes in temperature, pressure, shearing stress and chemical environment."@en ;
   skos:example "buchite"@en ;
   skos:example "fulgurite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:amphibolite ;
   skos:narrower lith:chlorite_actinolite_epidote_metamorphic_rock ;
   skos:narrower lith:eclogite ;
@@ -2200,7 +2199,7 @@ lith:metasomatic_rock
   skos:example "propylite"@en ;
   skos:example "rodingite"@en ;
   skos:example "spilite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:skarn ;
   skos:narrower lith:spilite ;
   skos:note "SLTTm (2004) proposed the following criteria to distinguish hydrothermally altered or metasomatic rock from igneous rock. \"The rock is classified as metamorphic if (1) the texture has been modified such that it can no longer be considered igneous, (2) the bulk composition of the rock is inconsistent with compositions that can be derived purely from a magma and associated processes such as assimilation and differentiation, or (3) minerals inconsistent with magmatic crystallization are present.\""@en ;
@@ -2212,7 +2211,7 @@ lith:mica_schist
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:schist ;
   skos:definition "A schist that consists of more than 50 percent mica minerals, typically muscovite or biotite. Special type included to distinguish this common variety of schist."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Include single subcategory of schist to indicate this common kind of schist. 'Mica rich metamorphic rock' for compound use with schist fabric term would be more compatible with treatment of blueschist (Glaucophane lawsonite epidote metamorphic rock) and greenschist (Chlorite actinolite epidote metamorphic rock), but based on the assumption that schist is the only rock type that will meet the mica-rich criteria, it seems reasonable to include as a subtype of schist."@en ;
   skos:prefLabel "mica schist"@en ;
 .
@@ -2231,7 +2230,7 @@ lith:migmatite
   skos:example "phlebite"@en ;
   skos:example "stromatite"@en ;
   skos:example "venite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "migmatite"@en ;
 .
 lith:monzodiorite
@@ -2240,7 +2239,7 @@ lith:monzodiorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzodioritic_rock ;
   skos:definition "Phaneritic crystalline igneous rock consisting of sodic plagioclase (An0 to An50), alkali feldspar, hornblende and biotite, with or without pyroxene, and 0 to 5 percent quartz. Includes rocks defined modally in QAPF field 9."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "monzodiorite"@en ;
 .
 lith:monzodioritic_rock
@@ -2249,7 +2248,7 @@ lith:monzodioritic_rock
   dcterms:source "This vocabulary; LeMaitre et al. 2002"@en ;
   skos:broader lith:dioritoid ;
   skos:definition "Phaneritic crystalline igneous rock consisting of sodic plagioclase (An0 to An50), alkali feldspar, hornblende and biotite, with or without pyroxene, and 0 to 10 percent feldspathoid or 0 to 20 percent quartz in the QAPF fraction. Plagioclase to total feldspar ratio in the QAPF fraction is between 0.65 and 0.9. Includes rocks defined modally in QAPF field 9, 9' and 9* as monzodiorite, foid-beaing monzodiorite, and quartz monzodiorite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_monzodiorite ;
   skos:narrower lith:monzodiorite ;
   skos:narrower lith:quartz_monzodiorite ;
@@ -2261,7 +2260,7 @@ lith:monzogabbro
   dcterms:source "LeMaitre et al. 2002, This vocabulary"@en ;
   skos:broader lith:monzogabbroic_rock ;
   skos:definition "Monzogabbroic rock that contains between 0 an 5 percent quartz and no feldspathoid mineral in the QAPF fraction. Includes rocks defined modally in QAPF field 9 ."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "monzogabbro"@en ;
 .
 lith:monzogabbroic_rock
@@ -2270,7 +2269,7 @@ lith:monzogabbroic_rock
   dcterms:source "LeMaitre et al. 2002, This vocabulary"@en ;
   skos:broader lith:gabbroid ;
   skos:definition "Gabbroid with a plagioclase to total feldspar ratio between 0.65 and 0.9. QAPF field 9, 9 prime and 9 asterisk"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_monzogabbro ;
   skos:narrower lith:monzogabbro ;
   skos:narrower lith:quartz_monzogabbro ;
@@ -2282,7 +2281,7 @@ lith:monzogranite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:granite ;
   skos:definition "Granite that has a plagiolcase to total feldspar ratio between 0.35 and 0.65. QAPF field 3b."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "monzogranite"@en ;
 .
 lith:monzonite
@@ -2291,7 +2290,7 @@ lith:monzonite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzonitic_rock ;
   skos:definition "Monzonitic rock that contains 0-5 percent quartz and no feldspathoid mineral in the QAPF fraction. Includes rocks defined modally in QAPF Field 8."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "monzonite"@en ;
 .
 lith:monzonitic_rock
@@ -2300,7 +2299,7 @@ lith:monzonitic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitoid ;
   skos:definition "Syenitoid with a plagioclase to total feldspar ratio between 0.35 and 0.65. Includes rocks in QAPF fields 8, 8*, and 8'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_monzonite ;
   skos:narrower lith:monzonite ;
   skos:narrower lith:quartz_monzonite ;
@@ -2313,7 +2312,7 @@ lith:mud
   skos:broader lith:clastic_sediment ;
   skos:broader lith:mud_size_sediment ;
   skos:definition "Clastic sediment consisting of less than 30 percent gravel-size (2 mm) particles and with a mud-size to sand-size particle ratio greater than 1. More than half of the particles are of epiclastic origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:clay ;
   skos:narrower lith:silt ;
   skos:prefLabel "mud"@en ;
@@ -2324,7 +2323,7 @@ lith:mud_size_sediment
   dcterms:source "based on SLTTs 2004; Neuendorf et al. 2005; particle sizes defined from Krumbein phi scale (W C Krumbein and L L Sloss, Stratigraphy and Sedimentation, 2nd edition, Freeman, San Francisco, 1963; Krumbein and Pettijohn, 1938, Manual of Sedimentary Petrography: New York, Appleton Century Co., Inc.)"@en ;
   skos:broader lith:sediment ;
   skos:definition "Sediment consisting of less than 30 percent gravel-size (2 mm) particles and with a mud-size to sand-size particle ratio greater than 1. Clasts may be of any composition or origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_mud ;
   skos:narrower lith:carbonate_rich_mud ;
   skos:narrower lith:mud ;
@@ -2344,7 +2343,7 @@ lith:mylonitic_rock
   skos:example "mylonite"@en ;
   skos:example "protomylonite"@en ;
   skos:example "ultramylonite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:phyllonite ;
   skos:prefLabel "mylonitic rock"@en ;
 .
@@ -2354,7 +2353,7 @@ lith:natural_unconsolidated_material
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:unconsolidated_material ;
   skos:definition "Unconsolidated material known to have natural, ie. not human-made, origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:sediment ;
   skos:narrower lith:tephra ;
   skos:prefLabel "natural unconsolidated material"@en ;
@@ -2366,7 +2365,7 @@ lith:non_clastic_siliceous_sediment
   skos:broader lith:non_clastic_siliceous_sedimentary_material ;
   skos:broader lith:sediment ;
   skos:definition "Sediment that consists of at least 50 percent silicate mineral material, deposited directly by chemical or biological processes at the depositional surface, or in particles formed by chemical or biological processes within the basin of deposition."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:siliceous_ooze ;
   skos:prefLabel "non clastic siliceous sediment"@en ;
 .
@@ -2376,7 +2375,7 @@ lith:non_clastic_siliceous_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material that consists of at least 50 percent silicate mineral material, deposited directly by chemical or biological processes at the depositional surface, or in particles formed by chemical or biological processes within the basin of deposition."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:non_clastic_siliceous_sediment ;
   skos:narrower lith:non_clastic_siliceous_sedimentary_rock ;
   skos:prefLabel "non clastic siliceous sedimentary material"@en ;
@@ -2390,7 +2389,7 @@ lith:non_clastic_siliceous_sedimentary_rock
   skos:definition "Sedimentary rock that consists of at least 50 percent silicate mineral material, deposited directly by chemical or biological processes at the depositional surface, or in particles formed by chemical or biological processes within the basin of deposition."@en ;
   skos:example "chert"@en ;
   skos:example "flint"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:biogenic_silica_sedimentary_rock ;
   skos:prefLabel "non clastic siliceous sedimentary rock"@en ;
 .
@@ -2402,7 +2401,7 @@ lith:ooze
   skos:broader lith:biogenic_sediment ;
   skos:broader lith:mud_size_sediment ;
   skos:definition "Biogenic sediment consisting of less than 1 percent gravel-size (greater than or equal to 2 mm) particles, with a sand to mud ratio less than 1 to 9, and less than 50 percent carbonate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_ooze ;
   skos:narrower lith:siliceous_ooze ;
   skos:note "Neuendorf et al. 2005 put cutoff at 30 percent skeletal remains; this is raised to 50 percent in This vocabulary for consistency with definition of other Biogenic sediment category"@en ;
@@ -2416,7 +2415,7 @@ lith:organic_bearing_mudstone
   skos:broader lith:generic_mudstone ;
   skos:definition "Mudstone that contains a significant amount of organic carbon, typically kerogen. commonly finely laminated, brown or black in color."@en ;
   skos:example "tar sand"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "organic bearing mudstone"@en ;
 .
 lith:organic_rich_sediment
@@ -2426,7 +2425,7 @@ lith:organic_rich_sediment
   skos:broader lith:biogenic_sediment ;
   skos:broader lith:organic_rich_sedimentary_material ;
   skos:definition "Sediment with color, composition, texture and apparent density indicating greater than 50 percent organic content by weight on a moisture-free basis."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:peat ;
   skos:narrower lith:sapropel ;
   skos:note "The broader relation from organic rich sediment to biogenic sediment is based on the inference that organic rich material is always biogenic in origin. Biogenic is a broader category because not all biogenic materials are organic rich, for example shells or phosphatic bone."@en ;
@@ -2438,7 +2437,7 @@ lith:organic_rich_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material in which 50 percent or more of the primary sedimentary material is organic carbon."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:organic_rich_sediment ;
   skos:narrower lith:organic_rich_sedimentary_rock ;
   skos:prefLabel "organic rich sedimentary material"@en ;
@@ -2450,7 +2449,7 @@ lith:organic_rich_sedimentary_rock
   skos:broader lith:organic_rich_sedimentary_material ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock with color, composition, texture and apparent density indicating greater than 50 percent organic content by weight on a moisture-free basis."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:coal ;
   skos:note "Sapropelic coal, and asphaltite are not differentiated in This vocabulary"@en ;
   skos:prefLabel "organic rich sedimentary rock"@en ;
@@ -2461,7 +2460,7 @@ lith:orthogneiss
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:gneiss ;
   skos:definition "A gneiss with mineralogy and texture indicating derivation from a phaneritic igneous rock protolith. Typically consists of abundant feldspar, with quartz, and variable hornblende, biotite, and muscovite, with a relatively homogeneous character."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "orthogneiss"@en ;
 .
 lith:packstone
@@ -2470,7 +2469,7 @@ lith:packstone
   dcterms:source "Hallsworth and Knox 1999"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Carbonate sedimentary rock with discernible grain supported depositional texture, containing greater than 10 percent grains, and constituent particles are of intrabasinal origin; intergranular spaces are filled by matrix."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Note that this category overlaps with 'carbonate mudstone'."@en ;
   skos:prefLabel "packstone"@en ;
 .
@@ -2480,7 +2479,7 @@ lith:paragneiss
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:gneiss ;
   skos:definition "A gneiss with mineralogy and texture indicating derivation from a sedimentary rock protolith. Typically consists of abundant quartz, mica, or calcsilicate minerals; aluminosilicate minerals or garnet commonly present. composition of rock tends to be more variable on a decimetric scale that in orthogneiss."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "paragneiss"@en ;
 .
 lith:peat
@@ -2489,7 +2488,7 @@ lith:peat
   dcterms:source "Hallsworth and Knox 1999"@en ;
   skos:broader lith:organic_rich_sediment ;
   skos:definition "Unconsolidated organic-rich sediment composed of at least 50 percent semi-carbonised plant remains; individual remains commonly seen with unaided eye; yellowish brown to brownish black; generally fibrous texture; can be plastic or friable. In its natural state it can be readily cut and has a very high moisture content, generally greater than 90 percent. Liptinite to Inertinite ratio is less than one (Economic commission for Europe, committee on Sustainable Energy- United Nations (ECE-UN), 1998, International Classification of in-Seam Coals: Energy 19, 41 pp.)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "peat"@en ;
 .
 lith:pebble_gravel_size_sediment
@@ -2498,7 +2497,7 @@ lith:pebble_gravel_size_sediment
   dcterms:source "Wentworth size scale"@en ;
   skos:broader lith:gravel_size_sediment ;
   skos:definition "Sediment containing greater than 30 percent pebble-size particles (2.0 -64 mm in diameter)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pebble gravel size sediment"@en ;
 .
 lith:pegmatite
@@ -2507,7 +2506,7 @@ lith:pegmatite
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Exceptionally coarse grained crystalline rock with interlocking crystals; most grains are 1cm or more diameter; composition is generally that of granite, but the term may refer to the coarse grained facies of any type of igneous rock;usually found as irregular dikes, lenses, or veins associated with plutons or batholiths."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pegmatite"@en ;
 .
 lith:peridotite
@@ -2522,7 +2521,7 @@ lith:peridotite
   skos:example "lherzolite"@en ;
   skos:example "olivinite"@en ;
   skos:example "wherlite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "peridotite"@en ;
 .
 lith:phaneritic_igneous_rock
@@ -2533,7 +2532,7 @@ lith:phaneritic_igneous_rock
   skos:altLabel "plutonic rock"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock in which the framework of the rock consists of individual crystals that can be discerned with the unaided eye. Bounding grain size is on the order of 32 to 100 microns. Igneous rocks with 'exotic' composition are excluded from this concept."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anorthositic_rock ;
   skos:narrower lith:aplite ;
   skos:narrower lith:dioritoid ;
@@ -2558,7 +2557,7 @@ lith:phonolilte
   skos:broader lith:phonolitoid ;
   skos:definition "Phonolitoid in which the plagioclase to total feldspar ratio is less than 0.1. Rock consists of alkali feldspar, feldspathoid minerals, and mafic minerals."@en ;
   skos:example "peralkaline phonolite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phonolite"@en ;
 .
 lith:phonolitic_basanite
@@ -2567,7 +2566,7 @@ lith:phonolitic_basanite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:tephritoid ;
   skos:definition "Tephritoid that has a plagioclase to total feldspar ratio between 0.5 and 0.9, and contains more than 10 percent normative (CIPW) olivine."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phonolitic basanite"@en ;
 .
 lith:phonolitic_foidite
@@ -2576,7 +2575,7 @@ lith:phonolitic_foidite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foiditoid ;
   skos:definition "Foiditoid that contains less than 90 percent feldspathoid minerals in the QAPF fraction, and has a plagioclase to total feldspar ratio that is less than 0.5"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phonolitic foidite"@en ;
 .
 lith:phonolitic_tephrite
@@ -2585,7 +2584,7 @@ lith:phonolitic_tephrite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:tephritoid ;
   skos:definition "Tephritoid that has a plagioclase to total feldspar ratio between 0.5 and 0.9, and contains less than 10 percent normative (CIPW) olivine."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phonolitic tephrite"@en ;
 .
 lith:phonolitoid
@@ -2595,7 +2594,7 @@ lith:phonolitoid
   skos:altLabel "phonolitic rock"@en ;
   skos:broader lith:fine_grained_igneous_rock ;
   skos:definition "Fine grained igneous rock than contains less than 90 percent mafic minerals, between 10 and 60 percent feldspathoid mineral in the QAPF fraction and has a plagioclase to total feldspar ratio less than 0.5. Includes rocks defined modally in QAPF fields 11 and 12, and TAS field Ph."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:phonolilte ;
   skos:narrower lith:tephritic_phonolite ;
   skos:prefLabel "phonolitoid"@en ;
@@ -2607,7 +2606,7 @@ lith:phosphate_rich_sediment
   skos:broader lith:phosphate_rich_sedimentary_material ;
   skos:broader lith:sediment ;
   skos:definition "Sediment in which at least 50 percent of the primary and/or recrystallized constituents are phosphate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phosphate rich sediment"@en ;
 .
 lith:phosphate_rich_sedimentary_material
@@ -2616,7 +2615,7 @@ lith:phosphate_rich_sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Sedimentary material in which at least 50 percent of the primary and/or recrystallized constituents are phosphate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:phosphate_rich_sediment ;
   skos:narrower lith:phosphorite ;
   skos:prefLabel "phosphate rich sedimentary material"@en ;
@@ -2628,7 +2627,7 @@ lith:phosphorite
   skos:broader lith:phosphate_rich_sedimentary_material ;
   skos:broader lith:sedimentary_rock ;
   skos:definition "Sedimentary rock in which at least 50 percent of the primary or recrystallized constituents are phosphate minerals. Most commonly occurs as a bedded primary or reworked secondary marine rock, composed of microcrystalline carbonate fluorapatite in the form of lamina, pellets, oolites and nodules, and skeletal, shell and bone fragments."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phosphorite"@en ;
 .
 lith:phyllite
@@ -2637,7 +2636,7 @@ lith:phyllite
   dcterms:source "IUGS SCMR 2007 (http://www.bgs.ac.uk/SCMR/)"@en ;
   skos:broader lith:foliated_metamorphic_rock ;
   skos:definition "Rock with a well developed, continuous schistosity, an average grain size between 0.1 and 0.5 millimeters, and a silvery sheen on cleavage surfaces. Individual phyllosilicate grains are barely visible with the unaided eye."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phyllite"@en ;
 .
 lith:phyllonite
@@ -2646,7 +2645,7 @@ lith:phyllonite
   dcterms:source "NADM metamorphic rock vocabulary SLTTm1.0; Marshak and Mitra 1988"@en ;
   skos:broader lith:mylonitic_rock ;
   skos:definition "Mylonitic rock composed largely of fine-grained mica that imparts a sheen to foliation surfaces; may have flaser lamination, isoclinal folding, and deformed veins, which indicate significant shearing. Macroscopically resembles phyllite, but formed by mechanical degradation of initially coarser rock."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "phyllonite"@en ;
 .
 lith:porphyry
@@ -2655,7 +2654,7 @@ lith:porphyry
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock that contains conspicuous phenocrysts in a finer grained groundmass; groundmass itself may be phaneritic or fine-grained."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "porphyry"@en ;
 .
 lith:pure_calcareous_carbonate_sediment
@@ -2666,7 +2665,7 @@ lith:pure_calcareous_carbonate_sediment
   skos:broader lith:calcareous_carbonate_sediment ;
   skos:broader lith:pure_carbonate_sediment ;
   skos:definition "Carbonate sediment in which greater than 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin, and a calcite (plus aragonite) to dolomite ratio greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pure calcareous carbonate sediment"@en ;
 .
 lith:pure_carbonate_mudstone
@@ -2677,7 +2676,7 @@ lith:pure_carbonate_mudstone
   skos:broader lith:generic_mudstone ;
   skos:broader lith:pure_carbonate_sedimentary_rock ;
   skos:definition "Mudstone that consists of greater than 90 percent carbonate minerals of intrabasinal orign in the mud fraction, and contains less than 10 percent allochems. The original depositional texture is preserved and fabric is matrix supported. Carbonate mudstone of Dunham (1962)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pure carbonate mudstone"@en ;
 .
 lith:pure_carbonate_sediment
@@ -2686,7 +2685,7 @@ lith:pure_carbonate_sediment
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:carbonate_sediment ;
   skos:definition "Carbonate sediment in which greater than 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:pure_calcareous_carbonate_sediment ;
   skos:narrower lith:pure_dolomitic_sediment ;
   skos:prefLabel "pure carbonate sediment"@en ;
@@ -2697,7 +2696,7 @@ lith:pure_carbonate_sedimentary_rock
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:carbonate_sedimentary_rock ;
   skos:definition "Sedimentary rock in which greater than 90 percent of the primary and/or recrystallized constituents are carbonate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:dolostone ;
   skos:narrower lith:limestone ;
   skos:narrower lith:pure_carbonate_mudstone ;
@@ -2710,7 +2709,7 @@ lith:pure_dolomitic_sediment
   skos:broader lith:dolomitic_sediment ;
   skos:broader lith:pure_carbonate_sediment ;
   skos:definition "Carbonate sediment in which greater than 90 percent of the constituents are composed of one (or more) of the carbonate minerals in particles of intrabasinal origin, and a ratio of magnesium carbonate to calcite (plus aragonite) greater than 1 to 1."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pure dolomitic sediment"@en ;
 .
 lith:pyroclastic_material
@@ -2719,7 +2718,7 @@ lith:pyroclastic_material
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:fragmental_igneous_material ;
   skos:definition "Fragmental igneous material that consists of more than 75 percent of particles formed by disruption as a direct result of volcanic action."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:pyroclastic_rock ;
   skos:narrower lith:tephra ;
   skos:prefLabel "pyroclastic material"@en ;
@@ -2731,7 +2730,7 @@ lith:pyroclastic_rock
   skos:broader lith:fragmental_igneous_rock ;
   skos:broader lith:pyroclastic_material ;
   skos:definition "Fragmental igneous rock that consists of greater than 75 percent fragments produced as a direct result of eruption or extrusion of magma from within the earth onto its surface. Includes autobreccia associated with lava flows and excludes deposits reworked by epiclastic processes."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:ash_tuff_lapillistone_and_lapilli_tuff ;
   skos:narrower lith:tuff_breccia_agglomerate_or_pyroclastic_breccia ;
   skos:prefLabel "pyroclastic rock"@en ;
@@ -2746,7 +2745,7 @@ lith:pyroxenite
   skos:example "clinopyroxenite"@en ;
   skos:example "orthopyroxenite"@en ;
   skos:example "websterite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "pyroxenite"@en ;
 .
 lith:quartz_alkali_feldspar_syenite
@@ -2755,7 +2754,7 @@ lith:quartz_alkali_feldspar_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_syenitic_rock ;
   skos:definition "Alkali feldspar syenitic rock that contains 5 to 20 percent quartz and no feldspathoid in the QAPF fraction. QAPF field 6*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz alkali feldspar syenite"@en ;
 .
 lith:quartz_alkali_feldspar_trachyte
@@ -2764,7 +2763,7 @@ lith:quartz_alkali_feldspar_trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:alkali_feldspar_trachytic_rock ;
   skos:definition "Alkali feldspar trachytic rock that contains and between 5 and 20 percent quartz mineral in the QAPF fraction. QAPF field 6*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz alkali feldspar trachyte"@en ;
 .
 lith:quartz_anorthosite
@@ -2773,7 +2772,7 @@ lith:quartz_anorthosite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:anorthositic_rock ;
   skos:definition "Anorthositic rock that contains between 5 and 20 percent quartz in the QAPF fraction. QAPF field 10*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz anorthosite"@en ;
 .
 lith:quartz_diorite
@@ -2782,7 +2781,7 @@ lith:quartz_diorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:dioritic_rock ;
   skos:definition "Dioritic rock that contains between 5 to 20 percent quartz in the QAPF fraction. QAPF field 10*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz diorite"@en ;
 .
 lith:quartz_gabbro
@@ -2791,7 +2790,7 @@ lith:quartz_gabbro
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:gabbroic_rock ;
   skos:definition "Gabbroic rock that contains between 5 and 20 percent quartz in the QAPF fraction. QAPF field 10*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz gabbro"@en ;
 .
 lith:quartz_latite
@@ -2800,7 +2799,7 @@ lith:quartz_latite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:latitic_rock ;
   skos:definition "Latitic rock that contains between 5 and 20 percent quartz in the QAPF fraction. QAPF field 8*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz latite"@en ;
 .
 lith:quartz_monzodiorite
@@ -2809,7 +2808,7 @@ lith:quartz_monzodiorite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzodioritic_rock ;
   skos:definition "Monzodioritic rock that contains between 5 and 20 percent quartz."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz monzodiorite"@en ;
 .
 lith:quartz_monzogabbro
@@ -2818,7 +2817,7 @@ lith:quartz_monzogabbro
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzogabbroic_rock ;
   skos:definition "Monzogabbroic rock that contains between 5 and 20 percent quartz in the QAPF fraction. QAPF field 9*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz monzogabbro"@en ;
 .
 lith:quartz_monzonite
@@ -2827,7 +2826,7 @@ lith:quartz_monzonite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:monzonitic_rock ;
   skos:definition "Monzonitic rock that contains 5-20 percent quartz iin the QAPF fraction. Includes rocks defined modally in QAPF Field 8*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz monzonite"@en ;
 .
 lith:quartz_rich_igneous_rock
@@ -2839,7 +2838,7 @@ lith:quartz_rich_igneous_rock
   skos:definition "Phaneritic crystalline igneous rock that contains less than 90 percent mafic minerals and contains greater than 60 percent quartz in the QAPF fraction."@en ;
   skos:example "quartz-rich granitoid"@en ;
   skos:example "quartzolite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Occurrence of igneous rocks meeting this criteria seems to be vanishingly rare, thus subdividing the category does not seem warranted for the purposes of This vocabulary. Future usage of the vocabulary may motivate including quatzolite and quartz-rich granitoid in future revisions"@en ;
   skos:prefLabel "quartz rich igneous rock"@en ;
 .
@@ -2849,7 +2848,7 @@ lith:quartz_syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitic_rock ;
   skos:definition "Syenitic rock that contains between 5 and 20 percent quartz in the QAPF fraction. Defined modally in QAPF Field 7*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz syenite"@en ;
 .
 lith:quartz_trachyte
@@ -2858,7 +2857,7 @@ lith:quartz_trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytic_rock ;
   skos:definition "Trachytic rock that contains between 5 and 20 percent quartz in the QAPF fraction. QAPF field 7*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartz trachyte"@en ;
 .
 lith:quartzite
@@ -2868,7 +2867,7 @@ lith:quartzite
   skos:broader lith:metamorphic_rock ;
   skos:definition "Metamorphic rock consisting of greater than or equal to 75 percent quartz; typically granoblastic texture."@en ;
   skos:example "itacolumite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "quartzite"@en ;
 .
 lith:residual_material
@@ -2877,7 +2876,7 @@ lith:residual_material
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:material_formed_in_surficial_environment ;
   skos:definition "Material of composite origin resulting from weathering processes at the Earth's surface, with genesis dominated by removal of chemical constituents by aqueous leaching. Miinor clastic, chemical, or organic input may also contribute. Consolidation state is not inherent in definition, but typically material is unconsolidated or weakly consolidated."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "residual material"@en ;
 .
 lith:rhyolite
@@ -2888,7 +2887,7 @@ lith:rhyolite
   skos:definition "rhyolitoid in which the ratio of plagioclase to total feldspar is between 0.1 and 0.65."@en ;
   skos:example "liparite"@en ;
   skos:example "rhyodacite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "rhyolite"@en ;
 .
 lith:rhyolitoid
@@ -2899,7 +2898,7 @@ lith:rhyolitoid
   skos:broader lith:acidic_igneous_rock ;
   skos:broader lith:fine_grained_igneous_rock ;
   skos:definition "fine_grained_igneous_rock consisting of quartz and alkali feldspar, with minor plagioclase and biotite, in a microcrystalline, cryptocrystalline or glassy groundmass. Flow texture is common. Includes rocks defined modally in QAPF fields 2 and 3 or chemically in TAS Field R as rhyolite. QAPF normative definition is based on modal mineralogy thus: less than 90 percent mafic minerals, between 20 and 60 percent quartz in the QAPF fraction, and ratio of plagioclse to total feldspar is less than 0.65."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_rhyolite ;
   skos:narrower lith:rhyolite ;
   skos:note "Note that technical definition, based on modal mineralogy plotted in a QAPF triangle may be applied qualitatively, based on phenocryst mineralogy when ground mass mineralogy can not be determined optically, or based on CIPW norm. Although TAS categories are defined based on chemical analyses, the correspondence with the QAPF defined categories is generally close enough that QAPF categories are commonly used interchangeably with TAS categories. It is important to note the basis for assignment of fine-grained igneous rocks to a specifice lithology category."@en ;
@@ -2911,7 +2910,7 @@ lith:rock
   dcterms:source "Jackson, 1997; NADM C1 2004; Neuendorf et al 2005"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Consolidated aggregate of one or more EarthMaterials, or a body of undifferentiated mineral matter, or of solid organic material. Includes mineral aggregates such as granite, shale, marble; glassy matter such as obsidian; and organic material such a coal. Excludes unconsolidated materials."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:aphanite ;
   skos:narrower lith:composite_genesis_rock ;
   skos:narrower lith:igneous_rock ;
@@ -2925,7 +2924,7 @@ lith:rock_gypsum_or_anhydrite
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:evaporite ;
   skos:definition "Evaporite composed of at least 50 percent gypsum or anhydrite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "gypsum or anhydrite"@en ;
 .
 lith:rock_salt
@@ -2934,7 +2933,7 @@ lith:rock_salt
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:evaporite ;
   skos:definition "Evaporite composed of at least 50 percent halite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "rock salt"@en ;
 .
 lith:sand
@@ -2944,7 +2943,7 @@ lith:sand
   skos:broader lith:clastic_sediment ;
   skos:broader lith:sand_size_sediment ;
   skos:definition "Clastic sediment in which less than 30 percent of particles are gravel (greater than 2 mm in diameter) and the sand to mud ratio is at least 1. More than half of the particles are of epiclastic origin."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "sand"@en ;
 .
 lith:sand_size_sediment
@@ -2953,7 +2952,7 @@ lith:sand_size_sediment
   dcterms:source "Neuendorf et al. 2005 ; particle sizes defined from Krumbein phi scale (W C Krumbein and L L Sloss, Stratigraphy and Sedimentation, 2nd edition, Freeman, San Francisco, 1963; Krumbein and Pettijohn, 1938, Manual of Sedimentary Petrography: New York, Appleton Century Co., Inc.)"@en ;
   skos:broader lith:sediment ;
   skos:definition "Sediment in which less than 30 percent of particles are gravel (greater than 2 mm in diameter) and the sand to mud ratio is at least 1. composition or genesis of clasts not specified."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:sand ;
   skos:prefLabel "sand size sediment"@en ;
 .
@@ -2963,7 +2962,7 @@ lith:sapropel
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:organic_rich_sediment ;
   skos:definition "Jelly like organic rich sediment composed of plant remains, usually algal. Liptinite to Inertinite ratio is greater than one (Economic commission for Europe, committee on Sustainable Energy- United Nations (ECE-UN), 1998, International Classification of in-Seam Coals: Energy 19, 41 pp.)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "sapropel"@en ;
 .
 lith:schist
@@ -2972,7 +2971,7 @@ lith:schist
   dcterms:source "SLTTm 2004; Neuendorf et al. 2005"@en ;
   skos:broader lith:foliated_metamorphic_rock ;
   skos:definition "Foliated phaneritic metamorphic rock with well developed, continuous schistosity, meaning that greater than 50 percent of the rock by volume is mineral grains with a thin tabular, lamellar, or acicular prismatic crystallographic habit that are oriented in a continuous planar or linear fabric."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:mica_schist ;
   skos:prefLabel "schist"@en ;
 .
@@ -2983,7 +2982,7 @@ lith:sediment
   skos:broader lith:natural_unconsolidated_material ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Unconsolidated material consisting of an aggregation of particles transported or deposited by air, water or ice, or that accumulated by other natural agents, such as chemical precipitation, and that forms in layers on the Earth's surface. Includes epiclastic deposits."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:biogenic_sediment ;
   skos:narrower lith:carbonate_sediment ;
   skos:narrower lith:clastic_sediment ;
@@ -3002,7 +3001,7 @@ lith:sedimentary_material
   dcterms:source "SLTTs 2004"@en ;
   skos:broader lith:compound_material ;
   skos:definition "Material formed by accumulation of solid fragmental material deposited by air, water or ice, or material that accumulated by other natural agents such as chemical precipitation from solution or secretion by organisms. Includes both sediment and sedimentary rock. Includes epiclastic deposits. All stated composition criteria are based on the mineral/ compound material (GeoSciML term)/particulate fraction of the material, irrespective of porosity or the pore-fluid. No distinctions are made based on porosity or pore fluid composition (except organic rich sediment in which liquid hydrocarbon content may be considered)."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_sedimentary_material ;
   skos:narrower lith:chemical_sedimentary_material ;
   skos:narrower lith:clastic_sedimentary_material ;
@@ -3020,7 +3019,7 @@ lith:sedimentary_rock
   skos:broader lith:rock ;
   skos:broader lith:sedimentary_material ;
   skos:definition "Rock formed by accumulation and cementation of solid fragmental material deposited by air, water or ice, or as a result of other natural agents, such as precipitation from solution, the accumulation of organic material, or from biogenic processes, including secretion by organisms. Includes epiclastic deposits."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:carbonate_sedimentary_rock ;
   skos:narrower lith:clastic_sedimentary_rock ;
   skos:narrower lith:generic_conglomerate ;
@@ -3039,7 +3038,7 @@ lith:serpentinite
   dcterms:source "Neuendorf et al. 2005"@en ;
   skos:broader lith:metamorphic_rock ;
   skos:definition "Rock consisting of more than 75 percent serpentine-group minerals, eg. antigorite, chrysotile or lizardite; accessory chlorite, talc and magnetite may be present; derived from hydration of ferromagnesian silicate minerals such as olivine and pyroxene."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "serpentinite"@en ;
 .
 lith:shale
@@ -3048,7 +3047,7 @@ lith:shale
   dcterms:source "NADM SLTT sedimentary, 2004"@en ;
   skos:broader lith:clastic_mudstone ;
   skos:definition "Laminated mudstone that will part or break along thin, closely spaced layers parallel to stratification."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Note definition does not specify carbonate vs. siliclastic nature of mud."@en ;
   skos:prefLabel "shale"@en ;
   skos:related lith:clastic_mudstone ;
@@ -3059,7 +3058,7 @@ lith:silicate_mud
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:mud_size_sediment ;
   skos:definition "Mud size sediment that consists of less than 50 percent carbonate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:siliceous_ooze ;
   skos:prefLabel "silicate mud"@en ;
 .
@@ -3069,7 +3068,7 @@ lith:silicate_mudstone
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:generic_mudstone ;
   skos:definition "Mudstone that contains less than 10 percent carbonate minerals."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Operational distinction of this category will typically be based on whether or not the rock fizzes when hydrochloric acid is applied--the rock is silicate mudstone if it does not fizz. The quantitative '10 percent' criteria is fuzzy."@en ;
   skos:prefLabel "silicate mudstone"@en ;
   skos:related lith:clastic_mudstone ;
@@ -3082,7 +3081,7 @@ lith:siliceous_ooze
   skos:broader lith:ooze ;
   skos:broader lith:silicate_mud ;
   skos:definition "ooze that consists of more than 50 percent siliceous skeletal remains"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "siliceous ooze"@en ;
 .
 lith:silt
@@ -3092,7 +3091,7 @@ lith:silt
   skos:altLabel "loess"@en ;
   skos:broader lith:mud ;
   skos:definition "Mud that consists of greater than 50 percent silt-size grains."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "silt"@en ;
 .
 lith:siltstone
@@ -3103,7 +3102,7 @@ lith:siltstone
   skos:broader lith:clastic_mudstone ;
   skos:definition "Mudstone that contains detectable silt. (see comments)"@en ;
   skos:example "siltstone"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Use of 'dectable silt' in the criteria for this category is based on the observation that in practice, distinction of claystone from 'siltstone' is typically based on a qualitative assessment of 'grittiness' (e.g. rubbing with fingers, or chewing); the property that these tests can determine is the presence or absence of silty particles in the material. Quantitative grain size analysis in the the clay/silt fraction of a lithified sediment is difficult at best, and of questionable significance because diagensis has altered the size and mineralogy of original sedimentary particles."@en ;
   skos:prefLabel "siltstone"@en ;
   skos:related lith:clastic_mudstone ;
@@ -3116,7 +3115,7 @@ lith:skarn
   skos:altLabel "tactite"@en ;
   skos:broader lith:metasomatic_rock ;
   skos:definition "Metasomatic rock consisting mainly of Ca-, Mg-, Fe-, or Mn-silicate minerals, which are free from or poor in water. Typically formed at the contact between a silicate rock or magma and a carbonate rock."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "skarn"@en ;
 .
 lith:slate
@@ -3125,7 +3124,7 @@ lith:slate
   dcterms:source "NADM metamorphic rock vocabulary SLTTm1.0; Neuendorf et al. 2005"@en ;
   skos:broader lith:foliated_metamorphic_rock ;
   skos:definition "compact, fine grained rock with an average grain size less than 0.032 millimeter and a well developed schistosity (slaty cleavage), and hence can be split into slabs or thin plates."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "slate"@en ;
 .
 lith:spilite
@@ -3136,7 +3135,7 @@ lith:spilite
   skos:definition "Altered basic to intermediate composition fine-grained igneous rock in which the feldspar is partially or completely composed of of albite, typically accompanied by chlorite, calcite, quartz, epidote, prehnite, and low-tempaerature hydrous crystallization products. Preservation of eruptive volcanic features is typical."@en ;
   skos:example "meta-andesite"@en ;
   skos:example "metabasalt"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "spilite"@en ;
 .
 lith:syenite
@@ -3145,7 +3144,7 @@ lith:syenite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitic_rock ;
   skos:definition "Syenitic rock that contains between 0 and 5 percent quartz and no feldspathoid mineral in the QAPF fraction. Defined modally in QAPF Field 7."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "syenite"@en ;
 .
 lith:syenitic_rock
@@ -3154,7 +3153,7 @@ lith:syenitic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:syenitoid ;
   skos:definition "Syenitoid with a plagioclase to total feldspar ratio between 0.1 and 0.35. Includes rocks in QAPF fields 7, 7*, and 7'."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_syenite ;
   skos:narrower lith:quartz_syenite ;
   skos:narrower lith:syenite ;
@@ -3166,7 +3165,7 @@ lith:syenitoid
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:phaneritic_igneous_rock ;
   skos:definition "Phaneritic crystalline igneous rock with M less than 90, consisting mainly of alkali feldspar and plagioclase; minor quartz or nepheline may be present, along with pyroxene, amphibole or biotite. Ratio of plagioclase to total feldspar is less than 0.65, quartz forms less than 20 percent of QAPF fraction, and feldspathoid minerals form less than 10 percent of QAPF fraction. Includes rocks classified in QAPF fields 6, 7 and 8 and their subdivisions."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_syenitic_rock ;
   skos:narrower lith:monzonitic_rock ;
   skos:narrower lith:syenitic_rock ;
@@ -3178,7 +3177,7 @@ lith:syenogranite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:granite ;
   skos:definition "Granite that has a plagiolcase to total feldspar ratio between 0.10 and 0.35. QAPF field 3a."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "syenogranite"@en ;
 .
 lith:tephra
@@ -3188,7 +3187,7 @@ lith:tephra
   skos:broader lith:natural_unconsolidated_material ;
   skos:broader lith:pyroclastic_material ;
   skos:definition "Unconsolidated pyroclastic material in which greater than 75 percent of the fragments are deposited as a direct result of volcanic processes and the deposit has not been reworked by epiclastic processes. Includes ash, lapilli tephra, bomb tephra, block tephra and unconsolidated agglomerate."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:ash_and_lapilli ;
   skos:narrower lith:ash_breccia_bomb_or_block_tephra ;
   skos:prefLabel "tephra"@en ;
@@ -3199,7 +3198,7 @@ lith:tephrite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:tephritoid ;
   skos:definition "Tephritoid that has a plagioclase to total feldspar ratio greater than 0.9, and contains less than 10 percent normative (CIPW) olivine."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "tephrite"@en ;
 .
 lith:tephritic_foidite
@@ -3208,7 +3207,7 @@ lith:tephritic_foidite
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:foiditoid ;
   skos:definition "Foiditoid that contains less than 90 percent feldspathoid minerals in the QAPF fraction, and has a plagioclase to total feldspar ratio that is greater than 0.5, with less than 10 percent normative olivine"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "tephritic foidite"@en ;
 .
 lith:tephritic_phonolite
@@ -3218,7 +3217,7 @@ lith:tephritic_phonolite
   skos:broader lith:phonolitoid ;
   skos:definition "Phonolitoid that has a plagioclase to total feldspar ratio between 0.1 and 0.5. Broadly corresponds to TAS tephriphonolite of TAS field U3."@en ;
   skos:example "tephriphonolite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "tephritic phonolite"@en ;
 .
 lith:tephritoid
@@ -3228,7 +3227,7 @@ lith:tephritoid
   skos:altLabel "tephritic rock"@en ;
   skos:broader lith:fine_grained_igneous_rock ;
   skos:definition "Fine grained igneous rock than contains less than 90 percent mafic minerals, between 10 and 60 percent feldspathoid mineral in the QAPF fraction and has a plagioclase to total feldspar ratio greater than 0.5. Includes rocks classified in QAPF field 13 and 14 or chemically in TAS field U1 as basanite or tephrite."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:basanite ;
   skos:narrower lith:phonolitic_basanite ;
   skos:narrower lith:phonolitic_tephrite ;
@@ -3241,7 +3240,7 @@ lith:tholeiitic_basalt
   dcterms:source "http://en.wikipedia.org/wiki/Basalt; Carmichael, I.S. Turner, F.J., Verhoogen, John, 1974, Igneous petrology: New York, McGraw HIll Book Co., p.42-43."@en ;
   skos:broader lith:basalt ;
   skos:definition "Tholeiitic basalt is defined here to contain 2 pyroxene phases and interstitial quartz or tridymite or cristobalite in the groundmass. Pyroxene (augite and orthopyroxene or pigeonite) and calcium-rich plagioclase are common phenocryst minerals. Olivine may also be a phenocryst, and when present, may have rims of pigeonite. Only in tholeiitic basalt is olivine in reaction relationship with melt. Interstitial siliceous residue may be present, and is often glassy. Tholeiitic basalt is relatively poor in sodium. This category includes most basalts of the ocean floor, most large oceanic islands, and continental flood basalts such as the Columbia River Plateau."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Definition of tholeiite and alkali basalt here are more proscriptive than those found in most reference authorities. This is to actually provide some descriptive criteria to allow assignment of rocks on a hand sample basis to the tholeiite or alkali basalt categories if detailed petrographic or chemical data are available."@en ;
   skos:prefLabel "tholeiitic basalt"@en ;
 .
@@ -3253,7 +3252,7 @@ lith:tonalite
   skos:definition "Granitoid consisting of quartz and intermediate plagioclase, usually with biotite and amphibole. Includes rocks defined modally in QAPF field 5; ratio of plagioclase to total feldspar is greater than 0.9."@en ;
   skos:example "plagiogranite"@en ;
   skos:example "trondhjemite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "tonalite"@en ;
 .
 lith:trachyte
@@ -3262,7 +3261,7 @@ lith:trachyte
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytic_rock ;
   skos:definition "Trachytoid that has a plagioclase to total feldspar ratio between 0.1 and 0.35, between 0 and 5 percent quartz in the QAPF fraction, and no feldspathoid minerals. QAPF field 7."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "trachyte"@en ;
 .
 lith:trachytic_rock
@@ -3271,7 +3270,7 @@ lith:trachytic_rock
   dcterms:source "LeMaitre et al. 2002"@en ;
   skos:broader lith:trachytoid ;
   skos:definition "Trachytoid that has a plagioclase to total feldspar ratio between 0.1 and 0.35. QAPF fields 7, 7', and 7*."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:foid_bearing_trachyte ;
   skos:narrower lith:quartz_trachyte ;
   skos:narrower lith:trachyte ;
@@ -3294,7 +3293,7 @@ lith:trachytoid
   skos:example "trachybasalt"@en ;
   skos:example "trachydacite"@en ;
   skos:example "trachyte(TAS)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:alkali_feldspar_trachytic_rock ;
   skos:narrower lith:latitic_rock ;
   skos:narrower lith:trachytic_rock ;
@@ -3310,7 +3309,7 @@ lith:travertine
   skos:example "calcareous sinter"@en ;
   skos:example "onyx marble"@en ;
   skos:example "tufa"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "travertine"@en ;
 .
 lith:tuff_breccia_agglomerate_or_pyroclastic_breccia
@@ -3319,7 +3318,7 @@ lith:tuff_breccia_agglomerate_or_pyroclastic_breccia
   dcterms:source "Schmid 1981; LeMaitre et al. 2002"@en ;
   skos:broader lith:pyroclastic_rock ;
   skos:definition "Pyroclastic rock in which greater than 25 percent of particles are greater than 64 mm in largest dimension. Includes agglomerate, pyroclastic breccia of Gillespie and Styles (1999)"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "tuff breccia agglomerate or pyroclastic breccia"@en ;
 .
 lith:tuffite
@@ -3329,7 +3328,7 @@ lith:tuffite
   skos:broader lith:rock ;
   skos:definition "Rock consists of more than 50 percent particles of indeterminate pyroclastic or epiclastic origin and less than 75 percent particles of clearly pyroclastic origin. commonly the rock is laminated or exhibits size grading. (based on LeMaitre et al. 2002; Murawski and Meyer 1998)."@en ;
   skos:example "volcaniclastic sedimentary rock"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "In practice, it is likely that any rock for which there is suspicion that it may consist of redeposited pyroclastic material, usually based on sedimentary structures, irrespective of the presence or percentage of clearly epiclastic particles, would be called a tuffite. 50 percent cutoff with epiclastic rock is in contrast with LeMaitre et al., but is used for consistentency with other sedimentary rock categories following the pattern that the rock name reflects the predominant constituent."@en ;
   skos:prefLabel "tuffit"@de ;
   skos:prefLabel "tuffite"@en ;
@@ -3342,7 +3341,7 @@ lith:ultrabasic_igneous_rock
   dcterms:source "after LeMaitre et al. 2002"@en ;
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock with less than 45 percent SiO2."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:prefLabel "ultrabasic igneous rock"@en ;
 .
 lith:ultramafic_igneous_rock
@@ -3352,7 +3351,7 @@ lith:ultramafic_igneous_rock
   skos:broader lith:igneous_rock ;
   skos:definition "Igneous rock that consists of greater than 90 percent mafic minerals."@en ;
   skos:example "alkremite"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:hornblendite ;
   skos:narrower lith:komatiitic_rock ;
   skos:narrower lith:peridotite ;
@@ -3365,7 +3364,7 @@ lith:unconsolidated_material
   dcterms:source "This vocabulary"@en ;
   skos:broader lith:compound_material ;
   skos:definition "compoundMaterial composed of an aggregation of particles that do not adhere to each other strongly enough that the aggregate can be considered a solid in its own right."@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:narrower lith:anthropogenic_unconsolidated_material ;
   skos:narrower lith:natural_unconsolidated_material ;
   skos:prefLabel "unconsolidated material"@en ;
@@ -3377,16 +3376,17 @@ lith:wacke
   skos:broader lith:clastic_sandstone ;
   skos:definition "Clastic sandstone with more than 10 percent matrix of indeterminate detrital or diagenetic nature. Matrix is mud size silicate minerals (clay, feldspar, quartz, rock fragments, and alteration products)."@en ;
   skos:example "graywacke"@en ;
-  skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> ;
+  skos:inScheme ex:simplelithology ;
   skos:note "Distinction from mudstone is based on inference that less that 50 percent of the mud size fraction (matrix) is original mud size detrital particles. May also grade into diamictite or conglomerate based on size distribution of discernible particles. If more than 50 percent of rock is detrital particles of intrabasinal orgin and carbonate composition, categorize as carbonate wackestone. Term is typically applied to diagenetically altered volcanic-lithic clastic rocks in which the definition of the original clasts has been obscured. Suggested boundaries between wacke and arenite range from 5 to 15 percent matrix. See Dickinson (1970) for discussion of interpretation of undiscernible matrix in diagenetically altered lithic clastic rocks. Dickinson, W.R., 1970, Interpreting detrital modes of graywacke and arkose: Journal of Sedimentary Petrology, v. 40, p. 695-707."@en ;
   skos:prefLabel "piedra"@es ;
   skos:prefLabel "wacke"@en ;
 .
-<http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology>
-  rdf:type rdfs:Resource ;
+ex:simplelithology
+  rdf:type owl:Ontology ;
   rdf:type skos:ConceptScheme ;
   dcterms:creator <http://editor.vocabs.ands.org.au/user/CGI-Geoscience-Terminology-Working-Group> ;
   dcterms:date "2012-11-24" ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   dcterms:description "This scheme specifies the concept space for Simple Lithology concepts, as defined by the IUGS Commission for Geoscience Information (CGI) Geoscience Terminology Working Group. By extension, it includes all concepts in this conceptScheme, as well as concepts in any previous versions of the scheme. This vocabulary is not designed to be a comprehensive list of all lithology terms."@en ;
   dcterms:issued "2017-02-22" ;
   dcterms:title "Simple Lithology"@en ;
