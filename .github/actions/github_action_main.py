@@ -148,7 +148,7 @@ def _run_python_in_container(path_to_python_script: str, args: list[str], f):
         result = subprocess.run(subprocess_args)
     else:
         result = subprocess.run(subprocess_args, stdout=f)
-    print("container call result ", result.returncode)
+#    print("container call result ", result.returncode)
     return result.returncode
 
 

@@ -244,7 +244,7 @@ def describeNarrowerTerms(g, v, r, depth=0, level=[]):
 def describeVocabulary(G, V):
     res = []
     level = [1, ]
-    print(f"vocab2md: {G} graph input")
+#    print(f"vocab2md: {G} graph input")
 
     # this is the header for Quarto in the markdown output
     res.append("---")
@@ -268,9 +268,8 @@ def describeVocabulary(G, V):
     if len(gobj)>0:
         scheme = gobj[0]
     else:
-        print(f"vocab2md: {V} object must have a skos:prefLabel")
-        return 1
-#    scheme = getObjects(G, V, skosT("prefLabel"))[0]
+#        print(f"vocab2md: {V} object must have a skos:prefLabel")
+        scheme = "ConceptScheme"
     lscheme = scheme.replace(" ","")
     res.append("[]{" + f"#{lscheme}" + "}")
     res.append("")
@@ -355,7 +354,7 @@ def main(source, vocabulary):
     res = []
 
     vocabulary = store.expand_name(vocabulary)
-    print(f"vocabulary name: {vocabulary}")
+#    print(f"vocabulary name: {vocabulary}")
     theMarkdown = describeVocabulary(store._g, vocabulary)
     res.append(theMarkdown)
 

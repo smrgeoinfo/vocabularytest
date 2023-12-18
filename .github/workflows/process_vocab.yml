@@ -41,7 +41,7 @@ jobs:
           #    used for output files with the appropriate extension.
           inputttl: cgi_simple-lithology_v0-1|GSQlithology
           # these are the URIs for the ConceptScheme; there must be a conceptScheme defined in each vocabulary.
-          inputvocaburi: http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology|http://linked.data.gov.au/def/lithotype
+          inputvocaburi: http://resource.geosciml.org/classifierscheme/cgi/2023.12/simplelithology|http://linked.data.gov.au/def/lithotype
 
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@v4
