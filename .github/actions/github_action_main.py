@@ -106,7 +106,7 @@ def _quarto_render_html(markdown_in:str, output_path:str):
 #     print("Quarto check result ", result.returncode)
      result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "-t", "html"])
      print("Quarto call result ", result.returncode)
-     if (result == 0):
+     if (result.returncode == 0):
          print(f"Quarto call successful for {markdown_in}")
          return 0
      else:
