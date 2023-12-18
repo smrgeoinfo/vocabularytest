@@ -106,7 +106,7 @@ def _quarto_render_html(markdown_in:str, output_path:str):
 #     print("Quarto check result ", result.returncode)
      result = subprocess.run(["/opt/quarto/bin/quarto", "render", markdown_in, "-t", "html"])
      print("Quarto call result ", result.returncode)
-     if (result == 0):
+     if (result.returncode == 0):
          print(f"Quarto call successful for {markdown_in}")
          return 0
      else:
@@ -148,7 +148,7 @@ def _run_python_in_container(path_to_python_script: str, args: list[str], f):
         result = subprocess.run(subprocess_args)
     else:
         result = subprocess.run(subprocess_args, stdout=f)
-    print("container call result ", result.returncode)
+#    print("container call result ", result.returncode)
     return result.returncode
 
 
